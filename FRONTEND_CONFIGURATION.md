@@ -52,3 +52,4 @@ Directly extends Tailwind's theme with KRAK & CO. tokens:
 
 - Extends `next/core-web-vitals` with zero suppressed warnings.
 - Enforces single quotes, semi-colons, and 2-space indentation.
+

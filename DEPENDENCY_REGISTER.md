@@ -41,3 +41,4 @@
   - Date and currency formatting uses native `Intl.NumberFormat("en-IN")`, avoiding heavy libraries like Moment.js or Lodash.
 - **Total Production Package Count:** 4 core dependencies.
 - **Total Development Package Count:** 9 dependencies.
+

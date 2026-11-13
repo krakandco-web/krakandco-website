@@ -12,3 +12,4 @@ export function cn(...classes: (string | boolean | undefined | null)[]): string 
 export function formatPrice(amount: number): string {
   return `₹${amount.toLocaleString("en-IN")}`;
 }
+

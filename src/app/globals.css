@@ -87,3 +87,4 @@ img, svg, video, canvas, audio, iframe, embed, object {
 ::-webkit-scrollbar-thumb:hover {
   background: var(--color-mustard);
 }
+

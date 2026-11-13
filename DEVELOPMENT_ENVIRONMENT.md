@@ -73,3 +73,4 @@ npm run dev
 - **Fast Refresh:** Next.js Fast Refresh is active; edits in `.tsx`, `.ts`, and `globals.css` reflect in the browser within < 200ms without state loss.
 - **Client Error Boundary:** Configured in `src/app/error.tsx` to catch runtime rendering errors and present a branded recovery view.
 - **404 Not Found Boundary:** Configured in `src/app/not-found.tsx` with retro snack illustrations and recovery routes.
+
