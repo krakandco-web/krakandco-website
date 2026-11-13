@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 54" width="240" height="54">
+  <defs>
+    <filter id="hshadow" x="-5%" y="-5%" width="120%" height="120%">
+      <feDropShadow dx="2" dy="2.5" stdDeviation="0" flood-color="#262321" />
+    </filter>
+  </defs>
+  <g filter="url(#hshadow)">
+    <text x="6" y="40" font-family="'Playfair Display', 'Impact', serif" font-size="42" font-weight="900" letter-spacing="1.5" fill="#7A1C1C" stroke="#E6AC2A" stroke-width="1.8">KRAK</text>
+  </g>
+  <rect x="146" y="16" width="82" height="26" rx="4" fill="#E6AC2A" stroke="#262321" stroke-width="1.5" />
+  <text x="154" y="35" font-family="'Poppins', sans-serif" font-size="15" font-weight="800" fill="#7A1C1C" letter-spacing="1">&amp; CO.</text>
+</svg>
+

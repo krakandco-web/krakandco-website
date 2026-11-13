@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 300" width="300" height="300">
+  <rect width="300" height="300" fill="#FAF3E0" rx="12" />
+  <!-- Ceramic Bowl -->
+  <ellipse cx="150" cy="190" rx="110" ry="40" fill="#F3E4C5" stroke="#7A1C1C" stroke-width="3" />
+  <path d="M 40 190 C 40 230 80 250 150 250 C 220 250 260 230 260 190 Z" fill="#FFF8EE" stroke="#7A1C1C" stroke-width="3" />
+  <!-- Banana Chips Coins -->
+  <g fill="#E6AC2A" stroke="#C8830E" stroke-width="2">
+    <ellipse cx="130" cy="160" rx="28" ry="18" transform="rotate(-15 130 160)" />
+    <ellipse cx="170" cy="155" rx="30" ry="19" transform="rotate(20 170 155)" />
+    <ellipse cx="110" cy="180" rx="26" ry="16" transform="rotate(-30 110 180)" />
+    <ellipse cx="150" cy="180" rx="32" ry="20" transform="rotate(5 150 180)" />
+    <ellipse cx="190" cy="175" rx="27" ry="17" transform="rotate(25 190 175)" />
+    <ellipse cx="140" cy="135" rx="25" ry="16" transform="rotate(-5 140 135)" />
+    <ellipse cx="175" cy="130" rx="24" ry="15" transform="rotate(15 175 130)" />
+  </g>
+  <!-- Pepper / Salt flecks -->
+  <circle cx="125" cy="158" r="1.5" fill="#262321" />
+  <circle cx="165" cy="152" r="1.5" fill="#262321" />
+  <circle cx="152" cy="178" r="1.5" fill="#262321" />
+  <!-- Label -->
+  <text x="150" y="275" font-family="'Poppins', sans-serif" font-size="12" font-weight="700" fill="#7A1C1C" text-anchor="middle" letter-spacing="1">KERALA BANANA CHIPS</text>
+</svg>
+

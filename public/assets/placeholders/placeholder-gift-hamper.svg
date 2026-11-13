@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 300" width="300" height="300">
+  <rect width="300" height="300" fill="#FAF3E0" rx="12" />
+  <!-- Retro Tin Box / Gift Hamper with Gold Ribbon -->
+  <g transform="rotate(-4 150 160)">
+    <!-- Box Body -->
+    <rect x="60" y="110" width="180" height="120" rx="10" fill="#7A1C1C" stroke="#E6AC2A" stroke-width="3" />
+    <!-- Box Lid -->
+    <rect x="52" y="98" width="196" height="24" rx="6" fill="#8B1E1E" stroke="#E6AC2A" stroke-width="2" />
+    <!-- Golden Ribbon & Bow -->
+    <rect x="140" y="98" width="20" height="132" fill="#E6AC2A" stroke="#C8830E" stroke-width="1" />
+    <ellipse cx="135" cy="90" rx="14" ry="9" fill="#E6AC2A" stroke="#C8830E" stroke-width="1.5" transform="rotate(-20 135 90)" />
+    <ellipse cx="165" cy="90" rx="14" ry="9" fill="#E6AC2A" stroke="#C8830E" stroke-width="1.5" transform="rotate(20 165 90)" />
+    <circle cx="150" cy="94" r="5" fill="#C8830E" />
+    <!-- Stamped Brand on Box -->
+    <text x="150" y="170" font-family="'Playfair Display', serif" font-size="22" font-weight="900" fill="#FFF8EE" text-anchor="middle" letter-spacing="2">KRAK</text>
+    <text x="150" y="186" font-family="'Poppins', sans-serif" font-size="9" font-weight="700" fill="#E6AC2A" text-anchor="middle" letter-spacing="1.5">FESTIVE HAMPER</text>
+  </g>
+  <!-- Sparkles -->
+  <path d="M 50 80 L 52 72 L 54 80 L 62 82 L 54 84 L 52 92 L 50 84 L 42 82 Z" fill="#E6AC2A" />
+  <path d="M 250 80 L 252 72 L 254 80 L 262 82 L 254 84 L 252 92 L 250 84 L 242 82 Z" fill="#E6AC2A" />
+  <text x="150" y="275" font-family="'Poppins', sans-serif" font-size="12" font-weight="700" fill="#7A1C1C" text-anchor="middle" letter-spacing="1">FESTIVE SNACK HAMPER</text>
+</svg>
+

@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="100" height="100">
+  <circle cx="50" cy="50" r="46" fill="#FFF8EE" stroke="#7A1C1C" stroke-width="3" />
+  <circle cx="50" cy="50" r="40" fill="none" stroke="#285F49" stroke-dasharray="3 2" stroke-width="1.5" />
+  <!-- Nitrogen burst / clock star -->
+  <path d="M 50 34 L 54 44 L 64 45 L 56 52 L 59 62 L 50 56 L 41 62 L 44 52 L 36 45 L 46 44 Z" fill="#E6AC2A" stroke="#7A1C1C" stroke-width="1.5" />
+  <text x="50" y="24" font-family="'Poppins', sans-serif" font-size="6.5" font-weight="700" fill="#7A1C1C" text-anchor="middle" letter-spacing="0.8">90 DAYS</text>
+  <text x="50" y="82" font-family="'Poppins', sans-serif" font-size="6.5" font-weight="700" fill="#7A1C1C" text-anchor="middle" letter-spacing="0.8">FRESH CRUNCH</text>
+</svg>
+

@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 300" width="300" height="300">
+  <rect width="300" height="300" fill="#FAF3E0" rx="12" />
+  <!-- Bowl -->
+  <ellipse cx="150" cy="190" rx="110" ry="40" fill="#F3E4C5" stroke="#7A1C1C" stroke-width="3" />
+  <path d="M 40 190 C 40 230 80 250 150 250 C 220 250 260 230 260 190 Z" fill="#FFF8EE" stroke="#7A1C1C" stroke-width="3" />
+  <!-- Mound of spicy mixture / sev strings / peanuts -->
+  <g fill="#E6AC2A" stroke="#B52C23" stroke-width="1.5">
+    <!-- Boondi spheres -->
+    <circle cx="120" cy="170" r="9" />
+    <circle cx="140" cy="180" r="8" />
+    <circle cx="165" cy="165" r="9" />
+    <circle cx="180" cy="180" r="8" />
+    <circle cx="135" cy="150" r="8" />
+    <circle cx="155" cy="140" r="9" />
+  </g>
+  <!-- Peanuts -->
+  <ellipse cx="115" cy="155" rx="11" ry="7" fill="#8B1E1E" stroke="#581111" stroke-width="1.5" transform="rotate(-20 115 155)" />
+  <ellipse cx="175" cy="150" rx="12" ry="7" fill="#8B1E1E" stroke="#581111" stroke-width="1.5" transform="rotate(30 175 150)" />
+  <!-- Fried Curry leaves -->
+  <path d="M 140 160 Q 155 145 160 165 Q 145 165 140 160 Z" fill="#285F49" stroke="#1E4D2B" stroke-width="1.5" />
+  <!-- Sev vermicelli lines -->
+  <path d="M 100 175 Q 125 165 150 175 M 130 145 Q 160 140 185 155 M 110 160 Q 135 150 160 160" stroke="#E6AC2A" stroke-width="3" stroke-linecap="round" fill="none" />
+  <!-- Label -->
+  <text x="150" y="275" font-family="'Poppins', sans-serif" font-size="12" font-weight="700" fill="#7A1C1C" text-anchor="middle" letter-spacing="1">MADURAI MIXTURE</text>
+</svg>
+

@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="100" height="100">
+  <!-- Stamped scalloped badge -->
+  <circle cx="50" cy="50" r="46" fill="#FFF8EE" stroke="#7A1C1C" stroke-width="3" />
+  <circle cx="50" cy="50" r="40" fill="none" stroke="#E6AC2A" stroke-dasharray="3 2" stroke-width="1.5" />
+  <!-- Center icon: scroll/mortar -->
+  <path d="M 38 42 C 38 36 45 34 50 34 C 55 34 62 36 62 42 L 62 60 C 62 66 55 68 50 68 C 45 68 38 66 38 60 Z" fill="#F3E4C5" stroke="#7A1C1C" stroke-width="2" />
+  <line x1="43" y1="46" x2="57" y2="46" stroke="#7A1C1C" stroke-width="1.5" stroke-linecap="round" />
+  <line x1="43" y1="52" x2="57" y2="52" stroke="#7A1C1C" stroke-width="1.5" stroke-linecap="round" />
+  <line x1="43" y1="58" x2="53" y2="58" stroke="#7A1C1C" stroke-width="1.5" stroke-linecap="round" />
+  <!-- Circular text -->
+  <text x="50" y="24" font-family="'Poppins', sans-serif" font-size="7" font-weight="700" fill="#7A1C1C" text-anchor="middle" letter-spacing="1">AUTHENTIC</text>
+  <text x="50" y="82" font-family="'Poppins', sans-serif" font-size="7" font-weight="700" fill="#7A1C1C" text-anchor="middle" letter-spacing="1">RECIPE</text>
+</svg>
+
