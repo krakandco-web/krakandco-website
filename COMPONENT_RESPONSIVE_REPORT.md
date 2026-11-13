@@ -47,3 +47,4 @@ All components in the KRAK & CO. library were inspected across mobile, tablet, a
 ### 2.4 Drawers & Modals
 - Drawer occupies 100% width on screens under 480px, switching to `max-w-md` (448px) on tablet/desktop.
 - Modals respect `p-4` gutters on mobile and expand up to `max-w-lg` (512px) on desktop with centered positioning.
+

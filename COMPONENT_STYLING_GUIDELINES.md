@@ -68,3 +68,4 @@ graph LR
   - Vintage dash border: `border-dashed border-surface-sand`.
   - Gradient hair-line dividers: `bg-gradient-to-r from-transparent via-brand-maroon/20 to-transparent`.
   - Kolam background patterns in promotional cards.
+

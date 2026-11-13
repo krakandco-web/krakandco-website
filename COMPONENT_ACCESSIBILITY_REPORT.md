@@ -49,3 +49,4 @@ Every component in Phase 08 was designed, built, and verified against WCAG 2.2 L
 - Tabs implement the complete WAI-ARIA Tabs pattern: `role="tablist"`, `role="tab"`, `aria-selected`, `aria-controls`, and `role="tabpanel"`.
 - Keyboard arrow navigation (`ArrowRight`, `ArrowLeft`, `Home`, `End`) cycles active tab automatically.
 - Accordion buttons feature `aria-expanded` and control their corresponding `role="region"` panels via `aria-controls`.
+

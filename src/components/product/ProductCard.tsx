@@ -164,3 +164,4 @@ export function ProductCard({
     </div>
   );
 }
+

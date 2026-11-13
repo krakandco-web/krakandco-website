@@ -34,3 +34,4 @@
 | **Tabs** | Keyboard arrows | ArrowRight moves focus and selects next tab | Complete WAI-ARIA tab navigation functioning | **PASS** |
 | **Toast** | Auto-dismiss timer | Toast disappears after specified milliseconds | Disappears after 4000ms; close button works | **PASS** |
 | **Input** | Clear button action | Cross icon clears input field | Resets input text to empty string | **PASS** |
+
