@@ -88,3 +88,4 @@ Route (app)                              Size     First Load JS
 **Evaluation:**
 - Shared First Load JS is lean at **87.2 kB**, guaranteeing rapid initial load on mobile 4G/5G connections across India.
 - Zero hydration errors or circular dependency warnings detected.
+

@@ -68,3 +68,4 @@ function handleFilterChange(key: string, value: string) {
 - Users can share URLs containing active filters.
 - Browser back and forward buttons navigate filter states naturally.
 - Zero client-side sync bugs.
+

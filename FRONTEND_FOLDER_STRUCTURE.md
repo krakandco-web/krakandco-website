@@ -145,3 +145,4 @@ krakandco/
 1. **Colocation & Modularity:** Everything related to a domain entity (types, services, mock fixtures) is isolated in designated folders under `src/`.
 2. **Clean URL Strategy:** Route Groups `(storefront)`, `(account)`, and `(content)` organize route logic into distinct domains without introducing unsightly folder names into the public URL pathname.
 3. **Safe Fallback Boundaries:** Dynamic route segments (`[collectionSlug]`, `[productSlug]`) query domain services and invoke Next.js `notFound()` on missing items, preventing runtime exceptions.
+

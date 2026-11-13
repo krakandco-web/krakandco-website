@@ -74,3 +74,4 @@ export interface Product {
   relatedProductSlugs?: string[];
   frequentlyBoughtTogetherSlug?: string;
 }
+

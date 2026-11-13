@@ -17,3 +17,4 @@ export interface Collection {
   metaTitle: string;
   metaDescription: string;
 }
+

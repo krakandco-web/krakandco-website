@@ -86,3 +86,4 @@ export default async function ProductPage({ params }: ProductPageProps) {
 ```
 
 This guarantees seamless 404 handling without unhandled exceptions or flash of empty content.
+

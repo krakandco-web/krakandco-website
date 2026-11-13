@@ -101,3 +101,4 @@ For Product and Collection pages, JSON-LD Schema.org markup will be injected dur
 - **`Product` Schema:** Includes `name`, `image`, `description`, `sku`, `offers: { price, priceCurrency: "INR", availability }`, and `aggregateRating`.
 - **`BreadcrumbList` Schema:** Provides Google search results with hierarchical breadcrumbs (`Home > Shop > Mixtures > Madurai Mixture`).
 - **`Organization` Schema:** Establishes the KRAK & CO. brand entity, official logo, and social profile links.
+

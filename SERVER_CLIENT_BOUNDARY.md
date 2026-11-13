@@ -54,3 +54,4 @@ Client Components (`"use client"`) are used deliberately and pushed down to the 
      return <CartProvider>{children}</CartProvider>;
    }
    ```
+

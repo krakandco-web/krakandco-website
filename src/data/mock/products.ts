@@ -180,3 +180,4 @@ export const MOCK_PRODUCTS: Product[] = [
     relatedProductSlugs: ["kerala-banana-chips", "kaju-katli"],
   },
 ];
+

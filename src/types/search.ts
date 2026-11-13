@@ -22,3 +22,4 @@ export interface SearchResult {
   suggestedCollections: { slug: string; name: string }[];
   popularSearches: string[];
 }
+

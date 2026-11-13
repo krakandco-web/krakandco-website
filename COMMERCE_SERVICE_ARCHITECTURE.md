@@ -84,3 +84,4 @@ export const productService = {
 };
 ```
 No consumer of `productService` needs to be modified.
+

@@ -36,3 +36,4 @@ export default async function CollectionDetailPage({ params }: CollectionPagePro
     />
   );
 }
+

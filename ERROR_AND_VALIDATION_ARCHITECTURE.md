@@ -56,3 +56,4 @@ For forms (Checkout, Address Book, Customer Login, Contact Inquiries):
 1. **Schema Validation:** Lightweight validation rules for Indian PIN codes (6 digits `^[1-9][0-9]{5}$`), 10-digit mobile numbers (`^[6-9]\d{9}$`), and valid email formats.
 2. **Instant Field-Level Feedback:** Inline error microcopy displayed under each field in `brand-terracotta` without requiring full form submission.
 3. **Safe Server Action Envelopes:** All form submissions return structured `APIResponse<T>` envelopes containing `{ success: boolean; data?: T; error?: { code: string; message: string } }`.
+

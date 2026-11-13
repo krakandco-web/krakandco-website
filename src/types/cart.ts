@@ -39,3 +39,4 @@ export interface Cart {
   freeShippingRemaining: number;
   isFreeShippingUnlocked: boolean;
 }
+

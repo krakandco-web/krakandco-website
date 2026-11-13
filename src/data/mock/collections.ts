@@ -96,3 +96,4 @@ export const MOCK_COLLECTIONS: Collection[] = [
     metaDescription: "Curated Indian snack gift boxes for festivals and corporate gifting. Beautiful retro packaging.",
   },
 ];
+

@@ -21,3 +21,4 @@ class CollectionService implements ICollectionService {
 }
 
 export const collectionService = new CollectionService();
+

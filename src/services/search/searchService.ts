@@ -49,3 +49,4 @@ class SearchService implements ISearchService {
 }
 
 export const searchService = new SearchService();
+

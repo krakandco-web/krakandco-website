@@ -78,3 +78,4 @@ graph TD
   - Brand colors: `brand-cream`, `brand-maroon`, `brand-mustard`, `brand-forest`, `brand-terracotta`.
   - Fonts: Google Fonts `Playfair Display` (headings) and `Poppins` (body UI).
   - Elevation & Borders: `shadow-card`, `border-surface-sand`.
+
