@@ -35,3 +35,4 @@ Clicking or focusing on the "Shop" menu item on desktop triggers the full-width 
 3. **No Accidental Collapse:**
    - Does not close unexpectedly on slight mouse movements.
    - Features a clean backdrop blur and border separation (`border-b-2 border-surface-sand bg-surface-card/98 shadow-xl`).
+

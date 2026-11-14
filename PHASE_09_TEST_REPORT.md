@@ -42,3 +42,4 @@
 | Cancellation Policy | Footer | `/cancellation-policy` | 200 OK | YES |
 | Privacy Policy | Footer | `/privacy-policy` | 200 OK | YES |
 | Terms & Conditions | Footer | `/terms` | 200 OK | YES |
+

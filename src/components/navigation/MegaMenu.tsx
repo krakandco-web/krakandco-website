@@ -274,3 +274,4 @@ export function MegaMenu({ isOpen, onClose, triggerRef }: MegaMenuProps) {
     </div>
   );
 }
+

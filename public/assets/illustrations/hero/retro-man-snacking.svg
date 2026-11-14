@@ -1,0 +1,57 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 400" width="100%" height="100%">
+  <defs>
+    <radialGradient id="manGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#E6AC2A" stop-opacity="0.35" />
+      <stop offset="100%" stop-color="#7A1C1C" stop-opacity="0" />
+    </radialGradient>
+    <linearGradient id="kurtaColor" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#F3E4C5" />
+      <stop offset="100%" stop-color="#E5D0A8" />
+    </linearGradient>
+  </defs>
+
+  <circle cx="180" cy="200" r="160" fill="url(#manGlow)" />
+
+  <!-- Torso & Kurta Shirt with Nehru collar -->
+  <path d="M 80 400 C 90 320 120 300 180 300 C 240 300 270 320 280 400 Z" fill="url(#kurtaColor)" stroke="#262321" stroke-width="4" />
+  <!-- Kurta placket buttons -->
+  <line x1="180" y1="300" x2="180" y2="380" stroke="#262321" stroke-width="3" />
+  <circle cx="180" cy="325" r="3" fill="#6B1D2F" />
+  <circle cx="180" cy="350" r="3" fill="#6B1D2F" />
+
+  <!-- Neck -->
+  <path d="M 155 250 L 155 300 C 165 305 195 305 205 300 L 205 250 Z" fill="#E8B896" stroke="#262321" stroke-width="3.5" />
+
+  <!-- Head & Square Jaw -->
+  <path d="M 135 170 C 130 240 150 275 180 275 C 210 275 230 240 225 170 Z" fill="#F0C2A2" stroke="#262321" stroke-width="4" />
+
+  <!-- Iconic Retro Indian Mustache -->
+  <path d="M 150 242 C 160 232 175 238 180 242 C 185 238 200 232 210 242 C 220 252 205 255 195 250 C 185 246 182 248 180 250 C 178 248 175 246 165 250 C 155 255 140 252 150 242 Z" fill="#262321" stroke="#262321" stroke-width="2" />
+
+  <!-- Smile & Snacking hand -->
+  <path d="M 165 258 Q 180 268 195 258" fill="none" stroke="#262321" stroke-width="3" stroke-linecap="round" />
+
+  <!-- Hand holding snack to mouth -->
+  <path d="M 230 360 C 235 320 220 280 205 260 C 200 258 195 262 198 268 C 205 280 215 310 220 340 Z" fill="#E8B896" stroke="#262321" stroke-width="3.5" />
+  <!-- Golden snack piece in hand -->
+  <ellipse cx="200" cy="256" rx="9" ry="6" transform="rotate(-20 200 256)" fill="#E6AC2A" stroke="#262321" stroke-width="2" />
+
+  <!-- Retro Wayfarer / Aviator Sunglasses -->
+  <g stroke="#262321" stroke-width="3.5">
+    <path d="M 140 185 C 138 205 155 210 172 205 C 176 195 170 180 150 180 Z" fill="#262321" />
+    <path d="M 143 187 C 141 202 153 207 168 203 C 172 196 167 184 152 184 Z" fill="#E6AC2A" opacity="0.85" />
+    <path d="M 188 205 C 205 210 222 205 220 185 C 210 180 184 195 188 205 Z" fill="#262321" />
+    <path d="M 192 203 C 207 207 219 202 217 187 C 208 184 188 196 192 203 Z" fill="#E6AC2A" opacity="0.85" />
+    <line x1="172" y1="187" x2="188" y2="187" stroke="#262321" stroke-width="3.5" />
+  </g>
+
+  <!-- Sideburns & Retro Haircut -->
+  <path d="M 136 180 L 136 210 L 142 208 L 142 180 Z" fill="#262321" />
+  <path d="M 224 180 L 224 210 L 218 208 L 218 180 Z" fill="#262321" />
+  <path d="M 130 180 C 120 120 150 90 180 90 C 210 90 240 120 230 180 C 220 140 210 125 180 125 C 150 125 140 140 130 180 Z" fill="#262321" />
+
+  <!-- Sparkles -->
+  <g fill="#E6AC2A">
+    <path d="M 220 235 L 222 228 L 224 235 L 230 237 L 224 239 L 222 246 L 220 239 L 214 237 Z" />
+  </g>
+</svg>

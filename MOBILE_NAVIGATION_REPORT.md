@@ -35,3 +35,4 @@ Mobile screen real estate is maximized by condensing secondary and tertiary link
    - WhatsApp & Support (`/contact`)
 6. **Sticky Footer:**
    - Free shipping indicator ("Free Shipping on Orders Above ₹499!").
+

@@ -34,3 +34,4 @@
 3. **Mobile Drawer:**
    - Hamburger icon button announces `aria-label="Open mobile menu"`.
    - Opening drawer traps focus inside the panel; pressing `Escape` dismisses drawer and unlocks background scroll.
+

@@ -32,3 +32,4 @@ src/app/(storefront)/layout.tsx (Server Component)
 3. **No Horizontal Overflow:** The root wrapper enforces `min-h-screen flex flex-col bg-surface-canvas text-text-primary antialiased` with bounded maximum container widths (`max-w-7xl`).
 4. **Dynamic Sticky Footer Behavior:** On short pages (e.g. Empty States, Order Confirmation), the footer stays anchored to the bottom of the viewport via `flex-1` expansion on `<main>`. On long catalog pages, it remains at the natural end of the document flow.
 5. **Decoupled Account & Content Experience:** The customer account portal (`(account)`) and editorial policy legal pages (`(content)`) retain their specialized layout shells established in Phase 07, ensuring purpose-built UI without layout bloat.
+

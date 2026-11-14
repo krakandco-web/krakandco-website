@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 350" width="100%" height="100%">
+  <defs>
+    <linearGradient id="tinRed" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#A52A2A" />
+      <stop offset="50%" stop-color="#801818" />
+      <stop offset="100%" stop-color="#550E0E" />
+    </linearGradient>
+    <linearGradient id="goldBorder" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#FFE89E" />
+      <stop offset="50%" stop-color="#E6AC2A" />
+      <stop offset="100%" stop-color="#A6730A" />
+    </linearGradient>
+  </defs>
+
+  <!-- Open Lid Tilt -->
+  <path d="M 50 120 L 220 50 L 350 80 L 190 150 Z" fill="#6A1414" stroke="#262321" stroke-width="3" />
+  <!-- Gold Embossed KRAK Logo on Lid -->
+  <text x="180" y="105" font-family="'Playfair Display', serif" font-size="28" font-weight="900" fill="#E6AC2A" transform="rotate(-20 180 105)" stroke="#262321" stroke-width="1">KRAK</text>
+
+  <!-- Main Tin Body Front -->
+  <path d="M 60 170 L 220 220 L 350 170 L 350 270 L 220 320 L 60 270 Z" fill="url(#tinRed)" stroke="#262321" stroke-width="4" />
+
+  <!-- Left Side Face of Box -->
+  <path d="M 60 170 L 220 220 L 220 320 L 60 270 Z" fill="#992222" stroke="#262321" stroke-width="3" />
+
+  <!-- Matchbox Serrated Golden Border -->
+  <line x1="65" y1="265" x2="215" y2="312" stroke="url(#goldBorder)" stroke-width="3" stroke-dasharray="6,4" />
+  <line x1="225" y1="312" x2="345" y2="265" stroke="url(#goldBorder)" stroke-width="3" stroke-dasharray="6,4" />
+
+  <!-- Gold Emblem on Front of Box -->
+  <circle cx="140" cy="245" r="28" fill="#E6AC2A" stroke="#262321" stroke-width="2.5" />
+  <circle cx="140" cy="245" r="23" fill="#801818" />
+  <text x="126" y="252" font-family="'Playfair Display', serif" font-size="18" font-weight="900" fill="#E6AC2A">K</text>
+
+  <!-- Snacks Peeking out of Tin -->
+  <!-- Banana chip pouch top -->
+  <path d="M 120 170 L 150 120 L 190 135 L 170 185 Z" fill="#E6AC2A" stroke="#262321" stroke-width="2" />
+  <text x="145" y="145" font-family="'Poppins', sans-serif" font-size="9" font-weight="700" fill="#262321">CHIPS</text>
+
+  <!-- Murukku pouch top -->
+  <path d="M 180 175 L 210 125 L 250 135 L 230 190 Z" fill="#B52C23" stroke="#262321" stroke-width="2" />
+  <text x="200" y="150" font-family="'Poppins', sans-serif" font-size="9" font-weight="700" fill="#FFF">MURUKKU</text>
+
+  <!-- Mixture pouch top -->
+  <path d="M 240 180 L 270 130 L 310 145 L 290 195 Z" fill="#1E4D2B" stroke="#262321" stroke-width="2" />
+  <text x="260" y="155" font-family="'Poppins', sans-serif" font-size="9" font-weight="700" fill="#FFF">MIXTURE</text>
+</svg>

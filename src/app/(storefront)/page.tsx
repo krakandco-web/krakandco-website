@@ -1,75 +1,64 @@
-import Image from "next/image";
-import Link from "next/link";
+import type { Metadata } from "next";
+import { productService } from "@/services";
+import {
+  HeroSection,
+  TrustStrip,
+  CategorySection,
+  RegionalSection,
+  BestsellersSection,
+  GiftBoxesCombosSection,
+  ReviewsSection,
+  BrandStorySection,
+} from "@/components/home";
 
-export default function StorefrontHomePage() {
+export const metadata: Metadata = {
+  title: "KRAK & CO. — Authentic Indian Snacks: South to North",
+  description:
+    "Handcrafted authentic South and North Indian snacks, crispy banana chips in cold-pressed coconut oil, spicy mixtures, savouries, sweets and festive gift hampers.",
+  openGraph: {
+    title: "KRAK & CO. — Authentic Indian Snacks: South to North",
+    description:
+      "Traditional recipes, premium ingredients, and irresistible crunch in every bite. Pan-India delivery.",
+    images: [
+      {
+        url: "/assets/brand/identity/reference-artboard.jpg",
+        width: 1200,
+        height: 630,
+        alt: "KRAK & CO. Storefront",
+      },
+    ],
+  },
+};
+
+export default async function StorefrontHomePage() {
+  // Fetch real catalog products from commerce service abstraction
+  const products = await productService.getAllProducts();
+
   return (
-    <main className="flex flex-1 flex-col items-center justify-center p-6 text-center">
-      <div className="w-full max-w-2xl rounded-2xl border-2 border-surface-sand bg-surface-card p-8 shadow-retro sm:p-12">
-        <div className="mb-6 flex justify-center">
-          <Image
-            src="/assets/brand/logos/brand-logo-primary.svg"
-            alt="KRAK & CO."
-            width={260}
-            height={74}
-            priority
-          />
-        </div>
-        <h1 className="font-display text-3xl font-extrabold tracking-tight text-brand-maroon sm:text-4xl">
-          Authentic Indian Snacks: South to North
-        </h1>
-        <p className="mt-3 text-base text-text-secondary sm:text-lg">
-          Traditional recipes, premium ingredients, and irresistible crunch in every bite. Complete Next.js App Router routing architecture established.
-        </p>
+    <div className="flex w-full flex-col bg-surface-canvas overflow-x-hidden">
+      {/* 1. Hero Section (Split Retro Artboard, Display Typography & Dual CTAs) */}
+      <HeroSection />
 
-        <div className="mt-6 flex flex-wrap justify-center gap-2">
-          <Link
-            href="/shop"
-            className="rounded-lg bg-brand-maroon px-4 py-2 text-xs font-semibold text-text-inverse hover:bg-brand-maroon-dark"
-          >
-            Shop All Catalog →
-          </Link>
-          <Link
-            href="/collections/south-indian"
-            className="rounded-lg bg-brand-forest px-4 py-2 text-xs font-semibold text-text-inverse hover:bg-brand-forest-dark"
-          >
-            South Indian Classics →
-          </Link>
-          <Link
-            href="/collections/north-indian"
-            className="rounded-lg bg-brand-vermilion px-4 py-2 text-xs font-semibold text-text-inverse hover:bg-brand-maroon-dark"
-          >
-            North Indian Favourites →
-          </Link>
-        </div>
+      {/* 2. Trust and Service Strip (Authentic Recipes, Cold-Pressed, Fresh Packed, Pan-India, Secure) */}
+      <TrustStrip />
 
-        <div className="mt-8 grid grid-cols-2 gap-3 sm:grid-cols-4">
-          <div className="rounded-lg border border-surface-sand bg-surface-canvas p-3">
-            <span className="block text-xs font-semibold uppercase tracking-wider text-text-muted">
-              App Router
-            </span>
-            <span className="mt-1 font-semibold text-brand-forest">Next.js 14</span>
-          </div>
-          <div className="rounded-lg border border-surface-sand bg-surface-canvas p-3">
-            <span className="block text-xs font-semibold uppercase tracking-wider text-text-muted">
-              Routing
-            </span>
-            <span className="mt-1 font-semibold text-brand-maroon">33 Routes</span>
-          </div>
-          <div className="rounded-lg border border-surface-sand bg-surface-canvas p-3">
-            <span className="block text-xs font-semibold uppercase tracking-wider text-text-muted">
-              Data Layer
-            </span>
-            <span className="mt-1 font-semibold text-brand-mustard-dark">Typed Services</span>
-          </div>
-          <div className="rounded-lg border border-surface-sand bg-surface-canvas p-3">
-            <span className="block text-xs font-semibold uppercase tracking-wider text-text-muted">
-              Architecture
-            </span>
-            <span className="mt-1 font-semibold text-text-primary">Phase 07 Active</span>
-          </div>
-        </div>
-      </div>
-    </main>
+      {/* 3. Shop by Category (6 Circular / Matchbox Avatar Cards) */}
+      <CategorySection />
+
+      {/* 4. Regional Showcases (South Indian Classics & North Indian Favourites) */}
+      <RegionalSection />
+
+      {/* 5. Bestsellers / Featured Products Grid (5 Verified Product Cards with Quick Add) */}
+      <BestsellersSection products={products} />
+
+      {/* 6. Gift Boxes and Snack Combos (Curated Hampers Banner + 4 Value Bundles) */}
+      <GiftBoxesCombosSection />
+
+      {/* 7. Customer Reviews & Social Proof Wall (25,000+ Verified Buyers Testimonials) */}
+      <ReviewsSection />
+
+      {/* 8. Brand Story / About Us Teaser ("A Snack Brand That Brings India Together") */}
+      <BrandStorySection />
+    </div>
   );
 }
-

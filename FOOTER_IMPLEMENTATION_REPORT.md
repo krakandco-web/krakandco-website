@@ -27,3 +27,4 @@ Four high-contrast value pillars:
 - Legal links: About Krak & Co., Reviews, Privacy Policy, Terms & Conditions.
 - Genuine Payment methods: UPI (GPay/PhonePe), RuPay, Visa/Mastercard, Netbanking.
 - Dynamic copyright year: Generated via `new Date().getFullYear()`.
+

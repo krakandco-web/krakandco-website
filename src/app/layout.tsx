@@ -17,6 +17,7 @@ const poppins = Poppins({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL || "http://localhost:3000"),
   title: "KRAK & CO. — Authentic Indian Snacks: South to North",
   description:
     "Traditional recipes, premium ingredients, and irresistible crunch in every bite. Discover authentic Kerala banana chips, Madurai mixture, Bikaneri bhujia, and festive gift boxes.",

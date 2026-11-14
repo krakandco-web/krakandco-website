@@ -25,3 +25,4 @@ The shared storefront layout, header, drawer, and footer were verified across al
 - **Sticky Navbar:** Header maintains a sticky anchor (`sticky top-0 z-40 bg-surface-card/95 backdrop-blur-md`) without covering page content or causing page jitter.
 - **Announcement Bar:** Compact 36px height (`h-9`) with single-line truncated text on mobile; side navigation arrows on desktop.
 - **Footer Sticky Anchor:** Uses `min-h-screen flex flex-col` on the layout wrapper and `flex-1` on `<main>`, guaranteeing the footer never floats awkwardly in the middle of short screens.
+

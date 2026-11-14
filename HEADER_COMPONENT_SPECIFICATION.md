@@ -45,3 +45,4 @@ The KRAK & CO. desktop header balances brand personality with conversion-focused
 - Aspect ratio is preserved with Next.js `Image` using `fill` and `object-contain object-left`.
 - Fully accessible via `aria-label="KRAK & CO. Home"`.
 - Keyboard accessible with `focus-visible:ring-2 focus-visible:ring-brand-maroon`.
+
