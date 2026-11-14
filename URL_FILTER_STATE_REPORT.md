@@ -44,3 +44,4 @@ The KRAK & CO. storefront adopts the **URL-as-State pattern** for all product di
 4. **Multi-Value Serialization:**
    - Multi-select parameters are appended using standard array parameters:
      - `/shop?region=south-indian&region=north-indian`
+

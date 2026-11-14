@@ -39,3 +39,4 @@ To support these journeys, the Shop All discovery toolbar incorporates **6 expli
    - Sorting applies globally across the entire matching dataset, not just the currently visible 8 products on page 1.
 3. **Reset Behavior:**
    - Selecting "Featured Picks" (the default) removes the redundant `sort` parameter from the URL, keeping URLs clean and readable (`/shop` instead of `/shop?sort=featured`).
+

@@ -3,9 +3,17 @@
  */
 import { CulinaryRegion, SnackCategory } from "./product";
 
+export interface SubcategoryShortcut {
+  name: string;
+  slug: string;
+  queryParam: { key: string; value: string };
+  count?: number;
+}
+
 export interface Collection {
   id: string;
   slug: string;
+  aliases?: string[];
   name: string;
   description: string;
   shortTagline: string;
@@ -16,5 +24,11 @@ export interface Collection {
   featuredProductSlugs: string[];
   metaTitle: string;
   metaDescription: string;
+  heroBadge?: string;
+  subcategories?: SubcategoryShortcut[];
+  editorialTitle?: string;
+  editorialText?: string;
+  relatedCollectionSlugs?: string[];
 }
+
 

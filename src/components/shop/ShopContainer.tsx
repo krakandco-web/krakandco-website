@@ -17,9 +17,15 @@ import { Frown, Sparkles } from "lucide-react";
 
 export interface ShopContainerProps {
   filterResult: ProductFilterResult;
+  hideCategoryFilter?: boolean;
+  hideRegionFilter?: boolean;
 }
 
-export function ShopContainer({ filterResult }: ShopContainerProps) {
+export function ShopContainer({
+  filterResult,
+  hideCategoryFilter,
+  hideRegionFilter,
+}: ShopContainerProps) {
   const { showToast } = useToast();
   const [isMobileDrawerOpen, setIsMobileDrawerOpen] = useState(false);
   const [wishlistIds, setWishlistIds] = useState<string[]>([]);
@@ -92,6 +98,8 @@ export function ShopContainer({ filterResult }: ShopContainerProps) {
         onToggleFilter={toggleFilter}
         onSetFilter={setFilter}
         onClearAll={clearAllFilters}
+        hideCategoryFilter={hideCategoryFilter}
+        hideRegionFilter={hideRegionFilter}
       />
 
       {/* Quick Add Variant Selection Modal */}
@@ -119,6 +127,8 @@ export function ShopContainer({ filterResult }: ShopContainerProps) {
             onToggleFilter={toggleFilter}
             onSetFilter={setFilter}
             onClearAll={clearAllFilters}
+            hideCategoryFilter={hideCategoryFilter}
+            hideRegionFilter={hideRegionFilter}
           />
         </div>
 

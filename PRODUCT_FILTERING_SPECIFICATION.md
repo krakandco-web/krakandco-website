@@ -110,3 +110,4 @@ All filter dimensions are strictly tied to verified data attributes in the `Prod
    - Pagination metadata (currentPage, totalPages).
    - Real-time counts for all available filter dimensions.
 5. The component renders the server-rendered HTML payload.
+

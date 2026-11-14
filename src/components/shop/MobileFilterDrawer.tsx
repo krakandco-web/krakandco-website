@@ -29,6 +29,8 @@ export interface MobileFilterDrawerProps {
   onToggleFilter: (key: string, value: string) => void;
   onSetFilter: (key: string, value: string | number | boolean | null) => void;
   onClearAll: () => void;
+  hideCategoryFilter?: boolean;
+  hideRegionFilter?: boolean;
 }
 
 export function MobileFilterDrawer({
@@ -47,6 +49,8 @@ export function MobileFilterDrawer({
   onToggleFilter,
   onSetFilter,
   onClearAll,
+  hideCategoryFilter,
+  hideRegionFilter,
 }: MobileFilterDrawerProps) {
   const [openSections, setOpenSections] = useState<Record<string, boolean>>({
     region: true,
@@ -99,68 +103,72 @@ export function MobileFilterDrawer({
     >
       <div className="divide-y divide-surface-sand/80 px-1">
         {/* 1. REGION */}
-        <div className="py-4">
-          <button
-            type="button"
-            onClick={() => toggleSection("region")}
-            className="flex w-full items-center justify-between text-left font-sans text-xs font-bold uppercase tracking-wider text-brand-maroon"
-          >
-            <span>Culinary Region</span>
-            <ChevronDown
-              className={cn(
-                "h-4 w-4 transition-transform duration-200 text-text-muted",
-                openSections.region && "rotate-180 text-brand-maroon"
-              )}
-            />
-          </button>
-          {openSections.region && (
-            <div className="mt-3 space-y-3">
-              {availableFilters.regions.map((reg) => (
-                <div key={reg.slug} className="flex items-center justify-between">
-                  <Checkbox
-                    id={`m-filter-reg-${reg.slug}`}
-                    label={<span className="text-xs text-text-primary font-medium">{reg.label}</span>}
-                    checked={selectedRegions.includes(reg.slug)}
-                    onChange={() => onToggleFilter("region", reg.slug)}
-                  />
-                  <span className="text-xs text-text-muted">({reg.count})</span>
-                </div>
-              ))}
-            </div>
-          )}
-        </div>
+        {!hideRegionFilter && (
+          <div className="py-4">
+            <button
+              type="button"
+              onClick={() => toggleSection("region")}
+              className="flex w-full items-center justify-between text-left font-sans text-xs font-bold uppercase tracking-wider text-brand-maroon"
+            >
+              <span>Culinary Region</span>
+              <ChevronDown
+                className={cn(
+                  "h-4 w-4 transition-transform duration-200 text-text-muted",
+                  openSections.region && "rotate-180 text-brand-maroon"
+                )}
+              />
+            </button>
+            {openSections.region && (
+              <div className="mt-3 space-y-3">
+                {availableFilters.regions.map((reg) => (
+                  <div key={reg.slug} className="flex items-center justify-between">
+                    <Checkbox
+                      id={`m-filter-reg-${reg.slug}`}
+                      label={<span className="text-xs text-text-primary font-medium">{reg.label}</span>}
+                      checked={selectedRegions.includes(reg.slug)}
+                      onChange={() => onToggleFilter("region", reg.slug)}
+                    />
+                    <span className="text-xs text-text-muted">({reg.count})</span>
+                  </div>
+                ))}
+              </div>
+            )}
+          </div>
+        )}
 
         {/* 2. CATEGORY */}
-        <div className="py-4">
-          <button
-            type="button"
-            onClick={() => toggleSection("category")}
-            className="flex w-full items-center justify-between text-left font-sans text-xs font-bold uppercase tracking-wider text-brand-maroon"
-          >
-            <span>Category</span>
-            <ChevronDown
-              className={cn(
-                "h-4 w-4 transition-transform duration-200 text-text-muted",
-                openSections.category && "rotate-180 text-brand-maroon"
-              )}
-            />
-          </button>
-          {openSections.category && (
-            <div className="mt-3 space-y-3">
-              {availableFilters.categories.map((cat) => (
-                <div key={cat.slug} className="flex items-center justify-between">
-                  <Checkbox
-                    id={`m-filter-cat-${cat.slug}`}
-                    label={<span className="text-xs text-text-primary font-medium">{cat.label}</span>}
-                    checked={selectedCategories.includes(cat.slug)}
-                    onChange={() => onToggleFilter("category", cat.slug)}
-                  />
-                  <span className="text-xs text-text-muted">({cat.count})</span>
-                </div>
-              ))}
-            </div>
-          )}
-        </div>
+        {!hideCategoryFilter && (
+          <div className="py-4">
+            <button
+              type="button"
+              onClick={() => toggleSection("category")}
+              className="flex w-full items-center justify-between text-left font-sans text-xs font-bold uppercase tracking-wider text-brand-maroon"
+            >
+              <span>Category</span>
+              <ChevronDown
+                className={cn(
+                  "h-4 w-4 transition-transform duration-200 text-text-muted",
+                  openSections.category && "rotate-180 text-brand-maroon"
+                )}
+              />
+            </button>
+            {openSections.category && (
+              <div className="mt-3 space-y-3">
+                {availableFilters.categories.map((cat) => (
+                  <div key={cat.slug} className="flex items-center justify-between">
+                    <Checkbox
+                      id={`m-filter-cat-${cat.slug}`}
+                      label={<span className="text-xs text-text-primary font-medium">{cat.label}</span>}
+                      checked={selectedCategories.includes(cat.slug)}
+                      onChange={() => onToggleFilter("category", cat.slug)}
+                    />
+                    <span className="text-xs text-text-muted">({cat.count})</span>
+                  </div>
+                ))}
+              </div>
+            )}
+          </div>
+        )}
 
         {/* 3. PRICE RANGE */}
         <div className="py-4">
@@ -283,3 +291,4 @@ export function MobileFilterDrawer({
     </Drawer>
   );
 }
+

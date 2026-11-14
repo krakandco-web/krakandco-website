@@ -35,3 +35,4 @@ The Shop All page (`/shop`) was verified across 8 target viewports:
 - **Mobile Filter Drawer:** Replaces sidebar with a touch-friendly slide-in sheet triggered by the "Filters" toolbar button.
 - **2-Column Product Grid:** Utilizes a space-efficient 2-column layout (`grid-cols-2 gap-4`). Product cards maintain generous 14px typography, high-contrast pricing, visible bestseller badges, and full-width "ADD TO CART" buttons.
 - **Category Shortcuts:** Horizontally scrollable pill strip (`overflow-x-auto scrollbar-none`) with momentum touch scrolling.
+

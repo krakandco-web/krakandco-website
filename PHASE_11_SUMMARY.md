@@ -60,3 +60,4 @@ The page unites authentic Indian snack heritage with best-in-class direct-to-con
 - [x] Quick Add variant modal prevents arbitrary pack size assumptions.
 - [x] Production build passes with exit code 0.
 - [x] Stopped after completing Phase 11. Ready for Phase 12 upon approval.
+

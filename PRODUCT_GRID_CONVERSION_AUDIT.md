@@ -48,3 +48,4 @@ When customer filters return 0 matching items (e.g. mutually exclusive region an
 - **Avoid Dead Ends:** The page never displays a blank white container.
 - **Empathetic Brand Microcopy:** Displays "No snacks match your filters" with clear context.
 - **Direct Recovery Action:** Prominent "Clear All Filters" button immediately resets the catalog to all 14 snacks.
+

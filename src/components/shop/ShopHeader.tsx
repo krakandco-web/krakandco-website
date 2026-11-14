@@ -30,3 +30,4 @@ export function ShopHeader() {
     </div>
   );
 }
+

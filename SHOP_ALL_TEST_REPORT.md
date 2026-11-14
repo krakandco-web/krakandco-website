@@ -30,3 +30,4 @@
 2. **Mobile Shop View (375px):** `/tmp/shop_mobile.png` (Verified: Compact header, 2-Col Grid, Filters button with badge, touch shortcuts).
 3. **Faceted Filter State:** `/tmp/shop_filtered.png` (Verified: Multi-filter combination, active chips, matching count).
 4. **Empty State:** `/tmp/shop_empty_state.png` (Verified: Frown icon, recovery guidance, Clear All Filters button).
+

@@ -15,7 +15,9 @@ class CollectionService implements ICollectionService {
   }
 
   async getCollectionBySlug(slug: string): Promise<Collection | null> {
-    const col = MOCK_COLLECTIONS.find((c) => c.slug === slug);
+    const col = MOCK_COLLECTIONS.find(
+      (c) => c.slug === slug || c.aliases?.includes(slug)
+    );
     return col || null;
   }
 }

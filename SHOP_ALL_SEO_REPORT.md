@@ -38,3 +38,4 @@ Faceted search pages risk search engine crawl bloat if every permutation of filt
 - `<h3>`: "Looking for a Specific Taste Journey?" (Discovery cross-sell)
 - `<h4>`: Product Card Titles ("Kerala Banana Chips", "Madurai Special Mixture")
 - `<nav aria-label="Breadcrumb">`: Proper schema structure for rich snippet breadcrumb trails in SERPs.
+

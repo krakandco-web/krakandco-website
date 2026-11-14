@@ -174,109 +174,136 @@ class ProductService implements IProductService {
         break;
     }
 
-    // Available filters counts computed from MOCK_PRODUCTS
-    const allPrices = MOCK_PRODUCTS.map(
-      (p) => (p.variants.find((v) => v.isDefault) || p.variants[0])?.price || 0
-    );
-    const minCatalogPrice = Math.min(...allPrices);
-    const maxCatalogPrice = Math.max(...allPrices);
+    // Available filters counts computed from baseProducts (scoped by category or region if specified)
+    let baseProducts = MOCK_PRODUCTS;
+    if (selectedCategories.length > 0) {
+      baseProducts = baseProducts.filter(
+        (p) =>
+          selectedCategories.includes(p.primaryCategory) ||
+          p.secondaryCategories?.some((cat) => selectedCategories.includes(cat))
+      );
+    }
+    if (selectedRegions.length > 0) {
+      baseProducts = baseProducts.filter((p) => selectedRegions.includes(p.region));
+    }
+
+    const allPrices = (selectedCategories.length > 0
+      ? MOCK_PRODUCTS.filter(
+          (p) =>
+            selectedCategories.includes(p.primaryCategory) ||
+            p.secondaryCategories?.some((cat) => selectedCategories.includes(cat))
+        )
+      : MOCK_PRODUCTS
+    ).map((p) => (p.variants.find((v) => v.isDefault) || p.variants[0])?.price || 0);
+
+    const minCatalogPrice = allPrices.length > 0 ? Math.min(...allPrices) : 0;
+    const maxCatalogPrice = allPrices.length > 0 ? Math.max(...allPrices) : 1000;
+
+    // Regions scoped by category if category is selected
+    const regionBaseProducts = selectedCategories.length > 0
+      ? MOCK_PRODUCTS.filter(
+          (p) =>
+            selectedCategories.includes(p.primaryCategory) ||
+            p.secondaryCategories?.some((cat) => selectedCategories.includes(cat))
+        )
+      : MOCK_PRODUCTS;
 
     const regions: FilterOptionCount[] = [
       {
         slug: "south-indian",
         label: "South Indian",
-        count: MOCK_PRODUCTS.filter((p) => p.region === "south-indian").length,
+        count: regionBaseProducts.filter((p) => p.region === "south-indian").length,
       },
       {
         slug: "north-indian",
         label: "North Indian",
-        count: MOCK_PRODUCTS.filter((p) => p.region === "north-indian").length,
+        count: regionBaseProducts.filter((p) => p.region === "north-indian").length,
       },
       {
         slug: "pan-indian",
         label: "Pan-Indian / Gift Boxes",
-        count: MOCK_PRODUCTS.filter((p) => p.region === "pan-indian").length,
+        count: regionBaseProducts.filter((p) => p.region === "pan-indian").length,
       },
-    ];
+    ].filter((r) => r.count > 0);
 
     const categories: FilterOptionCount[] = [
       {
         slug: "chips-crisps",
         label: "Chips & Crisps",
-        count: MOCK_PRODUCTS.filter((p) => p.primaryCategory === "chips-crisps").length,
+        count: baseProducts.filter((p) => p.primaryCategory === "chips-crisps").length,
       },
       {
         slug: "mixtures",
         label: "Mixtures & Namkeen",
-        count: MOCK_PRODUCTS.filter((p) => p.primaryCategory === "mixtures").length,
+        count: baseProducts.filter((p) => p.primaryCategory === "mixtures").length,
       },
       {
         slug: "savouries",
         label: "Murukku & Savouries",
-        count: MOCK_PRODUCTS.filter((p) => p.primaryCategory === "savouries").length,
+        count: baseProducts.filter((p) => p.primaryCategory === "savouries").length,
       },
       {
         slug: "sweets-mithai",
         label: "Sweets & Mithai",
-        count: MOCK_PRODUCTS.filter((p) => p.primaryCategory === "sweets-mithai").length,
+        count: baseProducts.filter((p) => p.primaryCategory === "sweets-mithai").length,
       },
       {
         slug: "pickles-sides",
         label: "Pickles & Sides",
-        count: MOCK_PRODUCTS.filter((p) => p.primaryCategory === "pickles-sides").length,
+        count: baseProducts.filter((p) => p.primaryCategory === "pickles-sides").length,
       },
       {
         slug: "gift-boxes",
         label: "Gift Boxes",
-        count: MOCK_PRODUCTS.filter((p) => p.primaryCategory === "gift-boxes").length,
+        count: baseProducts.filter((p) => p.primaryCategory === "gift-boxes").length,
       },
       {
         slug: "combos",
         label: "Combos & Bundles",
-        count: MOCK_PRODUCTS.filter((p) => p.primaryCategory === "combos").length,
+        count: baseProducts.filter((p) => p.primaryCategory === "combos").length,
       },
-    ];
+    ].filter((cat) => cat.count > 0); // Only return categories with available products in scope!
 
     const spiceLevels: FilterOptionCount[] = [
       {
         slug: "Mild",
         label: "Mild Spice",
-        count: MOCK_PRODUCTS.filter((p) => p.spiceLevel === "Mild").length,
+        count: baseProducts.filter((p) => p.spiceLevel === "Mild").length,
       },
       {
         slug: "Medium",
         label: "Medium Spice",
-        count: MOCK_PRODUCTS.filter((p) => p.spiceLevel === "Medium").length,
+        count: baseProducts.filter((p) => p.spiceLevel === "Medium").length,
       },
       {
         slug: "Spicy",
         label: "Spicy / Fiery",
-        count: MOCK_PRODUCTS.filter((p) => p.spiceLevel === "Spicy").length,
+        count: baseProducts.filter((p) => p.spiceLevel === "Spicy").length,
       },
-    ];
+    ].filter((sp) => sp.count > 0);
 
     const packSizes: FilterOptionCount[] = [
       {
         slug: "100g",
         label: "100g Snack Pack",
-        count: MOCK_PRODUCTS.filter((p) => p.variants.some((v) => v.packSize.includes("100g"))).length,
+        count: baseProducts.filter((p) => p.variants.some((v) => v.packSize.includes("100g"))).length,
       },
       {
         slug: "200g",
         label: "200g Standard",
-        count: MOCK_PRODUCTS.filter((p) => p.variants.some((v) => v.packSize.includes("200g"))).length,
+        count: baseProducts.filter((p) => p.variants.some((v) => v.packSize.includes("200g"))).length,
       },
       {
         slug: "250g",
         label: "250g Classic",
-        count: MOCK_PRODUCTS.filter((p) => p.variants.some((v) => v.packSize.includes("250g"))).length,
+        count: baseProducts.filter((p) => p.variants.some((v) => v.packSize.includes("250g"))).length,
       },
       {
         slug: "500g",
         label: "500g Value Pack",
-        count: MOCK_PRODUCTS.filter((p) => p.variants.some((v) => v.packSize.includes("500g"))).length,
+        count: baseProducts.filter((p) => p.variants.some((v) => v.packSize.includes("500g"))).length,
       },
-    ];
+    ].filter((size) => size.count > 0);
 
     const totalCount = filtered.length;
     const page = Math.max(1, params.page || 1);
