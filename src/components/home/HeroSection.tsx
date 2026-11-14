@@ -33,7 +33,10 @@ export function HeroSection() {
         <div className="grid grid-cols-1 items-center gap-8 lg:grid-cols-12 lg:gap-6">
           {/* LEFT: Retro Indian Snacking Woman Illustration (Desktop: 3 cols, Mobile: centered small) */}
           <div className="order-2 lg:order-1 lg:col-span-3 flex justify-center">
-            <div className="relative h-64 w-64 sm:h-72 sm:w-72 lg:h-96 lg:w-96 drop-shadow-2xl">
+            <div
+              className="relative h-64 w-64 sm:h-72 sm:w-72 lg:h-96 lg:w-96 drop-shadow-2xl"
+              style={{ position: "relative", width: "100%", maxWidth: "384px", height: "384px" }}
+            >
               <Image
                 src="/assets/illustrations/hero/retro-woman-snacking.svg"
                 alt="Vintage Indian Pop Art Woman Enjoying Authentic Snacks"
@@ -84,7 +87,10 @@ export function HeroSection() {
 
           {/* RIGHT: Golden Brass Urli & Snacks Platter (Desktop: 3 cols) */}
           <div className="order-3 lg:col-span-3 flex justify-center">
-            <div className="relative h-64 w-64 sm:h-72 sm:w-72 lg:h-96 lg:w-96 drop-shadow-2xl">
+            <div
+              className="relative h-64 w-64 sm:h-72 sm:w-72 lg:h-96 lg:w-96 drop-shadow-2xl"
+              style={{ position: "relative", width: "100%", maxWidth: "384px", height: "384px" }}
+            >
               <Image
                 src="/assets/illustrations/hero/hero-snack-platter.svg"
                 alt="Golden Platter of Fresh Banana Chips, Murukku, and Regional Savouries"
@@ -109,3 +115,4 @@ export function HeroSection() {
     </section>
   );
 }
+

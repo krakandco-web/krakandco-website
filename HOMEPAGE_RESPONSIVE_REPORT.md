@@ -31,3 +31,4 @@ The completed homepage was inspected across all target device resolutions:
    - Grid columns break cleanly into 2 columns on mobile instead of forcing awkward horizontal scroll bars.
 3. **No Hidden Content on Mobile:**
    - Critical conversion CTAs, pricing, ratings, and dietary badges remain fully visible on mobile without requiring mouse hover states.
+

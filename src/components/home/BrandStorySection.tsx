@@ -21,7 +21,7 @@ export function BrandStorySection() {
           {/* Right Column: Story Copy */}
           <div className="flex-1 text-center md:text-left space-y-4">
             <div className="inline-flex items-center gap-1.5 text-xs font-bold uppercase tracking-wider text-brand-maroon">
-              <Heart className="h-3.5 w-3.5 fill-brand-terracotta text-brand-terracotta" />
+              <Heart className="h-3.5 w-3.5 fill-brand-vermilion text-brand-vermilion" />
               <span>About KRAK &amp; CO.</span>
             </div>
 
@@ -51,3 +51,4 @@ export function BrandStorySection() {
     </section>
   );
 }
+

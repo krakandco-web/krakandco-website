@@ -37,3 +37,4 @@
 | Customer doesn't know spice level / oil type | Product cards and trust strip highlight "Cold-Pressed Coconut Oil & Pure Ghee" | **RESOLVED** |
 | Customer forced into multi-step PDP journey | "Quick Add" button directly on product cards adds default pack size in 1 click | **RESOLVED** |
 | Customer browsing on slow 4G mobile | Lean 109 kB first load JS; Next.js pre-rendered HTML streams instantly | **RESOLVED** |
+

@@ -28,8 +28,8 @@ export function TrustStrip() {
       icon: Truck,
       title: "Pan India Delivery",
       subtitle: "To your doorstep",
-      iconColor: "text-brand-terracotta",
-      bgColor: "bg-brand-terracotta/10",
+      iconColor: "text-brand-vermilion",
+      bgColor: "bg-brand-vermilion/10",
     },
     {
       icon: CreditCard,
@@ -75,3 +75,4 @@ export function TrustStrip() {
     </section>
   );
 }
+

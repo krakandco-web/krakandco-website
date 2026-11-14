@@ -25,3 +25,4 @@
 | **Brand Story CTA** | "Our Story →" | Navigates to `/about` | Opens About page | **PASS** |
 | **Announcement Bar** | Prev/Next arrows | Cycles through announcements | Text transitions smoothly; pauses on hover | **PASS** |
 | **Newsletter Subscribe**| Submit email in footer | Validates email; displays confirmation | Shows "Welcome to the Crunch Club! Check your inbox" | **PASS** |
+

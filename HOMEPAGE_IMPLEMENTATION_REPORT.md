@@ -96,3 +96,4 @@ graph TD
 - "About KRAK & CO. — A Snack Brand That Brings India Together."
 - Concise narrative on bridging regional snack cultures with pure cold-pressed oils.
 - "Our Story →" button navigating to `/about`.
+

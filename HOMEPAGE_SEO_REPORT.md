@@ -60,3 +60,4 @@ Strict single-H1 heading tree followed:
   - `alt="Madurai Special Mixture"`
   - `alt="KRAK & CO. Keepsake Snack Tin"`
 - Critical hero images declare `priority={true}` to prevent Largest Contentful Paint (LCP) delays.
+

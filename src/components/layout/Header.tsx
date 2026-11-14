@@ -62,7 +62,10 @@ export function Header({
               className="flex items-center focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-maroon rounded-lg"
               aria-label="KRAK & CO. Home"
             >
-              <div className="relative h-12 w-44 sm:h-14 sm:w-48">
+              <div
+                className="relative h-12 w-44 sm:h-14 sm:w-48"
+                style={{ position: "relative", width: "176px", height: "48px", maxWidth: "100%" }}
+              >
                 <Image
                   src="/assets/brand/logos/brand-logo-primary.svg"
                   alt="KRAK & CO. — Authentic Indian Snacks"

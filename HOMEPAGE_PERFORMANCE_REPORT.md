@@ -38,3 +38,4 @@ Route (app)                              Size     First Load JS
 ### 2.3 First Input Delay (FID) / Interaction to Next Paint (INP)
 - React Server Component streaming leaves the main browser thread idle and receptive to immediate touch and click events.
 - Client state is pushed to localized leaves (`QuickAddButton`, `WishlistToggle`, `MegaMenu`), ensuring clicking "Add to Cart" does not trigger heavy parent re-renders.
+

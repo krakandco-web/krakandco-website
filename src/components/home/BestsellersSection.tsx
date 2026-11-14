@@ -85,3 +85,4 @@ export function BestsellersSection({ products }: BestsellersSectionProps) {
     </section>
   );
 }
+

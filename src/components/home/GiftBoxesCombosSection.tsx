@@ -86,7 +86,10 @@ export function GiftBoxesCombosSection() {
           <div className="relative z-10 grid grid-cols-1 items-center gap-8 lg:grid-cols-12">
             {/* Left: Open Keepsake Red Gift Tin */}
             <div className="hidden lg:flex lg:col-span-3 justify-center">
-              <div className="relative h-56 w-56 drop-shadow-xl">
+              <div
+                className="relative h-56 w-56 drop-shadow-xl"
+                style={{ position: "relative", width: "224px", height: "224px" }}
+              >
                 <Image
                   src="/assets/illustrations/hero/retro-gift-tin.svg"
                   alt="KRAK & CO. Keepsake Snack Tin"
@@ -141,7 +144,10 @@ export function GiftBoxesCombosSection() {
 
             {/* Right: Retro Man Snacking Illustration */}
             <div className="lg:col-span-3 flex justify-center">
-              <div className="relative h-48 w-48 sm:h-56 sm:w-56 drop-shadow-xl">
+              <div
+                className="relative h-48 w-48 sm:h-56 sm:w-56 drop-shadow-xl"
+                style={{ position: "relative", width: "224px", height: "224px" }}
+              >
                 <Image
                   src="/assets/illustrations/hero/retro-man-snacking.svg"
                   alt="Retro Indian Man Enjoying Krak & Co Snacks"
@@ -212,3 +218,4 @@ export function GiftBoxesCombosSection() {
     </section>
   );
 }
+
