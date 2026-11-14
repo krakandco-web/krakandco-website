@@ -14,6 +14,7 @@ import { Heart } from "lucide-react";
 export interface ProductCardProps {
   product: Product;
   onAddToCart?: (product: Product, variant: ProductVariant, quantity: number) => void;
+  onSelectVariants?: (product: Product) => void;
   onToggleWishlist?: (product: Product) => void;
   isWishlisted?: boolean;
   className?: string;
@@ -22,6 +23,7 @@ export interface ProductCardProps {
 export function ProductCard({
   product,
   onAddToCart,
+  onSelectVariants,
   onToggleWishlist,
   isWishlisted = false,
   className,
@@ -38,6 +40,11 @@ export function ProductCard({
     e.preventDefault();
     e.stopPropagation();
     if (isOutOfStock) return;
+
+    if (product.variants.length > 1 && onSelectVariants) {
+      onSelectVariants(product);
+      return;
+    }
 
     setIsAdding(true);
     try {
