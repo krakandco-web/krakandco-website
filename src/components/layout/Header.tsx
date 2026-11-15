@@ -21,16 +21,18 @@ import { useCart } from "@/context/CartContext";
 export interface HeaderProps {
   cartItemCount?: number;
   wishlistItemCount?: number;
+  defaultMegaMenuOpen?: boolean;
 }
 
 export function Header({
   cartItemCount,
   wishlistItemCount = 0,
+  defaultMegaMenuOpen = false,
 }: HeaderProps) {
   const { cart, openCart } = useCart();
   const displayCartCount = typeof cartItemCount === "number" ? cartItemCount : cart.itemCount;
   const pathname = usePathname();
-  const [isMegaMenuOpen, setIsMegaMenuOpen] = useState(false);
+  const [isMegaMenuOpen, setIsMegaMenuOpen] = useState(defaultMegaMenuOpen);
   const [isMobileDrawerOpen, setIsMobileDrawerOpen] = useState(false);
   const shopTriggerRef = useRef<HTMLButtonElement>(null);
 
@@ -45,7 +47,10 @@ export function Header({
       <AnnouncementBar />
 
       {/* 2. Main Sticky Navigation Header */}
-      <div className="sticky top-0 z-40 w-full border-b border-surface-sand bg-surface-card/95 backdrop-blur-md transition-shadow">
+      <div
+        style={{ backgroundColor: "#FFFDF8" }}
+        className="sticky top-0 z-40 w-full border-b border-surface-sand bg-[#FFFDF8] shadow-xs transition-shadow"
+      >
         <div className="mx-auto flex h-20 max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8">
           {/* LEFT: Mobile Menu Button (Mobile) / Brand Logo (Desktop) */}
           <div className="flex items-center gap-4">
