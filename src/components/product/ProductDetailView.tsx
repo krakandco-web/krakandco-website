@@ -29,7 +29,7 @@ export interface ProductDetailViewProps {
 }
 
 export function ProductDetailView({ product, relatedProducts = [] }: ProductDetailViewProps) {
-  const { addItem } = useCart();
+  const { addItem, openCart } = useCart();
   const { showToast } = useToast();
 
   // Find default variant or first variant
@@ -61,6 +61,7 @@ export function ProductDetailView({ product, relatedProducts = [] }: ProductDeta
 
   const handleAddToCart = () => {
     addItem(product, selectedVariant, quantity);
+    openCart();
     showToast({
       type: "success",
       title: "Added to Cart!",
@@ -423,3 +424,4 @@ export function ProductDetailView({ product, relatedProducts = [] }: ProductDeta
     </div>
   );
 }
+

@@ -5,6 +5,7 @@ import Link from "next/link";
 import { Product, ProductVariant } from "@/types";
 import { ProductCard } from "@/components/product/ProductCard";
 import { useToast } from "@/components/feedback/Toast";
+import { useCart } from "@/context/CartContext";
 import { ArrowRight } from "lucide-react";
 
 export interface BestsellersSectionProps {
@@ -13,12 +14,15 @@ export interface BestsellersSectionProps {
 
 export function BestsellersSection({ products }: BestsellersSectionProps) {
   const { showToast } = useToast();
+  const { addItem, openCart } = useCart();
   const [wishlistIds, setWishlistIds] = useState<string[]>([]);
 
   // Take top 5 products matching reference artboard
   const featuredProducts = products.slice(0, 5);
 
   const handleAddToCart = (product: Product, variant: ProductVariant, quantity: number) => {
+    addItem(product, variant, quantity);
+    openCart();
     showToast({
       type: "success",
       title: "Added to Cart!",

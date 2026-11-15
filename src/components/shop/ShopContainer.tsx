@@ -28,7 +28,7 @@ export function ShopContainer({
   hideRegionFilter,
 }: ShopContainerProps) {
   const { showToast } = useToast();
-  const { addItem } = useCart();
+  const { addItem, openCart } = useCart();
   const [isMobileDrawerOpen, setIsMobileDrawerOpen] = useState(false);
   const [wishlistIds, setWishlistIds] = useState<string[]>([]);
   const [selectedProductForModal, setSelectedProductForModal] = useState<Product | null>(null);
@@ -54,6 +54,7 @@ export function ShopContainer({
 
   const handleAddToCart = (product: Product, variant: ProductVariant, quantity: number) => {
     addItem(product, variant, quantity);
+    openCart();
     showToast({
       type: "success",
       title: "Added to Cart!",

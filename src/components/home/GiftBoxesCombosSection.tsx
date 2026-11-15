@@ -6,6 +6,7 @@ import Image from "next/image";
 import { formatPrice } from "@/lib/utils";
 import { Button } from "@/components/ui/Button";
 import { useToast } from "@/components/feedback/Toast";
+import { useCart } from "@/context/CartContext";
 import { ArrowRight, Sparkles, Gift } from "lucide-react";
 
 interface ComboItem {
@@ -20,31 +21,31 @@ interface ComboItem {
 
 const COMBOS: ComboItem[] = [
   {
-    id: "combo-1",
+    id: "prod_classic_south_combo",
     name: "Classic South Combo",
-    slug: "gift-boxes",
-    price: 699,
-    compareAtPrice: 799,
+    slug: "classic-south-combo",
+    price: 399,
+    compareAtPrice: 499,
     tag: "Bestseller",
-    imageUrl: "/assets/placeholders/placeholder-gift-hamper.svg",
+    imageUrl: "/assets/products/festive-gift-box.svg",
   },
   {
-    id: "combo-2",
+    id: "prod_north_treat_box",
     name: "North Indian Treat Box",
-    slug: "gift-boxes",
-    price: 749,
-    compareAtPrice: 849,
+    slug: "north-indian-treat-box",
+    price: 599,
+    compareAtPrice: 699,
     tag: "Festive Pick",
-    imageUrl: "/assets/placeholders/placeholder-gift-hamper.svg",
+    imageUrl: "/assets/products/festive-gift-box.svg",
   },
   {
-    id: "combo-3",
-    name: "Festive Gift Hamper",
+    id: "prod_festive_hamper",
+    name: "Festive Grand Gift Hamper",
     slug: "festive-gift-hamper",
     price: 1199,
     compareAtPrice: 1499,
     tag: "Luxury Tin",
-    imageUrl: "/assets/placeholders/placeholder-gift-hamper.svg",
+    imageUrl: "/assets/products/festive-gift-box.svg",
   },
   {
     id: "combo-4",
@@ -53,14 +54,65 @@ const COMBOS: ComboItem[] = [
     price: 899,
     compareAtPrice: 1049,
     tag: "Save 15%",
-    imageUrl: "/assets/placeholders/placeholder-gift-hamper.svg",
+    imageUrl: "/assets/products/festive-gift-box.svg",
   },
 ];
 
 export function GiftBoxesCombosSection() {
   const { showToast } = useToast();
+  const { addItem, openCart } = useCart();
 
   const handleAddBundle = (combo: ComboItem) => {
+    addItem(
+      {
+        id: combo.id,
+        slug: combo.slug,
+        name: combo.name,
+        shortDescription: "Curated assortment of authentic regional savouries and sweets.",
+        fullDescription: "",
+        primaryCategory: "gift-boxes",
+        region: "pan-indian",
+        tags: ["combo", "gift"],
+        isBestseller: true,
+        isNew: false,
+        isFeatured: true,
+        cookingMedium: "Pure Desi Ghee",
+        spiceLevel: "Medium",
+        dietaryType: "100% Vegetarian",
+        ingredients: ["Assorted Traditional Snacks"],
+        allergens: ["May contain nuts"],
+        shelfLife: "60 Days",
+        storageInstructions: "Store sealed packs in dry conditions.",
+        thumbnailUrl: combo.imageUrl,
+        galleryUrls: [combo.imageUrl],
+        averageRating: 4.9,
+        reviewCount: 450,
+        variants: [
+          {
+            id: `${combo.id}-bundle`,
+            sku: `KRAK-${combo.id}`,
+            packSize: "Festive Box",
+            weightGrams: 750,
+            price: combo.price,
+            compareAtPrice: combo.compareAtPrice,
+            inventoryCount: 50,
+            isDefault: true,
+          },
+        ],
+      },
+      {
+        id: `${combo.id}-bundle`,
+        sku: `KRAK-${combo.id}`,
+        packSize: "Festive Box",
+        weightGrams: 750,
+        price: combo.price,
+        compareAtPrice: combo.compareAtPrice,
+        inventoryCount: 50,
+        isDefault: true,
+      },
+      1
+    );
+    openCart();
     showToast({
       type: "success",
       title: "Bundle Added to Cart!",

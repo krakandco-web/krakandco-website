@@ -10,6 +10,7 @@ import { ProductBadge } from "./ProductBadge";
 import { Button } from "@/components/ui/Button";
 import { IconButton } from "@/components/ui/IconButton";
 import { Heart } from "lucide-react";
+import { useCart } from "@/context/CartContext";
 
 export interface ProductCardProps {
   product: Product;
@@ -28,6 +29,7 @@ export function ProductCard({
   isWishlisted = false,
   className,
 }: ProductCardProps) {
+  const { addItem, openCart } = useCart();
   // Default to first variant or default marked variant
   const defaultVariant =
     product.variants.find((v) => v.isDefault) || product.variants[0];
@@ -48,7 +50,12 @@ export function ProductCard({
 
     setIsAdding(true);
     try {
-      await onAddToCart?.(product, selectedVariant, 1);
+      if (onAddToCart) {
+        await onAddToCart(product, selectedVariant, 1);
+      } else {
+        addItem(product, selectedVariant, 1);
+        openCart();
+      }
     } finally {
       setIsAdding(false);
     }
