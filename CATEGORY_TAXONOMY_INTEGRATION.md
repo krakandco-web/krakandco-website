@@ -82,3 +82,4 @@ Where products logically cross multiple categories (e.g., Combos or Gift Hampers
 * The item specifies a single `primaryCategory` (e.g. `combos` or `gift-boxes`).
 * Optional `secondaryCategories?: SnackCategory[]` allow items to appear in related category searches when explicitly configured.
 * Product records are never cloned or duplicated in database queries or mock fixtures; uniqueness is maintained by product `id` and `slug`.
+

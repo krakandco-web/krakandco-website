@@ -41,3 +41,4 @@
 * **Shared First Load JS:** `87.3 kB`
 * **Time to First Byte (TTFB):** `< 45ms` on local dev runtime
 * **Image Optimization:** SVG and Next.js Image components loaded with `priority` for above-the-fold heroes.
+

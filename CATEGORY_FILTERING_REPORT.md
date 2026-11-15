@@ -86,3 +86,4 @@ All filter selections, sorting orders, and pagination states synchronize bidirec
 | **TC-06** | `/collections/sweets-mithai?spice=Spicy` | 0 products | EmptyState displayed cleanly | PASS |
 | **TC-07** | `/collections/pickles-sides` | 2 products | 2 products (Avakaya Mango, Banarasi Chilli) | PASS |
 | **TC-08** | `/collections/murukku-savouries?sort=price-asc` | 3 products | Sorted: Ragi (₹119) → Butter (₹129) → Mathri (₹139) | PASS |
+

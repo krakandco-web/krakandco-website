@@ -42,3 +42,4 @@ All category pages were evaluated across the 8 standard design system breakpoint
 | **2.4.4 Link Purpose** | Meaningful link labels | Compliant | Detailed labels on all category and product links. |
 | **2.5.5 Target Size** | Minimum 44x44px interactive targets | Compliant | Filter checkboxes, quick add buttons, and subnav chips exceed 44px touch targets. |
 | **4.1.2 Name, Role, Value** | Accessible state for toggles | Compliant | `aria-expanded` on filters, `aria-pressed` on subnav chips, `aria-haspopup="dialog"`. |
+

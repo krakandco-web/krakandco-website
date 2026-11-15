@@ -77,3 +77,4 @@ Each collection page provides semantic HTML markup structured for:
   - `<h1>`: Category Title (e.g. `CHIPS & CRISPS`)
   - `<h2>`: Subcategory Exploration, Product Filters, Category Culinary Heritage, Related Categories
   - `<h3>`: Product Card Titles, Value Pillars, Related Category Names
+

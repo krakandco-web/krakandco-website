@@ -105,3 +105,4 @@ The following headless visual captures were generated from the active server at 
 10. `/tmp/cat_pickles_sides_mobile.png` (Mobile 375px)
 11. `/tmp/cat_chips_filtered_south.png` (Regional filtering on Chips)
 12. `/tmp/cat_mixtures_filtered_north.png` (Regional filtering on Mixtures)
+

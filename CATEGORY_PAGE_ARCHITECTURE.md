@@ -179,3 +179,4 @@ export interface Collection {
 2. **Invalid Filter Params**: Cleanly ignored by `productService.filterProducts()`; falls back to default catalogue bounds.
 3. **Empty Filter Results**: When user filters too strictly (e.g. ₹600+ on chips), `ShopContainer` renders an elegant `EmptyState` with a "Clear All Filters" button.
 4. **URL Search Parameter Persistence**: Uses native Next.js `useSearchParams()` and `router.push()` with `{ scroll: false }` to maintain smooth scrolling positions during filter adjustments.
+

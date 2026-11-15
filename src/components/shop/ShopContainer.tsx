@@ -14,6 +14,7 @@ import { useToast } from "@/components/feedback/Toast";
 import { formatPrice } from "@/lib/utils";
 import { EmptyState } from "@/components/feedback/EmptyState";
 import { Frown, Sparkles } from "lucide-react";
+import { useCart } from "@/context/CartContext";
 
 export interface ShopContainerProps {
   filterResult: ProductFilterResult;
@@ -27,6 +28,7 @@ export function ShopContainer({
   hideRegionFilter,
 }: ShopContainerProps) {
   const { showToast } = useToast();
+  const { addItem } = useCart();
   const [isMobileDrawerOpen, setIsMobileDrawerOpen] = useState(false);
   const [wishlistIds, setWishlistIds] = useState<string[]>([]);
   const [selectedProductForModal, setSelectedProductForModal] = useState<Product | null>(null);
@@ -51,6 +53,7 @@ export function ShopContainer({
   } = useShopFilters();
 
   const handleAddToCart = (product: Product, variant: ProductVariant, quantity: number) => {
+    addItem(product, variant, quantity);
     showToast({
       type: "success",
       title: "Added to Cart!",

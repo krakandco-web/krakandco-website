@@ -16,6 +16,7 @@ import {
 import { MegaMenu } from "@/components/navigation/MegaMenu";
 import { MobileNavDrawer } from "@/components/navigation/MobileNavDrawer";
 import { AnnouncementBar } from "./AnnouncementBar";
+import { useCart } from "@/context/CartContext";
 
 export interface HeaderProps {
   cartItemCount?: number;
@@ -23,9 +24,11 @@ export interface HeaderProps {
 }
 
 export function Header({
-  cartItemCount = 3, // Real demo initial state matching reference artboard: "Your Cart (3)"
+  cartItemCount,
   wishlistItemCount = 0,
 }: HeaderProps) {
+  const { cart, openCart } = useCart();
+  const displayCartCount = typeof cartItemCount === "number" ? cartItemCount : cart.itemCount;
   const pathname = usePathname();
   const [isMegaMenuOpen, setIsMegaMenuOpen] = useState(false);
   const [isMobileDrawerOpen, setIsMobileDrawerOpen] = useState(false);
@@ -214,19 +217,20 @@ export function Header({
               )}
             </Link>
 
-            {/* Shopping Cart Link with Live Count */}
-            <Link
-              href="/cart"
-              aria-label={`Shopping cart with ${cartItemCount} items`}
-              className="relative flex h-10 w-10 items-center justify-center rounded-lg text-text-primary transition-colors hover:text-brand-maroon hover:bg-surface-canvas focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-maroon"
+            {/* Shopping Cart Button with Live Count and Drawer Trigger */}
+            <button
+              type="button"
+              onClick={openCart}
+              aria-label={`Open shopping cart with ${displayCartCount} items`}
+              className="relative flex h-10 w-10 items-center justify-center rounded-lg text-text-primary transition-colors hover:text-brand-maroon hover:bg-surface-canvas focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-maroon cursor-pointer"
             >
               <ShoppingBag className="h-5 w-5" />
-              {cartItemCount > 0 && (
+              {displayCartCount > 0 && (
                 <span className="absolute right-1 top-1 flex h-4 w-4 items-center justify-center rounded-full bg-brand-maroon text-[10px] font-bold text-text-inverse shadow-xs">
-                  {cartItemCount}
+                  {displayCartCount}
                 </span>
               )}
-            </Link>
+            </button>
           </div>
         </div>
 

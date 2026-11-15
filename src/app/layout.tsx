@@ -1,5 +1,7 @@
 import type { Metadata, Viewport } from "next";
 import "./globals.css";
+import { CartProvider } from "@/context/CartContext";
+import { CartDrawer } from "@/components/cart";
 
 export const metadata: Metadata = {
   metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL || "http://localhost:3000"),
@@ -36,10 +38,15 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className="min-h-screen bg-surface-canvas text-text-primary antialiased selection:bg-brand-mustard selection:text-text-primary">
-        <div id="app-root" className="flex min-h-screen flex-col">
-          {children}
-        </div>
+        <CartProvider>
+          <div id="app-root" className="flex min-h-screen flex-col">
+            {children}
+          </div>
+          <CartDrawer />
+        </CartProvider>
       </body>
     </html>
   );
 }
+
+

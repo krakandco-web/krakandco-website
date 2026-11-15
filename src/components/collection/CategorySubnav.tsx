@@ -93,3 +93,4 @@ export function CategorySubnav({ subcategories, collectionTitle }: CategorySubna
     </section>
   );
 }
+

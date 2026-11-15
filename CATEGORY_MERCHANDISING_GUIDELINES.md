@@ -53,3 +53,4 @@ To preserve brand authenticity and customer trust:
 2. **No Fabricated Review Counts**: Ratings and review numbers correspond to recorded customer feedback data.
 3. **Transparent Ingredients**: Every product card displays exact cooking medium (e.g. *100% Pure Cold-Pressed Coconut Oil*, *Pure Desi Ghee*).
 4. **No Artificial Price Strikethroughs**: `compareAtPrice` is only displayed where genuine historical retail prices exist.
+
