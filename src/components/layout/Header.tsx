@@ -71,8 +71,8 @@ export function Header({
               aria-label="KRAK & CO. Home"
             >
               <div
-                className="relative h-12 w-44 sm:h-14 sm:w-48"
-                style={{ position: "relative", width: "176px", height: "48px", maxWidth: "100%" }}
+                className="relative h-12 w-36 sm:h-14 sm:w-40"
+                style={{ position: "relative", width: "150px", height: "56px", maxWidth: "100%" }}
               >
                 <Image
                   src="/assets/brand/logos/brand-logo-primary.svg"

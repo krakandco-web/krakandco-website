@@ -38,7 +38,7 @@ export function MobileNavDrawer({ isOpen, onClose }: MobileNavDrawerProps) {
         {/* Brand Logo in Drawer */}
         <div className="pb-3 border-b border-surface-sand">
           <Link href="/" onClick={onClose} className="inline-block">
-            <div className="relative h-10 w-36">
+            <div className="relative h-12 w-36">
               <Image
                 src="/assets/brand/logos/brand-logo-primary.svg"
                 alt="KRAK & CO."

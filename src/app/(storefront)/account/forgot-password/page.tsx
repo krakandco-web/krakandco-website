@@ -2,6 +2,7 @@
 
 import React, { useState } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { Mail, ArrowLeft, CheckCircle2, ArrowRight } from "lucide-react";
 import { useToast } from "@/components/feedback/Toast";
 
@@ -40,9 +41,15 @@ export default function ForgotPasswordPage() {
         {/* Header Branding */}
         <div className="text-center mb-8">
           <Link href="/" className="inline-block">
-            <span className="font-serif text-3xl font-black tracking-wider text-[#7A1C1C]">
-              KRAK <span className="text-[#E6AC2A]">&</span> CO.
-            </span>
+            <div className="relative h-14 w-44 mx-auto">
+              <Image
+                src="/assets/brand/logos/brand-logo-primary.svg"
+                alt="KRAK & CO."
+                fill
+                className="object-contain"
+                priority
+              />
+            </div>
           </Link>
           <h1 className="mt-3 font-serif text-2xl font-bold text-[#1C1917]">
             Reset Your Password

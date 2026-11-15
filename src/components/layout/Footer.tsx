@@ -81,7 +81,7 @@ export function Footer() {
           {/* Column 1: Brand Identity & Story (Col span 4) */}
           <div className="lg:col-span-4 space-y-4">
             <Link href="/" className="inline-block">
-              <div className="relative h-14 w-48">
+              <div className="relative h-14 w-44">
                 <Image
                   src="/assets/brand/logos/brand-logo-primary.svg"
                   alt="KRAK & CO."
