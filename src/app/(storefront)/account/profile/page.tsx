@@ -100,7 +100,7 @@ export default function AccountProfilePage() {
             </div>
 
             {/* Personal Details Form */}
-            <div className="rounded-2xl border-2 border-[#7A1C1C]/15 bg-[#FFFDF8] p-6 shadow-sm">
+            <div className="rounded-2xl border border-[#7A1C1C]/15 bg-[#FFFDF8] p-6 shadow-sm">
               <h3 className="font-serif text-base font-bold text-[#1C1917] mb-4">
                 Personal Information
               </h3>
@@ -237,7 +237,7 @@ export default function AccountProfilePage() {
             </div>
 
             {/* Change Password Card */}
-            <div className="rounded-2xl border-2 border-[#7A1C1C]/15 bg-[#FFFDF8] p-6 shadow-sm">
+            <div className="rounded-2xl border border-[#7A1C1C]/15 bg-[#FFFDF8] p-6 shadow-sm">
               <div className="flex items-center gap-2 mb-4">
                 <Lock className="h-4 w-4 text-[#7A1C1C]" />
                 <h3 className="font-serif text-base font-bold text-[#1C1917]">

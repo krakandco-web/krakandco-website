@@ -129,20 +129,8 @@ export default function TrackOrderPage() {
           </p>
         </div>
 
-        {/* Demo Pill */}
-        <div className="mb-6 text-center">
-          <button
-            type="button"
-            onClick={handleDemoFill}
-            className="inline-flex items-center gap-2 rounded-full border-2 border-dashed border-[#E6AC2A] bg-[#E6AC2A]/10 px-4 py-2 text-xs font-bold text-[#7A1C1C] hover:bg-[#E6AC2A]/20 transition-colors"
-          >
-            <Sparkles className="h-4 w-4 text-[#E6AC2A]" />
-            <span>Load Demo Order: <strong>#KRAK-78291</strong> (Out for Delivery)</span>
-          </button>
-        </div>
-
         {/* Search Card */}
-        <div className="rounded-3xl border-2 border-[#7A1C1C]/15 bg-[#FFFDF8] p-6 sm:p-8 shadow-md mb-8">
+        <div className="rounded-3xl border border-[#7A1C1C]/15 bg-[#FFFDF8] p-6 sm:p-8 shadow-sm mb-8">
           <form onSubmit={handleSearch} className="grid grid-cols-1 sm:grid-cols-5 gap-4">
             <div className="sm:col-span-2">
               <label className="block text-xs font-semibold text-[#1C1917] mb-1.5">
@@ -156,9 +144,19 @@ export default function TrackOrderPage() {
                   value={orderId}
                   onChange={(e) => setOrderId(e.target.value)}
                   placeholder="e.g. KRAK-78291"
-                  className="w-full pl-10 pr-3 py-2.5 rounded-xl border border-[#7A1C1C]/20 bg-[#FFF8EE] text-xs font-mono text-[#1C1917] focus:outline-none focus:ring-2 focus:ring-[#7A1C1C]"
+                  className="w-full pl-10 pr-3 py-2.5 rounded-xl border border-[#7A1C1C]/20 bg-[#FFF8EE] text-xs font-mono text-[#1C1917] focus:outline-none focus:ring-1 focus:ring-[#7A1C1C]"
                 />
               </div>
+              <p className="mt-1.5 text-[11px] text-[#1C1917]/50">
+                Sample order for testing:{" "}
+                <button
+                  type="button"
+                  onClick={handleDemoFill}
+                  className="font-mono font-semibold text-[#7A1C1C] hover:underline"
+                >
+                  KRAK-78291
+                </button>
+              </p>
             </div>
 
             <div className="sm:col-span-2">
@@ -191,7 +189,7 @@ export default function TrackOrderPage() {
         {isSearched && (
           <div className="space-y-6 animate-in fade-in slide-in-from-bottom-4 duration-300">
             {/* Status Banner */}
-            <div className="rounded-2xl border-2 border-[#285F49]/30 bg-[#285F49]/10 p-6 shadow-sm">
+            <div className="rounded-2xl border border-[#285F49]/25 bg-[#285F49]/10 p-6 shadow-sm">
               <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
                 <div>
                   <div className="flex items-center gap-2">
@@ -223,7 +221,7 @@ export default function TrackOrderPage() {
             </div>
 
             {/* Timeline checkpoints */}
-            <div className="rounded-2xl border-2 border-[#7A1C1C]/15 bg-[#FFFDF8] p-6 sm:p-8 shadow-sm">
+            <div className="rounded-2xl border border-[#7A1C1C]/15 bg-[#FFFDF8] p-6 sm:p-8 shadow-sm">
               <h4 className="font-serif text-base font-bold text-[#1C1917] mb-6">
                 Shipment Transit History
               </h4>

@@ -60,7 +60,7 @@ export default function ForgotPasswordPage() {
         </div>
 
         {/* Card */}
-        <div className="rounded-2xl border-2 border-[#7A1C1C]/15 bg-[#FFFDF8] p-6 sm:p-8 shadow-md">
+        <div className="rounded-2xl border border-[#7A1C1C]/15 bg-[#FFFDF8] p-6 sm:p-8 shadow-sm">
           {!isSubmitted ? (
             <form onSubmit={handleSubmit} className="space-y-4">
               <div>

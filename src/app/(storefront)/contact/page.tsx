@@ -86,7 +86,7 @@ export default function ContactPage() {
             href="https://wa.me/919840012345"
             target="_blank"
             rel="noopener noreferrer"
-            className="group rounded-2xl border-2 border-[#7A1C1C]/15 bg-[#FFFDF8] p-5 shadow-sm hover:border-[#285F49] transition-all"
+            className="group rounded-2xl border border-[#7A1C1C]/15 bg-[#FFFDF8] p-5 shadow-sm hover:border-[#285F49] transition-all"
           >
             <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-[#285F49]/15 text-[#285F49] group-hover:bg-[#285F49] group-hover:text-white transition-colors mb-3">
               <MessageSquare className="h-5 w-5" />
@@ -99,7 +99,7 @@ export default function ContactPage() {
           </a>
 
           {/* Phone */}
-          <div className="rounded-2xl border-2 border-[#7A1C1C]/15 bg-[#FFFDF8] p-5 shadow-sm">
+          <div className="rounded-2xl border border-[#7A1C1C]/15 bg-[#FFFDF8] p-5 shadow-sm">
             <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-[#7A1C1C]/10 text-[#7A1C1C] mb-3">
               <Phone className="h-5 w-5" />
             </div>
@@ -111,7 +111,7 @@ export default function ContactPage() {
           </div>
 
           {/* Email */}
-          <div className="rounded-2xl border-2 border-[#7A1C1C]/15 bg-[#FFFDF8] p-5 shadow-sm">
+          <div className="rounded-2xl border border-[#7A1C1C]/15 bg-[#FFFDF8] p-5 shadow-sm">
             <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-[#E6AC2A]/20 text-[#7A1C1C] mb-3">
               <Mail className="h-5 w-5" />
             </div>
@@ -123,7 +123,7 @@ export default function ContactPage() {
           </div>
 
           {/* Kitchen Hours */}
-          <div className="rounded-2xl border-2 border-[#7A1C1C]/15 bg-[#FFFDF8] p-5 shadow-sm">
+          <div className="rounded-2xl border border-[#7A1C1C]/15 bg-[#FFFDF8] p-5 shadow-sm">
             <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-orange-100 text-orange-700 mb-3">
               <Clock className="h-5 w-5" />
             </div>
@@ -138,7 +138,7 @@ export default function ContactPage() {
         {/* Contact Form & Location Section */}
         <div className="grid grid-cols-1 lg:grid-cols-5 gap-8">
           {/* Contact Form (3 cols) */}
-          <div className="lg:col-span-3 rounded-3xl border-2 border-[#7A1C1C]/15 bg-[#FFFDF8] p-6 sm:p-8 shadow-md">
+          <div className="lg:col-span-3 rounded-3xl border border-[#7A1C1C]/15 bg-[#FFFDF8] p-6 sm:p-8 shadow-md">
             <h2 className="font-serif text-xl sm:text-2xl font-bold text-[#1C1917] mb-2">
               Send Us a Message
             </h2>
@@ -279,7 +279,7 @@ export default function ContactPage() {
 
           {/* Location & Kitchen Address (2 cols) */}
           <div className="lg:col-span-2 space-y-6">
-            <div className="rounded-3xl border-2 border-[#7A1C1C]/15 bg-[#FFFDF8] p-6 shadow-md">
+            <div className="rounded-3xl border border-[#7A1C1C]/15 bg-[#FFFDF8] p-6 shadow-md">
               <div className="flex items-center gap-2 mb-3">
                 <MapPin className="h-5 w-5 text-[#7A1C1C]" />
                 <h3 className="font-serif text-base font-bold text-[#1C1917]">
@@ -302,7 +302,7 @@ export default function ContactPage() {
             </div>
 
             {/* Quick Self-Service Links */}
-            <div className="rounded-3xl border-2 border-[#7A1C1C]/15 bg-[#FFFDF8] p-6 shadow-md space-y-3">
+            <div className="rounded-3xl border border-[#7A1C1C]/15 bg-[#FFFDF8] p-6 shadow-md space-y-3">
               <h3 className="font-serif text-sm font-bold text-[#1C1917] flex items-center gap-1.5">
                 <HelpCircle className="h-4 w-4 text-[#E6AC2A]" />
                 Quick Self-Help Options

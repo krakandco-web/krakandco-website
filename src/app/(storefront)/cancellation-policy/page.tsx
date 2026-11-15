@@ -25,7 +25,7 @@ export default function CancellationPolicyPage() {
         </nav>
 
         {/* Hero Card */}
-        <div className="rounded-3xl border-2 border-[#7A1C1C]/15 bg-[#FFFDF8] p-8 sm:p-12 shadow-md mb-8">
+        <div className="rounded-3xl border border-[#7A1C1C]/15 bg-[#FFFDF8] p-8 sm:p-12 shadow-md mb-8">
           <div className="inline-flex items-center gap-2 rounded-full bg-[#7A1C1C]/10 px-3.5 py-1 text-xs font-bold text-[#7A1C1C] mb-4">
             <XCircle className="h-4 w-4" />
             ORDER MANAGEMENT
@@ -39,7 +39,7 @@ export default function CancellationPolicyPage() {
         </div>
 
         {/* Policy Body */}
-        <div className="rounded-3xl border-2 border-[#7A1C1C]/15 bg-[#FFFDF8] p-8 sm:p-10 shadow-md space-y-8 text-sm text-[#1C1917]/85 leading-relaxed">
+        <div className="rounded-3xl border border-[#7A1C1C]/15 bg-[#FFFDF8] p-8 sm:p-10 shadow-md space-y-8 text-sm text-[#1C1917]/85 leading-relaxed">
           <section>
             <div className="flex items-center gap-2 mb-3">
               <Clock className="h-5 w-5 text-[#7A1C1C]" />

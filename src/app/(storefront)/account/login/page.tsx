@@ -127,24 +127,8 @@ export default function LoginPage() {
           </p>
         </div>
 
-        {/* Demo Login Quick Pill */}
-        <div className="mb-6 rounded-xl border-2 border-dashed border-[#E6AC2A] bg-[#E6AC2A]/10 p-4 text-center">
-          <p className="text-xs font-semibold text-[#7A1C1C] flex items-center justify-center gap-1.5 mb-2">
-            <Sparkles className="h-4 w-4 text-[#E6AC2A]" />
-            Quick Evaluator Login
-          </p>
-          <button
-            type="button"
-            onClick={handleDemoLogin}
-            disabled={isLoading}
-            className="w-full py-2 px-3 rounded-lg bg-[#7A1C1C] text-[#FFF8EE] font-sans text-xs font-bold hover:bg-[#5C1515] transition-colors shadow-sm"
-          >
-            One-Click Sign In (Aditi Rao)
-          </button>
-        </div>
-
         {/* Auth Card */}
-        <div className="rounded-2xl border-2 border-[#7A1C1C]/15 bg-[#FFFDF8] p-6 sm:p-8 shadow-md">
+        <div className="rounded-2xl border border-[#7A1C1C]/15 bg-[#FFFDF8] p-6 sm:p-8 shadow-sm">
           {/* Method Tabs */}
           <div className="flex rounded-xl bg-[#FFF8EE] p-1 mb-6 border border-[#7A1C1C]/10">
             <button
@@ -313,7 +297,7 @@ export default function LoginPage() {
           )}
 
           {/* Footer separator & Register link */}
-          <div className="mt-6 pt-6 border-t border-[#7A1C1C]/10 text-center">
+          <div className="mt-6 pt-6 border-t border-[#7A1C1C]/10 text-center space-y-3">
             <p className="text-xs text-[#1C1917]/70">
               New to KRAK & CO.?{" "}
               <Link
@@ -323,6 +307,14 @@ export default function LoginPage() {
                 Create an account
               </Link>
             </p>
+
+            <button
+              type="button"
+              onClick={handleDemoLogin}
+              className="text-[11px] text-[#1C1917]/40 hover:text-[#7A1C1C] transition-colors"
+            >
+              (Evaluating this build? Click to auto-fill sample account)
+            </button>
           </div>
         </div>
 

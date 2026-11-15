@@ -87,7 +87,7 @@ export default function WishlistPage() {
 
         {wishlistItems.length === 0 ? (
           /* Empty State */
-          <div className="rounded-3xl border-2 border-surface-sand bg-[#FFFDF8] p-12 text-center max-w-md mx-auto space-y-4 my-12 shadow-xs">
+          <div className="rounded-3xl border border-surface-sand bg-[#FFFDF8] p-12 text-center max-w-md mx-auto space-y-4 my-12 shadow-xs">
             <div className="mx-auto flex h-16 w-16 items-center justify-center rounded-full bg-brand-maroon/10 text-brand-maroon">
               <Heart className="h-8 w-8" />
             </div>
@@ -117,7 +117,7 @@ export default function WishlistPage() {
               return (
                 <div
                   key={product.id}
-                  className="group relative flex flex-col justify-between rounded-3xl border-2 border-surface-sand bg-[#FFFDF8] p-4 shadow-xs transition-all duration-200 hover:border-brand-maroon/40 hover:shadow-md"
+                  className="group relative flex flex-col justify-between rounded-2xl border border-surface-sand bg-[#FFFDF8] p-4 shadow-xs transition-all duration-200 hover:border-brand-maroon/30 hover:shadow-card"
                 >
                   <div>
                     {/* Media Container */}

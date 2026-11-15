@@ -25,7 +25,7 @@ export default function PrivacyPolicyPage() {
         </nav>
 
         {/* Hero Card */}
-        <div className="rounded-3xl border-2 border-[#7A1C1C]/15 bg-[#FFFDF8] p-8 sm:p-12 shadow-md mb-8">
+        <div className="rounded-3xl border border-[#7A1C1C]/15 bg-[#FFFDF8] p-8 sm:p-12 shadow-md mb-8">
           <div className="inline-flex items-center gap-2 rounded-full bg-[#285F49]/15 px-3.5 py-1 text-xs font-bold text-[#285F49] mb-4">
             <Lock className="h-4 w-4" />
             256-BIT SSL ENCRYPTION
@@ -39,7 +39,7 @@ export default function PrivacyPolicyPage() {
         </div>
 
         {/* Policy Body */}
-        <div className="rounded-3xl border-2 border-[#7A1C1C]/15 bg-[#FFFDF8] p-8 sm:p-10 shadow-md space-y-8 text-sm text-[#1C1917]/85 leading-relaxed">
+        <div className="rounded-3xl border border-[#7A1C1C]/15 bg-[#FFFDF8] p-8 sm:p-10 shadow-md space-y-8 text-sm text-[#1C1917]/85 leading-relaxed">
           <section>
             <h2 className="font-serif text-xl font-bold text-[#1C1917] mb-3">
               1. Information We Collect

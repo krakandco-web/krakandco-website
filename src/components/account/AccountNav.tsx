@@ -64,17 +64,17 @@ export function AccountNav() {
   return (
     <aside className="w-full lg:w-72 shrink-0">
       {/* User Quick Info Card */}
-      <div className="rounded-2xl border-2 border-[#7A1C1C]/15 bg-[#FFFDF8] p-5 shadow-sm mb-4">
+      <div className="rounded-2xl border border-[#7A1C1C]/15 bg-[#FFFDF8] p-5 shadow-xs mb-4">
         <div className="flex items-center gap-4">
-          <div className="flex h-14 w-14 shrink-0 items-center justify-center rounded-full bg-[#7A1C1C] text-[#FFF8EE] font-serif text-xl font-bold border-2 border-[#E6AC2A]">
+          <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-[#7A1C1C] text-[#FFF8EE] font-serif text-lg font-bold border border-[#E6AC2A]/60 shadow-xs">
             AR
           </div>
           <div className="min-w-0 flex-1">
-            <h3 className="font-serif text-base font-bold text-[#1C1917] truncate">
+            <h3 className="font-serif text-sm font-bold text-[#1C1917] truncate">
               Aditi Rao
             </h3>
             <p className="text-xs text-[#1C1917]/65 truncate">aditi.rao@example.com</p>
-            <div className="mt-1.5 inline-flex items-center gap-1 rounded-full bg-[#E6AC2A]/15 px-2.5 py-0.5 text-[11px] font-semibold text-[#7A1C1C]">
+            <div className="mt-1.5 inline-flex items-center gap-1 rounded-full bg-[#E6AC2A]/15 px-2.5 py-0.5 text-[10px] font-semibold text-[#7A1C1C]">
               <ShieldCheck className="h-3 w-3 text-[#E6AC2A]" />
               KRAK Club Gold Member
             </div>
@@ -83,7 +83,7 @@ export function AccountNav() {
       </div>
 
       {/* Navigation Links */}
-      <nav aria-label="Account Navigation" className="rounded-2xl border-2 border-[#7A1C1C]/15 bg-[#FFFDF8] p-2.5 shadow-sm space-y-1">
+      <nav aria-label="Account Navigation" className="rounded-2xl border border-[#7A1C1C]/15 bg-[#FFFDF8] p-2.5 shadow-xs space-y-1">
         {navItems.map((item) => {
           const Icon = item.icon;
           const isActive = item.exact 

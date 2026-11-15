@@ -25,7 +25,7 @@ export default function ShippingPolicyPage() {
         </nav>
 
         {/* Hero Card */}
-        <div className="rounded-3xl border-2 border-[#7A1C1C]/15 bg-[#FFFDF8] p-8 sm:p-12 shadow-md mb-8">
+        <div className="rounded-3xl border border-[#7A1C1C]/15 bg-[#FFFDF8] p-8 sm:p-12 shadow-md mb-8">
           <div className="inline-flex items-center gap-2 rounded-full bg-[#E6AC2A]/20 px-3.5 py-1 text-xs font-bold text-[#7A1C1C] mb-4">
             <Truck className="h-4 w-4 text-[#E6AC2A]" />
             PAN-INDIA KITCHEN DISPATCH
@@ -40,17 +40,17 @@ export default function ShippingPolicyPage() {
 
         {/* Key Highlights Grid */}
         <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-8">
-          <div className="rounded-2xl border-2 border-[#7A1C1C]/15 bg-[#FFFDF8] p-5 shadow-sm">
+          <div className="rounded-2xl border border-[#7A1C1C]/15 bg-[#FFFDF8] p-5 shadow-sm">
             <Clock className="h-6 w-6 text-[#7A1C1C] mb-2" />
             <h3 className="font-serif text-sm font-bold text-[#1C1917]">24-Hour Dispatch</h3>
             <p className="text-xs text-[#1C1917]/70 mt-1">Orders leave our kitchen within 24 hours of roasting.</p>
           </div>
-          <div className="rounded-2xl border-2 border-[#7A1C1C]/15 bg-[#FFFDF8] p-5 shadow-sm">
+          <div className="rounded-2xl border border-[#7A1C1C]/15 bg-[#FFFDF8] p-5 shadow-sm">
             <PackageCheck className="h-6 w-6 text-[#285F49] mb-2" />
             <h3 className="font-serif text-sm font-bold text-[#1C1917]">Free Above ₹499</h3>
             <p className="text-xs text-[#1C1917]/70 mt-1">Complimentary standard delivery on all qualifying orders.</p>
           </div>
-          <div className="rounded-2xl border-2 border-[#7A1C1C]/15 bg-[#FFFDF8] p-5 shadow-sm">
+          <div className="rounded-2xl border border-[#7A1C1C]/15 bg-[#FFFDF8] p-5 shadow-sm">
             <ShieldCheck className="h-6 w-6 text-[#E6AC2A] mb-2" />
             <h3 className="font-serif text-sm font-bold text-[#1C1917]">Nitrogen Sealed</h3>
             <p className="text-xs text-[#1C1917]/70 mt-1">Flushed with food-grade N2 to preserve crispness in transit.</p>
@@ -58,7 +58,7 @@ export default function ShippingPolicyPage() {
         </div>
 
         {/* Policy Content */}
-        <div className="rounded-3xl border-2 border-[#7A1C1C]/15 bg-[#FFFDF8] p-8 sm:p-10 shadow-md space-y-8 text-sm text-[#1C1917]/85 leading-relaxed">
+        <div className="rounded-3xl border border-[#7A1C1C]/15 bg-[#FFFDF8] p-8 sm:p-10 shadow-md space-y-8 text-sm text-[#1C1917]/85 leading-relaxed">
           <section>
             <h2 className="font-serif text-xl font-bold text-[#1C1917] mb-3">
               1. Delivery Timelines & Regions

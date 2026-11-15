@@ -169,7 +169,7 @@ export function ProductCard({
             isLoading={isAdding}
             disabled={isOutOfStock}
             onClick={handleQuickAdd}
-            className="rounded-lg py-2 text-xs font-bold uppercase tracking-wider"
+            className="rounded-xl py-2.5 text-xs font-bold tracking-wider transition-all duration-200"
           >
             {isOutOfStock ? "Out of Stock" : "Add to Cart"}
           </Button>

@@ -134,7 +134,7 @@ export default function OrderDetailPage() {
             </div>
 
             {/* Tracking Progress Stepper Card */}
-            <div className="rounded-2xl border-2 border-[#7A1C1C]/15 bg-[#FFFDF8] p-6 shadow-sm">
+            <div className="rounded-2xl border border-[#7A1C1C]/15 bg-[#FFFDF8] p-6 shadow-sm">
               <h3 className="font-serif text-base font-bold text-[#1C1917] mb-6 flex items-center justify-between">
                 <span>Shipment Status</span>
                 <span className="text-xs font-mono text-[#7A1C1C] font-normal">
@@ -203,7 +203,7 @@ export default function OrderDetailPage() {
             {/* Order Items & Summary Grid */}
             <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
               {/* Items List (2 cols) */}
-              <div className="lg:col-span-2 rounded-2xl border-2 border-[#7A1C1C]/15 bg-[#FFFDF8] p-6 shadow-sm">
+              <div className="lg:col-span-2 rounded-2xl border border-[#7A1C1C]/15 bg-[#FFFDF8] p-6 shadow-sm">
                 <h3 className="font-serif text-base font-bold text-[#1C1917] mb-4">
                   Snacks in this Package (2 Items)
                 </h3>
@@ -255,7 +255,7 @@ export default function OrderDetailPage() {
               {/* Sidebar (Order Breakdown & Delivery Address) */}
               <div className="space-y-6">
                 {/* Price Breakdown */}
-                <div className="rounded-2xl border-2 border-[#7A1C1C]/15 bg-[#FFFDF8] p-5 shadow-sm">
+                <div className="rounded-2xl border border-[#7A1C1C]/15 bg-[#FFFDF8] p-5 shadow-sm">
                   <h4 className="font-serif text-sm font-bold text-[#1C1917] mb-3">
                     Payment Breakdown
                   </h4>
@@ -283,7 +283,7 @@ export default function OrderDetailPage() {
                 </div>
 
                 {/* Delivery Address */}
-                <div className="rounded-2xl border-2 border-[#7A1C1C]/15 bg-[#FFFDF8] p-5 shadow-sm">
+                <div className="rounded-2xl border border-[#7A1C1C]/15 bg-[#FFFDF8] p-5 shadow-sm">
                   <div className="flex items-center gap-2 mb-2">
                     <MapPin className="h-4 w-4 text-[#7A1C1C]" />
                     <h4 className="font-serif text-sm font-bold text-[#1C1917]">

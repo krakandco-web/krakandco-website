@@ -198,7 +198,7 @@ export default function AccountAddressesPage() {
 
             {/* Add Address Form Accordion / Card */}
             {isAddingNew && (
-              <div className="rounded-2xl border-2 border-[#7A1C1C] bg-[#FFFDF8] p-6 shadow-md animate-in fade-in slide-in-from-top-4 duration-300">
+              <div className="rounded-2xl border border-[#7A1C1C]/40 bg-[#FFFDF8] p-6 shadow-sm animate-in fade-in slide-in-from-top-4 duration-300">
                 <div className="flex items-center justify-between pb-4 border-b border-[#7A1C1C]/15 mb-4">
                   <h3 className="font-serif text-base font-bold text-[#1C1917]">
                     Add New Delivery Address
@@ -363,7 +363,7 @@ export default function AccountAddressesPage() {
               {addresses.map((address) => (
                 <div
                   key={address.id}
-                  className={`rounded-2xl border-2 p-5 bg-[#FFFDF8] shadow-sm flex flex-col justify-between transition-all ${
+                  className={`rounded-2xl border p-5 bg-[#FFFDF8] shadow-xs flex flex-col justify-between transition-all ${
                     address.isDefault
                       ? "border-[#7A1C1C] ring-1 ring-[#7A1C1C]/20"
                       : "border-[#7A1C1C]/15 hover:border-[#7A1C1C]/30"

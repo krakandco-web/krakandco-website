@@ -51,7 +51,7 @@ export default function AboutPage() {
         </div>
 
         {/* 2. Narrative Pillar 1: The Zero Palm Oil Promise */}
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center rounded-3xl border-2 border-surface-sand bg-[#FFFDF8] p-6 sm:p-12 shadow-xs">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center rounded-3xl border border-surface-sand bg-[#FFFDF8] p-6 sm:p-12 shadow-xs">
           <div className="lg:col-span-7 space-y-4">
             <div className="inline-flex items-center gap-1.5 rounded-full bg-brand-forest/10 px-3 py-1 text-xs font-bold uppercase tracking-wider text-brand-forest">
               <Leaf className="h-3.5 w-3.5" />
@@ -100,7 +100,7 @@ export default function AboutPage() {
         </div>
 
         {/* 3. Narrative Pillar 2: Brass Kadai Artisanal Cooking */}
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center rounded-3xl border-2 border-surface-sand bg-[#FFFDF8] p-6 sm:p-12 shadow-xs">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center rounded-3xl border border-surface-sand bg-[#FFFDF8] p-6 sm:p-12 shadow-xs">
           <div className="lg:col-span-5 order-2 lg:order-1 flex justify-center">
             <div className="relative h-64 w-64 sm:h-80 sm:w-80 drop-shadow-2xl">
               <Image
@@ -135,7 +135,7 @@ export default function AboutPage() {
 
         {/* 4. Values Strip (4 pillars) */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-          <div className="rounded-3xl border-2 border-surface-sand bg-[#FFFDF8] p-6 space-y-3 shadow-xs hover:-translate-y-1 transition-transform">
+          <div className="rounded-3xl border border-surface-sand bg-[#FFFDF8] p-6 space-y-3 shadow-xs hover:-translate-y-1 transition-transform">
             <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-brand-forest/10 text-brand-forest">
               <Leaf className="h-6 w-6" />
             </div>
@@ -145,7 +145,7 @@ export default function AboutPage() {
             </p>
           </div>
 
-          <div className="rounded-3xl border-2 border-surface-sand bg-[#FFFDF8] p-6 space-y-3 shadow-xs hover:-translate-y-1 transition-transform">
+          <div className="rounded-3xl border border-surface-sand bg-[#FFFDF8] p-6 space-y-3 shadow-xs hover:-translate-y-1 transition-transform">
             <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-brand-maroon/10 text-brand-maroon">
               <ShieldCheck className="h-6 w-6" />
             </div>
@@ -155,7 +155,7 @@ export default function AboutPage() {
             </p>
           </div>
 
-          <div className="rounded-3xl border-2 border-surface-sand bg-[#FFFDF8] p-6 space-y-3 shadow-xs hover:-translate-y-1 transition-transform">
+          <div className="rounded-3xl border border-surface-sand bg-[#FFFDF8] p-6 space-y-3 shadow-xs hover:-translate-y-1 transition-transform">
             <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-brand-mustard/20 text-brand-mustard-dark">
               <Award className="h-6 w-6" />
             </div>
@@ -165,7 +165,7 @@ export default function AboutPage() {
             </p>
           </div>
 
-          <div className="rounded-3xl border-2 border-surface-sand bg-[#FFFDF8] p-6 space-y-3 shadow-xs hover:-translate-y-1 transition-transform">
+          <div className="rounded-3xl border border-surface-sand bg-[#FFFDF8] p-6 space-y-3 shadow-xs hover:-translate-y-1 transition-transform">
             <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-brand-vermilion/10 text-brand-vermilion">
               <Heart className="h-6 w-6" />
             </div>
@@ -177,7 +177,7 @@ export default function AboutPage() {
         </div>
 
         {/* 5. Founders Note / Brand Promise */}
-        <div className="rounded-3xl border-2 border-surface-sand bg-[#FFFDF8] p-8 sm:p-12 text-center max-w-4xl mx-auto space-y-6 shadow-xs">
+        <div className="rounded-3xl border border-surface-sand bg-[#FFFDF8] p-8 sm:p-12 text-center max-w-4xl mx-auto space-y-6 shadow-xs">
           <div className="inline-flex items-center gap-2">
             <span className="text-brand-mustard text-xs">✦</span>
             <span className="font-sans text-xs font-bold uppercase tracking-widest text-brand-maroon">
@@ -205,7 +205,7 @@ export default function AboutPage() {
 
             <Link
               href="/gift-boxes"
-              className="inline-flex items-center gap-2 rounded-xl border-2 border-brand-maroon bg-white px-7 py-3.5 text-xs sm:text-sm font-bold uppercase tracking-wider text-brand-maroon hover:bg-brand-maroon/5 active:scale-95 transition-all"
+              className="inline-flex items-center gap-2 rounded-xl border border-brand-maroon bg-white px-7 py-3.5 text-xs sm:text-sm font-bold uppercase tracking-wider text-brand-maroon hover:bg-brand-maroon/5 active:scale-95 transition-all"
             >
               <span>Explore Festive Gift Hampers</span>
             </Link>

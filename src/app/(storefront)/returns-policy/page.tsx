@@ -25,7 +25,7 @@ export default function ReturnsPolicyPage() {
         </nav>
 
         {/* Hero Card */}
-        <div className="rounded-3xl border-2 border-[#7A1C1C]/15 bg-[#FFFDF8] p-8 sm:p-12 shadow-md mb-8">
+        <div className="rounded-3xl border border-[#7A1C1C]/15 bg-[#FFFDF8] p-8 sm:p-12 shadow-md mb-8">
           <div className="inline-flex items-center gap-2 rounded-full bg-[#285F49]/15 px-3.5 py-1 text-xs font-bold text-[#285F49] mb-4">
             <ShieldCheck className="h-4 w-4" />
             100% CRISP & FRESH GUARANTEE
@@ -40,17 +40,17 @@ export default function ReturnsPolicyPage() {
 
         {/* 3 Pillars */}
         <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-8">
-          <div className="rounded-2xl border-2 border-[#7A1C1C]/15 bg-[#FFFDF8] p-5 shadow-sm">
+          <div className="rounded-2xl border border-[#7A1C1C]/15 bg-[#FFFDF8] p-5 shadow-sm">
             <HeartHandshake className="h-6 w-6 text-[#7A1C1C] mb-2" />
             <h3 className="font-serif text-sm font-bold text-[#1C1917]">Zero Friction</h3>
             <p className="text-xs text-[#1C1917]/70 mt-1">No complicated paperwork or return shipping of food items required.</p>
           </div>
-          <div className="rounded-2xl border-2 border-[#7A1C1C]/15 bg-[#FFFDF8] p-5 shadow-sm">
+          <div className="rounded-2xl border border-[#7A1C1C]/15 bg-[#FFFDF8] p-5 shadow-sm">
             <CheckCircle2 className="h-6 w-6 text-[#285F49] mb-2" />
             <h3 className="font-serif text-sm font-bold text-[#1C1917]">48-Hour Window</h3>
             <p className="text-xs text-[#1C1917]/70 mt-1">Report any quality or packaging issue within 48 hours of delivery.</p>
           </div>
-          <div className="rounded-2xl border-2 border-[#7A1C1C]/15 bg-[#FFFDF8] p-5 shadow-sm">
+          <div className="rounded-2xl border border-[#7A1C1C]/15 bg-[#FFFDF8] p-5 shadow-sm">
             <RotateCcw className="h-6 w-6 text-[#E6AC2A] mb-2" />
             <h3 className="font-serif text-sm font-bold text-[#1C1917]">Instant Redo</h3>
             <p className="text-xs text-[#1C1917]/70 mt-1">Free express replacement batch or 100% refund to original source.</p>
@@ -58,7 +58,7 @@ export default function ReturnsPolicyPage() {
         </div>
 
         {/* Policy Body */}
-        <div className="rounded-3xl border-2 border-[#7A1C1C]/15 bg-[#FFFDF8] p-8 sm:p-10 shadow-md space-y-8 text-sm text-[#1C1917]/85 leading-relaxed">
+        <div className="rounded-3xl border border-[#7A1C1C]/15 bg-[#FFFDF8] p-8 sm:p-10 shadow-md space-y-8 text-sm text-[#1C1917]/85 leading-relaxed">
           <section>
             <h2 className="font-serif text-xl font-bold text-[#1C1917] mb-3">
               1. Food Safety & Return Nature

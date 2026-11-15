@@ -222,7 +222,7 @@ export default function AccountOrdersPage() {
             </div>
 
             {/* Filter and Search Bar */}
-            <div className="flex flex-col sm:flex-row items-stretch sm:items-center justify-between gap-4 rounded-2xl border-2 border-[#7A1C1C]/15 bg-[#FFFDF8] p-4 shadow-sm">
+            <div className="flex flex-col sm:flex-row items-stretch sm:items-center justify-between gap-4 rounded-2xl border border-[#7A1C1C]/15 bg-[#FFFDF8] p-4 shadow-xs">
               {/* Filter Tabs */}
               <div className="flex rounded-xl bg-[#FFF8EE] p-1 border border-[#7A1C1C]/10">
                 <button
@@ -275,7 +275,7 @@ export default function AccountOrdersPage() {
 
             {/* Orders List */}
             {filteredOrders.length === 0 ? (
-              <div className="rounded-2xl border-2 border-dashed border-[#7A1C1C]/20 bg-[#FFFDF8] p-12 text-center">
+              <div className="rounded-2xl border border-[#7A1C1C]/15 bg-[#FFFDF8] p-12 text-center">
                 <Package className="mx-auto h-12 w-12 text-[#1C1917]/30" />
                 <h3 className="mt-3 font-serif text-lg font-bold text-[#1C1917]">
                   No matching orders found
@@ -299,7 +299,7 @@ export default function AccountOrdersPage() {
                   return (
                     <div
                       key={order.orderId}
-                      className="rounded-2xl border-2 border-[#7A1C1C]/15 bg-[#FFFDF8] p-5 sm:p-6 shadow-sm hover:border-[#7A1C1C]/30 transition-all"
+                      className="rounded-2xl border border-[#7A1C1C]/15 bg-[#FFFDF8] p-5 sm:p-6 shadow-xs hover:border-[#7A1C1C]/30 transition-all"
                     >
                       {/* Header */}
                       <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 pb-4 border-b border-[#7A1C1C]/10">

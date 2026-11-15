@@ -21,12 +21,12 @@ export function HeroSection() {
         aria-hidden="true"
       />
 
-      {/* Decorative Gold Stars */}
+      {/* Decorative Vintage Gold Starbursts */}
       <div className="pointer-events-none absolute inset-0 overflow-hidden" aria-hidden="true">
-        <Sparkles className="absolute left-[10%] top-[15%] h-5 w-5 text-brand-mustard opacity-40 animate-pulse" />
-        <Sparkles className="absolute right-[12%] top-[20%] h-6 w-6 text-brand-mustard opacity-50 animate-pulse" />
-        <Sparkles className="absolute left-[25%] bottom-[20%] h-4 w-4 text-brand-mustard opacity-30" />
-        <Sparkles className="absolute right-[22%] bottom-[25%] h-5 w-5 text-brand-mustard opacity-40" />
+        <div className="absolute left-[8%] top-[18%] text-[#E6AC2A] opacity-30 text-lg">✦</div>
+        <div className="absolute right-[10%] top-[22%] text-[#E6AC2A] opacity-35 text-xl">✦</div>
+        <div className="absolute left-[22%] bottom-[18%] text-[#E6AC2A] opacity-25 text-sm">✦</div>
+        <div className="absolute right-[20%] bottom-[22%] text-[#E6AC2A] opacity-30 text-base">✦</div>
       </div>
 
       <div className="relative mx-auto max-w-7xl px-4 py-12 sm:px-6 sm:py-16 lg:px-8 lg:py-20">
@@ -70,7 +70,7 @@ export function HeroSection() {
             <div className="flex flex-wrap items-center justify-center gap-4 pt-2">
               <Link
                 href="/shop"
-                className="inline-flex items-center gap-2 rounded-xl bg-brand-mustard px-7 py-3.5 text-sm font-bold uppercase tracking-wider text-brand-maroon-dark shadow-md hover:bg-brand-mustard-light hover:shadow-lg active:scale-95 transition-all duration-150 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-mustard focus-visible:ring-offset-2 focus-visible:ring-offset-[#5A1624]"
+                className="inline-flex items-center gap-2 rounded-xl bg-brand-mustard px-7 py-3.5 text-sm font-bold uppercase tracking-wider text-brand-maroon-dark shadow-sm hover:bg-brand-mustard-light hover:shadow-md transition-all duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-mustard focus-visible:ring-offset-2 focus-visible:ring-offset-[#5A1624]"
               >
                 <span>Shop Now</span>
                 <ArrowRight className="h-4 w-4 stroke-[2.5]" />
@@ -78,7 +78,7 @@ export function HeroSection() {
 
               <Link
                 href="/collections/south-indian"
-                className="inline-flex items-center gap-2 rounded-xl border-2 border-surface-cream/80 bg-black/10 px-6 py-3.5 text-sm font-bold uppercase tracking-wider text-surface-cream hover:bg-white/10 hover:border-surface-cream active:scale-95 transition-all duration-150 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-surface-cream focus-visible:ring-offset-2 focus-visible:ring-offset-[#5A1624]"
+                className="inline-flex items-center gap-2 rounded-xl border border-surface-cream/70 bg-white/5 px-6 py-3.5 text-sm font-bold uppercase tracking-wider text-surface-cream hover:bg-white/15 hover:border-surface-cream transition-all duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-surface-cream focus-visible:ring-offset-2 focus-visible:ring-offset-[#5A1624]"
               >
                 <span>Explore Collections</span>
               </Link>

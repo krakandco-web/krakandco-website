@@ -61,7 +61,7 @@ export default function AccountDashboardPage() {
           {/* Main Content Area */}
           <div className="flex-1 space-y-6">
             {/* Welcome Banner */}
-            <div className="relative overflow-hidden rounded-3xl bg-gradient-to-r from-[#7A1C1C] to-[#5C1515] p-6 sm:p-8 text-[#FFF8EE] shadow-md border-2 border-[#E6AC2A]/30">
+            <div className="relative overflow-hidden rounded-3xl bg-gradient-to-r from-[#7A1C1C] to-[#5C1515] p-6 sm:p-8 text-[#FFF8EE] shadow-sm border border-[#E6AC2A]/30">
               <div className="relative z-10 max-w-xl">
                 <div className="inline-flex items-center gap-1.5 rounded-full bg-[#E6AC2A]/20 px-3 py-1 text-xs font-bold text-[#E6AC2A] mb-3">
                   <Sparkles className="h-3.5 w-3.5" />
@@ -101,7 +101,7 @@ export default function AccountDashboardPage() {
             <div className="grid grid-cols-2 sm:grid-cols-4 gap-4">
               <Link
                 href="/account/orders"
-                className="group rounded-2xl border-2 border-[#7A1C1C]/15 bg-[#FFFDF8] p-4 shadow-sm hover:border-[#7A1C1C] transition-all"
+                className="group rounded-2xl border border-[#7A1C1C]/15 bg-[#FFFDF8] p-4 shadow-sm hover:border-[#7A1C1C] transition-all"
               >
                 <div className="flex items-center justify-between">
                   <span className="text-xs font-medium text-[#1C1917]/70">Orders</span>
@@ -115,7 +115,7 @@ export default function AccountDashboardPage() {
 
               <Link
                 href="/account/orders/KRAK-78291"
-                className="group rounded-2xl border-2 border-[#7A1C1C]/15 bg-[#FFFDF8] p-4 shadow-sm hover:border-[#7A1C1C] transition-all"
+                className="group rounded-2xl border border-[#7A1C1C]/15 bg-[#FFFDF8] p-4 shadow-sm hover:border-[#7A1C1C] transition-all"
               >
                 <div className="flex items-center justify-between">
                   <span className="text-xs font-medium text-[#1C1917]/70">Tracking</span>
@@ -129,7 +129,7 @@ export default function AccountDashboardPage() {
 
               <Link
                 href="/account/addresses"
-                className="group rounded-2xl border-2 border-[#7A1C1C]/15 bg-[#FFFDF8] p-4 shadow-sm hover:border-[#7A1C1C] transition-all"
+                className="group rounded-2xl border border-[#7A1C1C]/15 bg-[#FFFDF8] p-4 shadow-sm hover:border-[#7A1C1C] transition-all"
               >
                 <div className="flex items-center justify-between">
                   <span className="text-xs font-medium text-[#1C1917]/70">Addresses</span>
@@ -143,7 +143,7 @@ export default function AccountDashboardPage() {
 
               <Link
                 href="/wishlist"
-                className="group rounded-2xl border-2 border-[#7A1C1C]/15 bg-[#FFFDF8] p-4 shadow-sm hover:border-[#7A1C1C] transition-all"
+                className="group rounded-2xl border border-[#7A1C1C]/15 bg-[#FFFDF8] p-4 shadow-sm hover:border-[#7A1C1C] transition-all"
               >
                 <div className="flex items-center justify-between">
                   <span className="text-xs font-medium text-[#1C1917]/70">Wishlist</span>
@@ -157,7 +157,7 @@ export default function AccountDashboardPage() {
             </div>
 
             {/* Active Order Spotlight */}
-            <div className="rounded-2xl border-2 border-[#7A1C1C]/15 bg-[#FFFDF8] p-6 shadow-sm">
+            <div className="rounded-2xl border border-[#7A1C1C]/15 bg-[#FFFDF8] p-6 shadow-sm">
               <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 pb-4 border-b border-[#7A1C1C]/10">
                 <div>
                   <div className="flex items-center gap-2">
@@ -249,7 +249,7 @@ export default function AccountDashboardPage() {
 
             {/* Quick Settings & Help Row */}
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-              <div className="rounded-2xl border-2 border-[#7A1C1C]/15 bg-[#FFFDF8] p-5 shadow-sm">
+              <div className="rounded-2xl border border-[#7A1C1C]/15 bg-[#FFFDF8] p-5 shadow-sm">
                 <div className="flex items-center gap-3 mb-2">
                   <ShieldCheck className="h-5 w-5 text-[#285F49]" />
                   <h3 className="font-serif text-sm font-bold text-[#1C1917]">
@@ -267,7 +267,7 @@ export default function AccountDashboardPage() {
                 </Link>
               </div>
 
-              <div className="rounded-2xl border-2 border-[#7A1C1C]/15 bg-[#FFFDF8] p-5 shadow-sm">
+              <div className="rounded-2xl border border-[#7A1C1C]/15 bg-[#FFFDF8] p-5 shadow-sm">
                 <div className="flex items-center gap-3 mb-2">
                   <MapPin className="h-5 w-5 text-[#E6AC2A]" />
                   <h3 className="font-serif text-sm font-bold text-[#1C1917]">

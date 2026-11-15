@@ -169,7 +169,7 @@ export default function FAQPage() {
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
               placeholder="Search by keywords (e.g. coconut oil, shelf life, refund)..."
-              className="w-full pl-11 pr-4 py-3 rounded-2xl border-2 border-[#7A1C1C]/20 bg-[#FFFDF8] text-sm text-[#1C1917] focus:outline-none focus:border-[#7A1C1C] shadow-sm"
+              className="w-full pl-11 pr-4 py-3 rounded-2xl border border-[#7A1C1C]/20 bg-[#FFFDF8] text-sm text-[#1C1917] focus:outline-none focus:border-[#7A1C1C] shadow-xs"
             />
           </div>
         </div>
@@ -206,7 +206,7 @@ export default function FAQPage() {
 
         {/* FAQ Accordion List */}
         {filteredFAQs.length === 0 ? (
-          <div className="rounded-2xl border-2 border-dashed border-[#7A1C1C]/20 bg-[#FFFDF8] p-12 text-center">
+          <div className="rounded-2xl border border-[#7A1C1C]/15 bg-[#FFFDF8] p-12 text-center">
             <HelpCircle className="mx-auto h-12 w-12 text-[#1C1917]/30" />
             <h3 className="mt-3 font-serif text-lg font-bold text-[#1C1917]">
               No questions matched your search
@@ -230,7 +230,7 @@ export default function FAQPage() {
               return (
                 <div
                   key={faq.id}
-                  className="rounded-2xl border-2 border-[#7A1C1C]/15 bg-[#FFFDF8] overflow-hidden shadow-sm transition-all"
+                  className="rounded-2xl border border-[#7A1C1C]/15 bg-[#FFFDF8] overflow-hidden shadow-xs transition-all"
                 >
                   <button
                     type="button"
@@ -259,7 +259,7 @@ export default function FAQPage() {
         )}
 
         {/* Contact Helpline Callout */}
-        <div className="mt-12 rounded-3xl border-2 border-[#7A1C1C]/15 bg-gradient-to-r from-[#7A1C1C] to-[#5C1515] p-6 sm:p-8 text-center text-[#FFF8EE] shadow-md">
+        <div className="mt-12 rounded-3xl border border-[#7A1C1C]/15 bg-gradient-to-r from-[#7A1C1C] to-[#5C1515] p-6 sm:p-8 text-center text-[#FFF8EE] shadow-sm">
           <h3 className="font-serif text-xl sm:text-2xl font-bold">
             Still Have Questions?
           </h3>

@@ -240,9 +240,9 @@ export function ProductDetailView({ product, relatedProducts = [] }: ProductDeta
                       key={v.id}
                       type="button"
                       onClick={() => setSelectedVariant(v)}
-                      className={`flex flex-col items-center justify-center p-3 rounded-2xl border-2 transition-all cursor-pointer ${
+                      className={`flex flex-col items-center justify-center p-3 rounded-2xl border transition-all duration-200 cursor-pointer ${
                         isSelected
-                          ? "border-brand-maroon bg-brand-maroon text-text-inverse shadow-md"
+                          ? "border-brand-maroon bg-brand-maroon text-text-inverse shadow-sm"
                           : "border-surface-sand bg-surface-card text-text-primary hover:border-brand-maroon/40"
                       }`}
                     >
@@ -262,7 +262,7 @@ export function ProductDetailView({ product, relatedProducts = [] }: ProductDeta
 
             {/* Quantity Stepper & Add to Cart Action */}
             <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-4 pt-4">
-              <div className="flex items-center justify-between rounded-xl border-2 border-surface-sand bg-surface-card px-3 py-2 min-w-[130px]">
+              <div className="flex items-center justify-between rounded-xl border border-surface-sand bg-surface-card px-3 py-2 min-w-[130px]">
                 <button
                   type="button"
                   onClick={() => setQuantity((q) => Math.max(1, q - 1))}
@@ -285,7 +285,7 @@ export function ProductDetailView({ product, relatedProducts = [] }: ProductDeta
               <button
                 type="button"
                 onClick={handleAddToCart}
-                className="flex-1 flex items-center justify-center gap-2 rounded-xl bg-brand-maroon px-8 py-3.5 text-sm font-bold uppercase tracking-wider text-text-inverse shadow-md hover:bg-brand-maroon-dark active:scale-98 transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-maroon"
+                className="flex-1 flex items-center justify-center gap-2 rounded-xl bg-brand-maroon px-8 py-3.5 text-sm font-bold tracking-wider text-text-inverse shadow-sm hover:bg-brand-maroon-dark hover:shadow-md transition-all duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-maroon"
               >
                 <ShoppingBag className="h-4 w-4" />
                 <span>Add to Cart • {formatPrice(selectedVariant.price * quantity)}</span>

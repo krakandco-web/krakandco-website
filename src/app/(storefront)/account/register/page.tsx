@@ -87,7 +87,7 @@ export default function RegisterPage() {
         </div>
 
         {/* Register Card */}
-        <div className="rounded-2xl border-2 border-[#7A1C1C]/15 bg-[#FFFDF8] p-6 sm:p-8 shadow-md">
+        <div className="rounded-2xl border border-[#7A1C1C]/15 bg-[#FFFDF8] p-6 sm:p-8 shadow-sm">
           <form onSubmit={handleSubmit} className="space-y-4">
             <div>
               <label className="block text-xs font-semibold text-[#1C1917] mb-1.5">
