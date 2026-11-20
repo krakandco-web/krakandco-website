@@ -1,0 +1,102 @@
+<!doctype html>
+<html class="no-js" lang="{{ request.locale.iso_code }}">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="theme-color" content="{{ settings.color_primary | default: '#7A1F1D' }}">
+    <link rel="canonical" href="{{ canonical_url }}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    {%- if page_description -%}
+      <meta name="description" content="{{ page_description | escape }}">
+    {%- endif -%}
+
+    <title>
+      {{ page_title }}
+      {%- if current_tags %} &ndash; tagged "{{ current_tags | join: ', ' }}"{% endif -%}
+      {%- if current_page != 1 %} &ndash; Page {{ current_page }}{% endif -%}
+      {%- unless page_title contains shop.name %} &ndash; {{ shop.name }}{% endunless -%}
+    </title>
+
+    {{ content_for_header }}
+
+    <!-- Dynamic Theme Styling & CSS Tokens -->
+    <style>
+      :root {
+        --color-primary: {{ settings.color_primary | default: '#7A1F1D' }};
+        --color-primary-hover: {{ settings.color_primary_hover | default: '#5E1615' }};
+        --color-accent-terracotta: {{ settings.color_accent_terracotta | default: '#B85D3B' }};
+        --color-accent-sage: {{ settings.color_accent_sage | default: '#3B5E43' }};
+        --color-bg-main: {{ settings.color_bg_main | default: '#FBF7F0' }};
+        --color-bg-surface: {{ settings.color_bg_surface | default: '#FFFFFF' }};
+        --color-bg-subtle: {{ settings.color_bg_subtle | default: '#F5EFE6' }};
+        --color-text-main: {{ settings.color_text_main | default: '#1C1614' }};
+        --color-text-muted: {{ settings.color_text_muted | default: '#756658' }};
+        --color-border: {{ settings.color_border | default: '#E8DFD3' }};
+        --color-gold-star: {{ settings.color_gold_star | default: '#D49B28' }};
+      }
+    </style>
+
+    {{ 'base.css' | asset_url | stylesheet_tag }}
+  </head>
+
+  <body class="template-{{ template.name }}">
+    <!-- Accessibility Skip Link -->
+    <a class="skip-to-content" href="#MainContent" style="position: absolute; left: -9999px; z-index: 999; padding: 1rem; background: #FFF;">
+      Skip to content
+    </a>
+
+    <!-- Global Announcements & Header -->
+    {% section 'announcement-bar' %}
+    {% section 'header' %}
+
+    <!-- Main Content Area -->
+    <main id="MainContent" class="content-for-layout focus-none" role="main" tabindex="-1">
+      {{ content_for_layout }}
+    </main>
+
+    <!-- Global Footer -->
+    {% section 'footer' %}
+
+    <!-- Global Slide-Out Cart Drawer -->
+    {% section 'cart-drawer' %}
+
+    <!-- Mobile Navigation Drawer -->
+    <div class="mobile-nav-drawer" aria-label="Mobile Navigation">
+      <div style="display: flex; align-items: center; justify-content: space-between;">
+        <div class="brand-logo" style="text-align: left; align-items: flex-start;">
+          <img 
+            src="{{ 'krak-logo-transparent.png' | asset_url }}" 
+            alt="KRAK &amp; CO." 
+            style="height: 38px; width: auto; object-fit: contain;"
+          >
+        </div>
+        <button type="button" class="mobile-nav-close" aria-label="Close navigation" style="padding: 0.5rem;">
+          {% render 'icon', name: 'close' %}
+        </button>
+      </div>
+
+      <nav class="mobile-nav-drawer__links">
+        <a href="/collections/all">Shop</a>
+        <a href="/collections">Collections</a>
+        <a href="/pages/our-story">Our Story</a>
+        <a href="/blogs/snack-culture">Snack Culture</a>
+        <a href="/account">My Account</a>
+      </nav>
+
+      <div style="margin-top: auto; padding-top: 2rem; border-top: 1px solid var(--color-border);">
+        <p style="font-size: 0.85rem; color: var(--color-text-muted); margin-bottom: 0.5rem;">India, In Every Crunch.</p>
+        <span class="overline" style="margin: 0;">Authentic Indian Snacks</span>
+      </div>
+    </div>
+
+    <!-- Global Backdrop Overlay -->
+    <div class="drawer-overlay" aria-hidden="true"></div>
+
+    <!-- Theme JavaScript -->
+    {{ 'theme.js' | asset_url | script_tag }}
+  </body>
+</html>
+

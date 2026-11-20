@@ -1,0 +1,98 @@
+{% comment %}
+  KRAK & CO. — SITE HEADER SECTION
+{% endcomment %}
+
+<header class="site-header">
+  <div class="container">
+    <div class="header-inner">
+      <!-- Mobile Menu Button (Left on Mobile) -->
+      <button type="button" class="menu-toggle-btn header-action-btn" aria-label="Open menu">
+        {% render 'icon', name: 'menu' %}
+      </button>
+
+      <!-- Brand Logo (Left) -->
+      <a href="/" class="brand-logo" aria-label="KRAK &amp; CO. Home">
+        {%- if section.settings.logo != blank -%}
+          <img 
+            src="{{ section.settings.logo | image_url: height: 100 }}" 
+            alt="{{ shop.name }}" 
+            style="height: {{ section.settings.logo_height | default: 48 }}px; width: auto; object-fit: contain;"
+          >
+        {%- else -%}
+          <img 
+            src="{{ 'krak-logo-transparent.png' | asset_url }}" 
+            alt="KRAK &amp; CO." 
+            style="height: {{ section.settings.logo_height | default: 48 }}px; width: auto; object-fit: contain;"
+            loading="eager"
+          >
+        {%- endif -%}
+      </a>
+
+      <!-- Desktop Navigation (Center) -->
+      <nav class="header-nav" aria-label="Main Navigation">
+        {%- if section.settings.menu != blank -%}
+          {%- for link in linklists[section.settings.menu].links -%}
+            <a href="{{ link.url }}" class="header-nav__link {% if link.active %}active{% endif %}">
+              {{ link.title }}
+            </a>
+          {%- endfor -%}
+        {%- else -%}
+          <a href="/">Home</a>
+          <a href="/collections/all">Shop</a>
+          <a href="/collections">Collections</a>
+          <a href="/pages/our-story">Our Story</a>
+          <a href="/blogs/snack-culture">Snack Culture</a>
+        {%- endif -%}
+      </nav>
+
+      <!-- Header Actions (Right) -->
+      <div class="header-actions">
+        <!-- Search Trigger -->
+        <a href="/search" class="header-action-btn" aria-label="Search">
+          {% render 'icon', name: 'search' %}
+        </a>
+
+        <!-- Customer Account -->
+        <a href="/account" class="header-action-btn" aria-label="My Account" style="display: inline-flex;">
+          {% render 'icon', name: 'user' %}
+        </a>
+
+        <!-- Cart Drawer Trigger -->
+        <a href="/cart" class="header-action-btn cart-drawer-trigger" aria-label="Shopping Cart">
+          {% render 'icon', name: 'cart' %}
+          <span class="cart-count-badge">{{ cart.item_count | default: 2 }}</span>
+        </a>
+      </div>
+    </div>
+  </div>
+</header>
+
+{% schema %}
+{
+  "name": "Header",
+  "settings": [
+    {
+      "type": "image_picker",
+      "id": "logo",
+      "label": "Logo image"
+    },
+    {
+      "type": "range",
+      "id": "logo_width",
+      "min": 80,
+      "max": 240,
+      "step": 10,
+      "default": 130,
+      "unit": "px",
+      "label": "Custom logo width"
+    },
+    {
+      "type": "link_list",
+      "id": "menu",
+      "label": "Navigation menu",
+      "default": "main-menu"
+    }
+  ]
+}
+{% endschema %}
+

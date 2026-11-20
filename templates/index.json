@@ -1,0 +1,61 @@
+{
+  "sections": {
+    "hero_banner": {
+      "type": "hero-banner",
+      "settings": {
+        "tagline": "A NEW SNACKING CULTURE",
+        "heading": "India, In Every Crunch.",
+        "description": "From timeless favourites to regional discoveries, we bring India's love for snacking into a new era.",
+        "primary_btn_text": "Shop the Collection",
+        "primary_btn_link": "/collections/all",
+        "secondary_btn_text": "Our Story",
+        "secondary_btn_link": "/pages/our-story"
+      }
+    },
+    "trust_badges": {
+      "type": "trust-badges",
+      "settings": {
+        "badge_1": "Authentic Indian Flavours",
+        "badge_2": "No Artificial Preservatives",
+        "badge_3": "Premium Ingredients",
+        "badge_4": "Delivering Pan India"
+      }
+    },
+    "featured_collections": {
+      "type": "featured-collections",
+      "settings": {
+        "south_title": "The South Collection",
+        "south_desc": "Flavours rooted in tradition, made for today.",
+        "south_link": "/collections/south",
+        "north_title": "The North Collection",
+        "north_desc": "Discover the flavours that bring people together.",
+        "north_link": "/collections/north"
+      }
+    },
+    "crowd_favourites": {
+      "type": "crowd-favourites",
+      "settings": {
+        "heading": "The Crowd Favourites.",
+        "view_all_text": "View All",
+        "view_all_link": "/collections/all"
+      }
+    },
+    "taste_of_india_box": {
+      "type": "taste-of-india-box",
+      "settings": {
+        "heading": "A Little Taste of India.",
+        "subtext": "Can't decide where to start? Discover a little bit of everything with our curated snack boxes.",
+        "btn_text": "Explore Our Boxes",
+        "btn_link": "/collections/all"
+      }
+    }
+  },
+  "order": [
+    "hero_banner",
+    "trust_badges",
+    "featured_collections",
+    "crowd_favourites",
+    "taste_of_india_box"
+  ]
+}
+

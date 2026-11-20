@@ -1,0 +1,44 @@
+{% comment %}
+  KRAK & CO. — VARIANT PICKER SNIPPET
+  Renders interactive weight selection pills (e.g. 100g, 200g, 400g)
+{% endcomment %}
+
+<div class="variant-picker">
+  <span class="pdp-label">{{ 'products.product.weight' | t | default: 'Weight' }}</span>
+  
+  <div class="variant-pills">
+    {%- if product.variants and product.variants.size > 1 -%}
+      {%- for variant in product.variants -%}
+        <button 
+          type="button" 
+          class="variant-pill {% if forloop.first %}active{% endif %}" 
+          data-variant-id="{{ variant.id }}" 
+          data-price="₹{{ variant.price | divided_by: 100 }}"
+        >
+          {{ variant.title }}
+        </button>
+      {%- endfor -%}
+    {%- else -%}
+      <!-- Default fallback weight variants from design mockups -->
+      <button type="button" class="variant-pill" data-variant-id="1001" data-price="₹149">100g</button>
+      <button type="button" class="variant-pill active" data-variant-id="1002" data-price="₹249">200g</button>
+      <button type="button" class="variant-pill" data-variant-id="1003" data-price="₹449">400g</button>
+    {%- endif -%}
+  </div>
+
+  <!-- Hidden native select for Shopify form binding -->
+  <select name="id" class="hidden" style="display: none;">
+    {%- if product.variants -%}
+      {%- for variant in product.variants -%}
+        <option value="{{ variant.id }}" {% if forloop.first %}selected{% endif %}>
+          {{ variant.title }} - {{ variant.price | money }}
+        </option>
+      {%- endfor -%}
+    {%- else -%}
+      <option value="1002" selected>200g - ₹249</option>
+      <option value="1001">100g - ₹149</option>
+      <option value="1003">400g - ₹449</option>
+    {%- endif -%}
+  </select>
+</div>
+

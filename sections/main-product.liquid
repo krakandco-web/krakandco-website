@@ -1,0 +1,179 @@
+{% comment %}
+  KRAK & CO. — MAIN PRODUCT DETAIL PAGE (PDP)
+{% endcomment %}
+
+<section class="main-product-section section-spacing">
+  <div class="container">
+    {% render 'breadcrumbs' %}
+
+    <div class="pdp-grid">
+      <!-- Media Gallery -->
+      <div class="pdp-gallery">
+        <!-- Thumbnail strip -->
+        <div class="pdp-gallery__thumbnails">
+          <div class="pdp-gallery__thumb active" data-full-src="{{ product.featured_image | image_url: width: 800 }}">
+            <div style="width: 100%; height: 100%; display: flex; align-items: center; justify-content: center; padding: 4px;">
+              {% render 'line-art-motifs', motif: 'snack-bowl' %}
+            </div>
+          </div>
+          <div class="pdp-gallery__thumb" data-full-src="{{ product.images[1] | image_url: width: 800 }}">
+            <div style="width: 100%; height: 100%; display: flex; align-items: center; justify-content: center; background: #F9F2E7; font-size: 0.65rem; font-weight: 700; color: #7A1F1D;">
+              PACK
+            </div>
+          </div>
+          <div class="pdp-gallery__thumb" data-full-src="{{ product.images[2] | image_url: width: 800 }}">
+            <div style="width: 100%; height: 100%; display: flex; align-items: center; justify-content: center; background: #F4EBE0;">
+              {% render 'stamp-seal', size: 36 %}
+            </div>
+          </div>
+        </div>
+
+        <!-- Main Focal Image -->
+        <div class="pdp-gallery__main">
+          <button type="button" class="product-card__wishlist" data-product-handle="{{ product.handle | default: 'kerala-banana-chips' }}" style="top: 16px; right: 16px;" aria-label="Add to wishlist">
+            {% render 'icon', name: 'heart' %}
+          </button>
+          
+          {%- if product.featured_image -%}
+            <img 
+              src="{{ product.featured_image | image_url: width: 800 }}" 
+              alt="{{ product.title | escape }}" 
+              class="pdp-gallery__main-img" 
+              style="max-width: 85%; max-height: 85%; object-fit: contain;"
+            >
+          {%- else -%}
+            <div style="width: 75%; height: 75%; display: flex; align-items: center; justify-content: center;">
+              {% render 'line-art-motifs', motif: 'snack-bowl' %}
+            </div>
+          {%- endif -%}
+        </div>
+      </div>
+
+      <!-- Product Information Column -->
+      <div class="pdp-info">
+        <h1 style="font-size: clamp(2.2rem, 3.8vw, 3rem); margin-bottom: 0.25rem;">
+          {{ product.title | default: 'Kerala Banana Chips' }}
+        </h1>
+
+        <!-- Star Reviews Social Proof -->
+        <div class="pdp-reviews">
+          <div style="display: flex; gap: 2px;">
+            {% for i in (1..5) %}
+              {% render 'icon', name: 'star' %}
+            {% endfor %}
+          </div>
+          <span>(4.8 &bull; 1,120 reviews)</span>
+        </div>
+
+        <!-- Price Display -->
+        <div class="pdp-price">
+          {% render 'price', product: product, price: '₹249' %}
+        </div>
+
+        <!-- Short Description -->
+        <p style="font-size: 1rem; line-height: 1.6; color: var(--color-text-muted); margin-bottom: 1.5rem;">
+          {{ product.description | strip_html | truncatewords: 30 | default: 'Crispy, golden banana chips made from premium Nendran bananas, lightly seasoned with salt.' }}
+        </p>
+
+        <!-- Product Purchase Form -->
+        {% form 'product', product, id: 'AddToCartForm', class: 'pdp-form' %}
+          <!-- Variant Selector (Weight) -->
+          {% render 'variant-picker', product: product %}
+
+          <!-- Quantity Stepper -->
+          {% render 'quantity-stepper', name: 'quantity', value: 1 %}
+
+          <!-- Action Buttons Group -->
+          <div class="pdp-actions-group">
+            <button type="submit" name="add" class="btn btn-primary btn-full" style="height: 50px; font-size: 1rem;">
+              {% render 'icon', name: 'cart' %}
+              {{ 'products.product.add_to_cart' | t | default: 'Add to Cart' }}
+            </button>
+
+            <button type="button" class="btn btn-outline-primary btn-full" style="height: 50px; font-size: 1rem;" onclick="location.href='/checkout'">
+              {% render 'icon', name: 'lightning' %}
+              {{ 'products.product.buy_now' | t | default: 'Buy Now' }}
+            </button>
+          </div>
+        {% endform %}
+
+        <!-- Product Badges (3 Icons) -->
+        <div class="pdp-badges-row">
+          <div class="pdp-badge-item">
+            {% render 'icon', name: 'leaf' %}
+            <span>Authentic Recipe</span>
+          </div>
+          <div class="pdp-badge-item">
+            {% render 'icon', name: 'flask' %}
+            <span>No Preservatives</span>
+          </div>
+          <div class="pdp-badge-item">
+            {% render 'stamp-seal', size: 28 %}
+            <span>Made in Kerala</span>
+          </div>
+        </div>
+
+        <!-- Accordion Information Tabs -->
+        <div class="pdp-accordions" style="margin-top: 1.5rem;">
+          <!-- Accordion 1: The Story -->
+          <div class="pdp-accordion-item active">
+            <button type="button" class="pdp-accordion-trigger">
+              <span>The Story</span>
+              {% render 'icon', name: 'chevron-down' %}
+            </button>
+            <div class="pdp-accordion-content">
+              <p style="margin-bottom: 0.75rem;">
+                Our Kerala Banana Chips are made using traditional methods and premium Nendran bananas, slow-fried to perfection for an iconic crunch.
+              </p>
+              <div style="width: 80px; opacity: 0.6; margin-top: 0.5rem;">
+                {% render 'icon', name: 'leaf' %}
+              </div>
+            </div>
+          </div>
+
+          <!-- Accordion 2: Ingredients -->
+          <div class="pdp-accordion-item">
+            <button type="button" class="pdp-accordion-trigger">
+              <span>Ingredients</span>
+              {% render 'icon', name: 'chevron-down' %}
+            </button>
+            <div class="pdp-accordion-content">
+              <p>Raw Nendran Bananas, Pure Coconut Oil, Rock Salt, Turmeric.</p>
+            </div>
+          </div>
+
+          <!-- Accordion 3: Nutrition -->
+          <div class="pdp-accordion-item">
+            <button type="button" class="pdp-accordion-trigger">
+              <span>Nutrition</span>
+              {% render 'icon', name: 'chevron-down' %}
+            </button>
+            <div class="pdp-accordion-content">
+              <p>Per 100g: Energy 524 kcal, Protein 2.8g, Carbohydrates 58g, Fat 31g, Dietary Fiber 4.5g.</p>
+            </div>
+          </div>
+
+          <!-- Accordion 4: Shipping -->
+          <div class="pdp-accordion-item">
+            <button type="button" class="pdp-accordion-trigger">
+              <span>Shipping</span>
+              {% render 'icon', name: 'chevron-down' %}
+            </button>
+            <div class="pdp-accordion-content">
+              <p>Pan-India delivery within 3-5 business days. Free shipping on all orders above ₹999.</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Product Information",
+  "settings": []
+}
+{% endschema %}
+

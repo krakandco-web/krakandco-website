@@ -1,0 +1,127 @@
+{% comment %}
+  KRAK & CO. — MAIN COLLECTION (PLP) WITH CATEGORY FILTER PILLS & SORTING
+{% endcomment %}
+
+<section class="main-collection-section section-spacing" style="padding-top: 2rem;">
+  <div class="container">
+    
+    <!-- Category Filter Pills Bar -->
+    <div class="filter-pills-bar">
+      <button type="button" class="filter-pill active" data-filter="all">All</button>
+      <button type="button" class="filter-pill" data-filter="south">South</button>
+      <button type="button" class="filter-pill" data-filter="north">North</button>
+      <button type="button" class="filter-pill" data-filter="sweet">Sweet</button>
+      <button type="button" class="filter-pill" data-filter="spicy">Spicy</button>
+      <button type="button" class="filter-pill" data-filter="savoury">Savoury</button>
+    </div>
+
+    <!-- Controls Row: Sort & Filter Trigger -->
+    <div class="filter-controls-row">
+      <div style="display: flex; align-items: center; gap: 0.5rem;">
+        <span style="color: var(--color-text-muted); font-size: 0.85rem;">Sort:</span>
+        <select class="sort-select" id="SortBy" onchange="location = this.value;">
+          <option value="{{ collection.url }}?sort_by=best-selling" selected>Bestseller</option>
+          <option value="{{ collection.url }}?sort_by=price-ascending">Price: Low to High</option>
+          <option value="{{ collection.url }}?sort_by=price-descending">Price: High to Low</option>
+          <option value="{{ collection.url }}?sort_by=created-descending">New Arrivals</option>
+        </select>
+      </div>
+
+      <button type="button" class="btn btn-secondary" style="padding: 0.45rem 1rem; font-size: 0.85rem;">
+        {% render 'icon', name: 'filter' %}
+        Filter
+      </button>
+    </div>
+
+    <!-- Product Grid -->
+    {%- paginate collection.products by 12 -%}
+      <div class="grid grid--4-col" id="ProductGrid">
+        {%- if collection.products.size > 0 -%}
+          {%- for product in collection.products -%}
+            {% render 'product-card', product: product %}
+          {%- endfor -%}
+        {%- else -%}
+          <!-- Curated Products matching Design Manual Mockups -->
+          {% render 'product-card', 
+            title: 'Kerala Banana Chips', 
+            price: '₹249', 
+            weight: '200 g', 
+            handle: 'kerala-banana-chips', 
+            url: '/products/kerala-banana-chips',
+            category: 'south chips savoury'
+          %}
+
+          {% render 'product-card', 
+            title: 'Thenkuzhal Murukku', 
+            price: '₹259', 
+            weight: '200 g', 
+            handle: 'thenkuzhal-murukku', 
+            url: '/products/thenkuzhal-murukku',
+            category: 'south savoury'
+          %}
+
+          {% render 'product-card', 
+            title: 'Madras Mixture', 
+            price: '₹249', 
+            weight: '200 g', 
+            handle: 'madras-mixture', 
+            url: '/products/madras-mixture',
+            category: 'south spicy savoury'
+          %}
+
+          {% render 'product-card', 
+            title: 'Masala Cashews', 
+            price: '₹399', 
+            weight: '200 g', 
+            handle: 'masala-cashews', 
+            url: '/products/masala-cashews',
+            category: 'north spicy savoury'
+          %}
+
+          {% render 'product-card', 
+            title: 'Bikaneri Bhujia', 
+            price: '₹229', 
+            weight: '200 g', 
+            handle: 'bikaneri-bhujia', 
+            url: '/products/bikaneri-bhujia',
+            category: 'north spicy savoury'
+          %}
+
+          {% render 'product-card', 
+            title: 'Ribbon Pakoda', 
+            price: '₹249', 
+            weight: '200 g', 
+            handle: 'ribbon-pakoda', 
+            url: '/products/ribbon-pakoda',
+            category: 'south savoury'
+          %}
+        {%- endif -%}
+      </div>
+
+      {%- if paginate.pages > 1 -%}
+        <div style="margin-top: 3rem; text-align: center;">
+          {{ paginate | default_pagination }}
+        </div>
+      {%- endif -%}
+    {%- endpaginate -%}
+
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Main Collection Grid",
+  "settings": [
+    {
+      "type": "range",
+      "id": "products_per_page",
+      "min": 8,
+      "max": 24,
+      "step": 4,
+      "default": 12,
+      "label": "Products per page"
+    }
+  ]
+}
+{% endschema %}
+

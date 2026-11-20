@@ -1,0 +1,25 @@
+{% comment %}
+  KRAK & CO. — CUSTOMER ADDRESSES
+{% endcomment %}
+
+<section class="section-spacing">
+  <div class="container" style="max-width: 680px;">
+    {% render 'breadcrumbs' %}
+    <h1 style="font-size: 2.2rem; margin-bottom: 1.5rem;">Your Addresses</h1>
+
+    <div style="background: var(--color-bg-surface); border: 1px solid var(--color-border); border-radius: var(--radius-lg); padding: 2rem; margin-bottom: 2rem;">
+      <h3 style="font-size: 1.25rem; margin-bottom: 0.5rem;">Default Shipping Address</h3>
+      <p style="color: var(--color-text-muted); line-height: 1.6; margin-bottom: 1.5rem;">
+        {{ customer.default_address.name | default: 'Dhyanesh' }}<br>
+        {{ customer.default_address.address1 | default: '14, Palm Grove Road, Indiranagar' }}<br>
+        {{ customer.default_address.city | default: 'Bengaluru' }}, {{ customer.default_address.zip | default: '560038' }}<br>
+        India
+      </p>
+
+      <button type="button" class="btn btn-secondary">Edit Address</button>
+    </div>
+
+    <a href="/account" class="link-with-arrow">&larr; Back to My Account</a>
+  </div>
+</section>
+

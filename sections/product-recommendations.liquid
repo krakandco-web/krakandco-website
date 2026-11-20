@@ -1,0 +1,71 @@
+{% comment %}
+  KRAK & CO. — PRODUCT RECOMMENDATIONS ("YOU MAY ALSO LIKE")
+{% endcomment %}
+
+<section class="recommendations-section section-spacing" style="border-top: 1px solid var(--color-border);">
+  <div class="container">
+    <h2 style="font-size: 1.85rem; margin-bottom: 2rem;">
+      {{ section.settings.heading | default: 'You may also like' }}
+    </h2>
+
+    <div class="grid grid--4-col">
+      {%- if recommendations.performed and recommendations.products_count > 0 -%}
+        {%- for product in recommendations.products -%}
+          {% render 'product-card', product: product %}
+        {%- endfor -%}
+      {%- else -%}
+        <!-- Curated Upsells matching Design Mockups -->
+        {% render 'product-card', 
+          title: 'Thenkuzhal Murukku', 
+          price: '₹259', 
+          weight: '200 g', 
+          handle: 'thenkuzhal-murukku', 
+          url: '/products/thenkuzhal-murukku',
+          category: 'south savoury'
+        %}
+
+        {% render 'product-card', 
+          title: 'Ribbon Pakoda', 
+          price: '₹249', 
+          weight: '200 g', 
+          handle: 'ribbon-pakoda', 
+          url: '/products/ribbon-pakoda',
+          category: 'south savoury'
+        %}
+
+        {% render 'product-card', 
+          title: 'Madras Mixture', 
+          price: '₹249', 
+          weight: '200 g', 
+          handle: 'madras-mixture', 
+          url: '/products/madras-mixture',
+          category: 'south spicy'
+        %}
+
+        {% render 'product-card', 
+          title: 'Masala Cashews', 
+          price: '₹399', 
+          weight: '200 g', 
+          handle: 'masala-cashews', 
+          url: '/products/masala-cashews',
+          category: 'north spicy'
+        %}
+      {%- endif -%}
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Product Recommendations",
+  "settings": [
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Heading",
+      "default": "You may also like"
+    }
+  ]
+}
+{% endschema %}
+

@@ -1,0 +1,80 @@
+{% comment %}
+  KRAK & CO. — CUSTOMER ACCOUNT DASHBOARD (MY ACCOUNT)
+{% endcomment %}
+
+<section class="main-account-section section-spacing">
+  <div class="container" style="max-width: 580px;">
+    <h1 style="font-size: 2.2rem; margin-bottom: 2rem; text-align: center;">My Account</h1>
+
+    <!-- Customer Profile Header Card -->
+    <div style="background: var(--color-bg-surface); border: 1px solid var(--color-border); border-radius: var(--radius-lg); padding: 1.75rem; text-align: center; margin-bottom: 1.5rem; box-shadow: var(--shadow-sm);">
+      <div style="width: 72px; height: 72px; border-radius: 50%; background: #F5EFE6; display: flex; align-items: center; justify-content: center; margin: 0 auto 0.85rem; color: var(--color-primary);">
+        {% render 'icon', name: 'user' %}
+      </div>
+      <h2 style="font-size: 1.55rem; margin-bottom: 0.2rem;">
+        Hi, {{ customer.first_name | default: 'Dhyanesh' }}
+      </h2>
+      <p style="font-size: 0.9rem; color: var(--color-text-muted);">
+        {{ customer.email | default: 'dhyanesh@gmail.com' }}
+      </p>
+    </div>
+
+    <!-- Quick Navigation Links (Card List) -->
+    <div style="display: flex; flex-direction: column; gap: 0.75rem;">
+      
+      <!-- My Orders -->
+      <a href="/account#orders" style="display: flex; align-items: center; justify-content: space-between; background: var(--color-bg-surface); border: 1px solid var(--color-border); border-radius: var(--radius-md); padding: 1.1rem 1.25rem; font-weight: 600; color: var(--color-text-main); transition: all var(--transition-fast);">
+        <div style="display: flex; align-items: center; gap: 0.85rem;">
+          <span style="color: var(--color-primary);">{% render 'icon', name: 'cart' %}</span>
+          <span>My Orders</span>
+        </div>
+        <span style="color: var(--color-text-muted);">{% render 'icon', name: 'chevron-right' %}</span>
+      </a>
+
+      <!-- Addresses -->
+      <a href="{{ routes.account_addresses_url }}" style="display: flex; align-items: center; justify-content: space-between; background: var(--color-bg-surface); border: 1px solid var(--color-border); border-radius: var(--radius-md); padding: 1.1rem 1.25rem; font-weight: 600; color: var(--color-text-main); transition: all var(--transition-fast);">
+        <div style="display: flex; align-items: center; gap: 0.85rem;">
+          <span style="color: var(--color-primary);">{% render 'icon', name: 'truck' %}</span>
+          <span>Addresses</span>
+        </div>
+        <span style="color: var(--color-text-muted);">{% render 'icon', name: 'chevron-right' %}</span>
+      </a>
+
+      <!-- Wishlist -->
+      <a href="/pages/wishlist" style="display: flex; align-items: center; justify-content: space-between; background: var(--color-bg-surface); border: 1px solid var(--color-border); border-radius: var(--radius-md); padding: 1.1rem 1.25rem; font-weight: 600; color: var(--color-text-main); transition: all var(--transition-fast);">
+        <div style="display: flex; align-items: center; gap: 0.85rem;">
+          <span style="color: var(--color-primary);">{% render 'icon', name: 'heart' %}</span>
+          <span>Wishlist</span>
+        </div>
+        <span style="color: var(--color-text-muted);">{% render 'icon', name: 'chevron-right' %}</span>
+      </a>
+
+      <!-- Account Details -->
+      <a href="/account" style="display: flex; align-items: center; justify-content: space-between; background: var(--color-bg-surface); border: 1px solid var(--color-border); border-radius: var(--radius-md); padding: 1.1rem 1.25rem; font-weight: 600; color: var(--color-text-main); transition: all var(--transition-fast);">
+        <div style="display: flex; align-items: center; gap: 0.85rem;">
+          <span style="color: var(--color-primary);">{% render 'icon', name: 'user' %}</span>
+          <span>Account Details</span>
+        </div>
+        <span style="color: var(--color-text-muted);">{% render 'icon', name: 'chevron-right' %}</span>
+      </a>
+
+      <!-- Log Out -->
+      <a href="{{ routes.account_logout_url }}" style="display: flex; align-items: center; justify-content: space-between; background: var(--color-bg-surface); border: 1px solid var(--color-border); border-radius: var(--radius-md); padding: 1.1rem 1.25rem; font-weight: 600; color: var(--color-primary); transition: all var(--transition-fast);">
+        <div style="display: flex; align-items: center; gap: 0.85rem;">
+          <span>{% render 'icon', name: 'close' %}</span>
+          <span>Log Out</span>
+        </div>
+        <span style="color: var(--color-primary);">{% render 'icon', name: 'chevron-right' %}</span>
+      </a>
+
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Customer Account",
+  "settings": []
+}
+{% endschema %}
+

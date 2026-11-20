@@ -1,0 +1,38 @@
+{% comment %}
+  KRAK & CO. — BREADCRUMBS SNIPPET
+{% endcomment %}
+
+<nav class="breadcrumbs" aria-label="Breadcrumb">
+  <a href="/">Home</a>
+  <span class="breadcrumbs__sep">&gt;</span>
+
+  {%- if template contains 'collection' -%}
+    {%- if current_tags -%}
+      {{ collection.title | link_to: collection.url }}
+      <span class="breadcrumbs__sep">&gt;</span>
+      <span>{{ current_tags | join: " + " }}</span>
+    {%- else -%}
+      <span>{{ collection.title | default: 'Shop All' }}</span>
+    {%- endif -%}
+  {%- elsif template contains 'product' -%}
+    {%- if collection -%}
+      <a href="{{ collection.url }}">{{ collection.title }}</a>
+      <span class="breadcrumbs__sep">&gt;</span>
+    {%- else -%}
+      <a href="/collections/all">South Collection</a>
+      <span class="breadcrumbs__sep">&gt;</span>
+    {%- endif -%}
+    <span>{{ product.title | default: 'Kerala Banana Chips' }}</span>
+  {%- elsif template contains 'blog' -%}
+    <span>{{ blog.title | default: 'Snack Culture' }}</span>
+  {%- elsif template contains 'article' -%}
+    <a href="{{ blog.url }}">{{ blog.title }}</a>
+    <span class="breadcrumbs__sep">&gt;</span>
+    <span>{{ article.title }}</span>
+  {%- elsif template contains 'page' -%}
+    <span>{{ page.title }}</span>
+  {%- else -%}
+    <span>{{ page_title }}</span>
+  {%- endif -%}
+</nav>
+

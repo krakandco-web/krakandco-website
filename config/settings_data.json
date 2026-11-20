@@ -1,0 +1,19 @@
+{
+  "current": {
+    "color_primary": "#7A1F1D",
+    "color_primary_hover": "#5E1615",
+    "color_accent_terracotta": "#B85D3B",
+    "color_accent_sage": "#3B5E43",
+    "color_bg_main": "#FBF7F0",
+    "color_bg_surface": "#FFFFFF",
+    "color_bg_subtle": "#F5EFE6",
+    "color_text_main": "#1C1614",
+    "color_text_muted": "#756658",
+    "color_border": "#E8DFD3",
+    "color_gold_star": "#D49B28",
+    "free_shipping_threshold": 999,
+    "announcement_text": "★ A NEW SNACKING CULTURE | REGIONAL FLAVOURS | FREE SHIPPING ABOVE ₹999 ★",
+    "social_instagram_link": "https://instagram.com"
+  }
+}
+

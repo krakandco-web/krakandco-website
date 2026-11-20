@@ -1,0 +1,26 @@
+{% comment %}
+  KRAK & CO. — BRAND LOGO SNIPPET
+  Usage: {% render 'brand-logo', height: 42 %}
+{% endcomment %}
+
+{%- liquid
+  assign logo_height = height | default: 42
+-%}
+
+<a href="/" class="brand-logo" aria-label="KRAK &amp; CO. Home">
+  {%- if settings.logo != blank -%}
+    <img 
+      src="{{ settings.logo | image_url: height: 100 }}" 
+      alt="{{ shop.name }}" 
+      style="height: {{ logo_height }}px; width: auto; object-fit: contain;"
+    >
+  {%- else -%}
+    <img 
+      src="{{ 'krak-logo-transparent.png' | asset_url }}" 
+      alt="KRAK &amp; CO." 
+      style="height: {{ logo_height }}px; width: auto; object-fit: contain;"
+      loading="eager"
+    >
+  {%- endif -%}
+</a>
+

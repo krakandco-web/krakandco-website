@@ -1,0 +1,62 @@
+{% comment %}
+  KRAK & CO. — PRODUCT CARD SNIPPET
+  Renders a single snack product card with wishlist button, image, weight & price
+{% endcomment %}
+
+{%- liquid
+  assign card_product = product
+  assign product_title = title | default: card_product.title | default: 'Kerala Banana Chips'
+  assign product_price = price | default: card_product.price | default: 24900
+  assign product_weight = weight | default: '200 g'
+  assign product_handle = handle | default: card_product.handle | default: 'kerala-banana-chips'
+  assign product_url = url | default: card_product.url | default: '/products/kerala-banana-chips'
+  assign product_category = category | default: 'south savoury'
+-%}
+
+<div class="product-card" data-category="{{ product_category }}">
+  <!-- Wishlist Heart Toggle -->
+  <button type="button" class="product-card__wishlist" data-product-handle="{{ product_handle }}" aria-label="Add to wishlist">
+    {% render 'icon', name: 'heart' %}
+  </button>
+
+  <!-- Product Imagery -->
+  <a href="{{ product_url }}" class="product-card__image-wrap">
+    {%- if card_product.featured_image -%}
+      <img 
+        src="{{ card_product.featured_image | image_url: width: 400 }}" 
+        alt="{{ product_title | escape }}" 
+        loading="lazy" 
+        class="product-card__image"
+      >
+    {%- elsif image_src -%}
+      <img 
+        src="{{ image_src }}" 
+        alt="{{ product_title | escape }}" 
+        loading="lazy" 
+        class="product-card__image"
+      >
+    {%- else -%}
+      <div style="width: 100%; height: 100%; display: flex; align-items: center; justify-content: center;">
+        {% render 'line-art-motifs', motif: 'snack-bowl' %}
+      </div>
+    {%- endif -%}
+  </a>
+
+  <!-- Product Details -->
+  <h3 class="product-card__title">
+    <a href="{{ product_url }}">{{ product_title }}</a>
+  </h3>
+
+  <div class="product-card__meta">
+    <span class="product-card__weight">{{ product_weight }}</span>
+    <span>|</span>
+    <span class="product-card__price">
+      {%- if product_price contains '₹' -%}
+        {{ product_price }}
+      {%- else -%}
+        ₹{{ product_price | divided_by: 100 }}
+      {%- endif -%}
+    </span>
+  </div>
+</div>
+

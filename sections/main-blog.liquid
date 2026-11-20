@@ -1,0 +1,72 @@
+{% comment %}
+  KRAK & CO. — "SNACK CULTURE" BLOG JOURNAL
+{% endcomment %}
+
+<section class="main-blog-section section-spacing">
+  <div class="container" style="max-width: 960px;">
+    
+    <div style="text-align: center; margin-bottom: 2.5rem;">
+      <h1 style="font-size: clamp(2.2rem, 4vw, 3.2rem); margin-bottom: 0.5rem;">
+        {{ blog.title | default: 'Snack Culture' }}
+      </h1>
+      <p style="font-size: 1.05rem; color: var(--color-text-muted);">
+        Stories, flavours and everything around India's snacking culture.
+      </p>
+    </div>
+
+    <!-- Category Filter Pills -->
+    <div class="filter-pills-bar" style="justify-content: center; margin-bottom: 2.5rem;">
+      <button type="button" class="filter-pill active">All</button>
+      <button type="button" class="filter-pill">Recipes</button>
+      <button type="button" class="filter-pill">Stories</button>
+      <button type="button" class="filter-pill">Guides</button>
+    </div>
+
+    <!-- Featured Article Card -->
+    <article style="background: var(--color-bg-surface); border: 1px solid var(--color-border); border-radius: var(--radius-lg); overflow: hidden; margin-bottom: 2.5rem; box-shadow: var(--shadow-sm);">
+      <div style="background: #F9F2E7; height: 260px; display: flex; align-items: center; justify-content: center; position: relative;">
+        {% render 'line-art-motifs', motif: 'snack-bowl' %}
+        <span style="position: absolute; top: 16px; left: 16px; background: var(--color-primary); color: #FFF; font-size: 0.72rem; font-weight: 700; letter-spacing: 0.1em; padding: 0.35rem 0.85rem; border-radius: var(--radius-pill); text-transform: uppercase;">
+          RECIPES
+        </span>
+      </div>
+      <div style="padding: 1.75rem;">
+        <h2 style="font-size: 1.75rem; margin-bottom: 0.5rem; line-height: 1.25;">
+          <a href="/blogs/snack-culture/how-kerala-banana-chips-became-a-timeless-classic">
+            How Kerala Banana Chips Became a Timeless Classic
+          </a>
+        </h2>
+        <p style="font-size: 0.95rem; line-height: 1.6; color: var(--color-text-muted); margin-bottom: 1.25rem;">
+          Tracing the journey of Nendran bananas, wood-pressed coconut oil, and the slow artisanal frying technique that defined South Indian crunch.
+        </p>
+        <span style="font-size: 0.8rem; font-weight: 600; color: var(--color-primary);">5 min read &bull; Nov 2026</span>
+      </div>
+    </article>
+
+    <!-- Additional Articles Grid -->
+    <div class="grid grid--2-col" style="gap: 1.5rem;">
+      <article style="background: var(--color-bg-surface); border: 1px solid var(--color-border); border-radius: var(--radius-md); padding: 1.5rem;">
+        <span class="overline" style="color: var(--color-accent-terracotta);">STORIES</span>
+        <h3 style="font-size: 1.35rem; margin-bottom: 0.5rem;">The Spice Route of Madras Mixture</h3>
+        <p style="font-size: 0.88rem; color: var(--color-text-muted); margin-bottom: 1rem;">Why fried curry leaves and asafoetida form the soul of South Indian evening tea.</p>
+        <span style="font-size: 0.78rem; font-weight: 600; color: var(--color-text-muted);">4 min read</span>
+      </article>
+
+      <article style="background: var(--color-bg-surface); border: 1px solid var(--color-border); border-radius: var(--radius-md); padding: 1.5rem;">
+        <span class="overline" style="color: var(--color-accent-sage);">GUIDES</span>
+        <h3 style="font-size: 1.35rem; margin-bottom: 0.5rem;">Pairing Chai with Traditional Savouries</h3>
+        <p style="font-size: 0.88rem; color: var(--color-text-muted); margin-bottom: 1rem;">From spiced ginger cutting chai to robust Filter Kaapi pairings.</p>
+        <span style="font-size: 0.78rem; font-weight: 600; color: var(--color-text-muted);">6 min read</span>
+      </article>
+    </div>
+
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Main Blog Section",
+  "settings": []
+}
+{% endschema %}
+

@@ -1,0 +1,78 @@
+{% comment %}
+  KRAK & CO. — COLLECTION BANNER (WITH REGIONAL LINE-ART ENGRAVINGS)
+{% endcomment %}
+
+{%- liquid
+  assign is_south = false
+  assign is_north = false
+  if collection.handle contains 'south' or section.settings.force_region == 'south'
+    assign is_south = true
+  elsif collection.handle contains 'north' or section.settings.force_region == 'north'
+    assign is_north = true
+  endif
+-%}
+
+<section class="collection-banner" style="background-color: var(--color-bg-subtle); border-bottom: 1px solid var(--color-border); padding: 2.5rem 0 2rem; position: relative; overflow: hidden;">
+  <div class="container">
+    {% render 'breadcrumbs' %}
+
+    <div style="display: flex; align-items: center; justify-content: space-between; position: relative;">
+      <div style="max-width: 620px; z-index: 2;">
+        <h1 style="font-size: clamp(2rem, 4vw, 3rem); margin-bottom: 0.5rem;">
+          {{ collection.title | default: 'All Snacks' }}
+        </h1>
+        <p style="font-size: 1.05rem; line-height: 1.5; color: var(--color-text-muted);">
+          {%- if collection.description != blank -%}
+            {{ collection.description }}
+          {%- elsif is_south -%}
+            Flavours rooted in tradition, made for today.
+          {%- elsif is_north -%}
+            Discover the flavours that bring people together.
+          {%- else -%}
+            Classic favourites, regional specialties and new discoveries.
+          {%- endif -%}
+        </p>
+      </div>
+
+      <!-- Regional Engraving Accent -->
+      <div class="collection-banner__motif" style="width: 160px; height: 130px; opacity: 0.85; flex-shrink: 0;">
+        {%- if is_south -%}
+          {% render 'line-art-motifs', motif: 'south-temple', color: 'var(--color-accent-sage)' %}
+        {%- elsif is_north -%}
+          {% render 'line-art-motifs', motif: 'north-palace', color: 'var(--color-accent-terracotta)' %}
+        {%- else -%}
+          {% render 'stamp-seal', size: 100 %}
+        {%- endif -%}
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  @media (max-width: 640px) {
+    .collection-banner__motif {
+      width: 100px !important;
+      height: 85px !important;
+    }
+  }
+</style>
+
+{% schema %}
+{
+  "name": "Collection Banner",
+  "settings": [
+    {
+      "type": "select",
+      "id": "force_region",
+      "label": "Regional theme style",
+      "options": [
+        { "value": "auto", "label": "Auto-detect from collection handle" },
+        { "value": "south", "label": "South Collection (Sage Gopuram)" },
+        { "value": "north", "label": "North Collection (Terracotta Haveli)" }
+      ],
+      "default": "auto"
+    }
+  ]
+}
+{% endschema %}
+

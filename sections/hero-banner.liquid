@@ -1,0 +1,131 @@
+{% comment %}
+  KRAK & CO. — ORGANIC FLUID HERO SECTION
+  Features an asymmetrical organic terracotta wave, left typography hierarchy,
+  trio snack pouches, and scattered artisanal ingredients/condiment bowls.
+{% endcomment %}
+
+<section class="hero-organic-section">
+  <!-- Organic Terracotta Fluid Wave Backdrop -->
+  <div class="hero-organic-backdrop">
+    <svg viewBox="0 0 1440 680" width="100%" height="100%" fill="none" preserveAspectRatio="none" style="display: block; width: 100%; height: 100%;">
+      <path d="M 0,110 C 220,70 420,185 640,165 C 880,145 1100,75 1320,85 C 1380,88 1420,95 1440,105 L 1440,370 C 1350,390 1260,420 1160,465 C 1050,515 970,545 840,535 C 640,520 480,590 280,575 C 140,565 60,580 0,565 Z" fill="url(#hero-wave-grad)"/>
+      <defs>
+        <linearGradient id="hero-wave-grad" x1="0%" y1="0%" x2="100%" y2="80%">
+          <stop offset="0%" stop-color="#8C2220" />
+          <stop offset="45%" stop-color="#7A1F1D" />
+          <stop offset="100%" stop-color="#5E1615" />
+        </linearGradient>
+      </defs>
+    </svg>
+  </div>
+
+  <!-- Scattered Photorealistic Ingredients around the edges -->
+  <!-- Top Left Whole Red Chili Pepper & Flakes Splash -->
+  <div class="scattered-top-left">
+    <img src="{{ 'hero-scattered-top-left.png' | asset_url }}" alt="Whole red chili and spicy flakes" style="width: 100%; height: auto;">
+  </div>
+
+  <!-- Bottom Left Scattered Nuts & Spices -->
+  <div class="scattered-bottom-left">
+    <img src="{{ 'hero-scattered-left.png' | asset_url }}" alt="Spices and crisps" style="width: 100%; height: auto;">
+  </div>
+
+  <!-- Center-Bottom Floating Spicy Namki Crisp on Curve -->
+  <div class="scattered-center-bottom">
+    <img src="{{ 'hero-scattered-center-bottom.png' | asset_url }}" alt="Spicy namki crisp" style="width: 100%; height: auto;">
+  </div>
+
+  <!-- Bottom Right Bowls Cluster -->
+  <div class="scattered-bottom-right">
+    <img src="{{ 'hero-bowls-cluster.png' | asset_url }}" alt="Assorted Indian Snack Bowls" style="width: 100%; height: auto;">
+  </div>
+
+  <!-- Top Right Floating Crunch & Cumin Seeds Cluster -->
+  <div class="scattered-top-right">
+    <img src="{{ 'hero-scattered-top-right.png' | asset_url }}" alt="Roasted cumin seeds and crunchy namkeen" style="width: 100%; height: auto;">
+  </div>
+
+  <!-- Hero Main Content Grid -->
+  <div class="hero-organic-container">
+    <div class="hero-organic-grid">
+      
+      <!-- Left Content -->
+      <div class="hero-organic-content">
+        <h1 class="hero-headline">
+          {{ section.settings.headline | default: "India's snack culture.<br>With a little more KRAK." }}
+        </h1>
+
+        <p class="hero-subheadline">
+          {{ section.settings.subheadline | default: "From the snacks we grew up with to flavours we can't stop talking about. We bring regional favourites and bold twists together, one ridiculously satisfying crunch at a time." }}
+        </p>
+
+        <div class="hero-btn-group">
+          <a href="{{ section.settings.primary_btn_link | default: '/collections/all' }}" class="hero-btn-primary">
+            {{ section.settings.primary_btn_text | default: 'SHOP THE CRUNCH' }}
+          </a>
+          <a href="{{ section.settings.secondary_btn_link | default: '#shop-our-snacks' }}" class="hero-btn-secondary">
+            {{ section.settings.secondary_btn_text | default: 'EXPLORE OUR SNACKS' }}
+          </a>
+        </div>
+      </div>
+
+      <!-- Right Content (Fan-Out 3 Pouches Presentation) -->
+      <div class="hero-pouches-wrap">
+        <img 
+          src="{{ 'hero-krak-official-pouches.png' | asset_url }}" 
+          alt="KRAK &amp; CO. Trio: Thenkulzal Murukku, Peri Peri Murukku, Thika Namki" 
+          class="hero-pouches-img"
+        >
+      </div>
+
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Hero Banner (Organic)",
+  "settings": [
+    {
+      "type": "text",
+      "id": "badge_tag",
+      "label": "Small supporting text",
+      "default": "REGIONAL SNACKS • MODERN FLAVOURS"
+    },
+    {
+      "type": "text",
+      "id": "headline",
+      "label": "Headline",
+      "default": "India's snack culture.<br>With a little more KRAK."
+    },
+    {
+      "type": "textarea",
+      "id": "subheadline",
+      "label": "Subheadline",
+      "default": "From the snacks we grew up with to flavours we can't stop talking about. We bring regional favourites and bold twists together, one ridiculously satisfying crunch at a time."
+    },
+    {
+      "type": "text",
+      "id": "primary_btn_text",
+      "label": "Primary button text",
+      "default": "SHOP THE CRUNCH"
+    },
+    {
+      "type": "url",
+      "id": "primary_btn_link",
+      "label": "Primary button link"
+    },
+    {
+      "type": "text",
+      "id": "secondary_btn_text",
+      "label": "Secondary button text",
+      "default": "EXPLORE OUR SNACKS"
+    },
+    {
+      "type": "url",
+      "id": "secondary_btn_link",
+      "label": "Secondary button link"
+    }
+  ]
+}
+{% endschema %}

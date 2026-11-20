@@ -1,0 +1,15 @@
+{% comment %}
+  KRAK & CO. — PRICE FORMATTER SNIPPET
+  Usage: {% render 'price', product: product %} or {% render 'price', price: 24900 %}
+{% endcomment %}
+{%- liquid
+  assign raw_price = price | default: product.price | default: 24900
+-%}
+<span class="price-formatted">
+  {%- if raw_price contains '₹' -%}
+    {{ raw_price }}
+  {%- else -%}
+    ₹{{ raw_price | divided_by: 100 }}
+  {%- endif -%}
+</span>
+

@@ -1,0 +1,31 @@
+{% comment %}
+  KRAK & CO. — ANNOUNCEMENT BAR SECTION
+{% endcomment %}
+
+{%- if section.settings.show_announcement -%}
+  <div class="announcement-bar">
+    <div class="container" style="display: flex; align-items: center; justify-content: center; gap: 0.75rem;">
+      <span>{{ section.settings.text | default: 'A LITTLE CRUNCH. A LOT OF FLAVOUR. WELCOME TO KRAK & CO. • FREE SHIPPING ABOVE ₹999' }}</span>
+    </div>
+  </div>
+{%- endif -%}
+
+{% schema %}
+{
+  "name": "Announcement Bar",
+  "settings": [
+    {
+      "type": "checkbox",
+      "id": "show_announcement",
+      "label": "Show announcement bar",
+      "default": true
+    },
+    {
+      "type": "text",
+      "id": "text",
+      "label": "Announcement text",
+      "default": "A LITTLE CRUNCH. A LOT OF FLAVOUR. WELCOME TO KRAK & CO. • FREE SHIPPING ABOVE ₹999"
+    }
+  ]
+}
+{% endschema %}

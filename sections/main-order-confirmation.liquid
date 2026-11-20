@@ -1,0 +1,49 @@
+{% comment %}
+  KRAK & CO. — ORDER CONFIRMATION / THANK YOU SECTION
+{% endcomment %}
+
+<section class="order-confirmation-section section-spacing" style="text-align: center; padding-top: 4rem; padding-bottom: 2rem;">
+  <div class="container" style="max-width: 580px;">
+    
+    <!-- Scalloped Badge with White Checkmark -->
+    {% render 'line-art-motifs', motif: 'order-success' %}
+
+    <h1 style="font-size: clamp(2.2rem, 4vw, 3rem); margin-bottom: 0.5rem;">
+      Order Placed!
+    </h1>
+
+    <p style="font-size: 1.1rem; color: var(--color-text-main); font-weight: 500; margin-bottom: 1.25rem;">
+      Thank you for shopping with KRAK &amp; CO.
+    </p>
+
+    <!-- Order ID Pill -->
+    <div style="display: inline-block; background: var(--color-bg-surface); border: 1.5px solid var(--color-border); border-radius: var(--radius-pill); padding: 0.5rem 1.5rem; font-weight: 700; color: var(--color-primary); font-size: 0.95rem; margin-bottom: 1.25rem;">
+      Order ID: #KRAK12847
+    </div>
+
+    <p style="font-size: 0.92rem; color: var(--color-text-muted); max-width: 380px; margin: 0 auto 2rem; line-height: 1.5;">
+      We've sent a confirmation email with your order details and live tracking updates.
+    </p>
+
+    <div style="margin-bottom: 3.5rem;">
+      <a href="/account#orders" class="btn btn-primary" style="padding: 0.85rem 2.25rem;">
+        Track Your Order
+        {% render 'icon', name: 'arrow-right' %}
+      </a>
+    </div>
+
+    <!-- Heritage Coastal Palm Landscape Sketch framing footer -->
+    <div style="max-width: 280px; height: 120px; margin: 0 auto; opacity: 0.85;">
+      {% render 'line-art-motifs', motif: 'kerala-backwaters', color: 'var(--color-primary)' %}
+    </div>
+
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Order Confirmation",
+  "settings": []
+}
+{% endschema %}
+

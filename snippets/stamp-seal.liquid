@@ -1,0 +1,34 @@
+{% comment %}
+  KRAK & CO. — REGIONAL FLAVOURS CIRCULAR STAMP SEAL
+  Renders the iconic circular guarantee badge shown in the hero section & PDP
+{% endcomment %}
+<div class="stamp-seal" style="width: {{ size | default: 90 }}px; height: {{ size | default: 90 }}px; display: inline-block;">
+  <svg viewBox="0 0 100 100" width="100%" height="100%">
+    <!-- Outer scalloped or dashed ring -->
+    <circle cx="50" cy="50" r="46" fill="none" stroke="var(--color-primary)" stroke-width="1.2" stroke-dasharray="3 2" />
+    <circle cx="50" cy="50" r="42" fill="none" stroke="var(--color-primary)" stroke-width="0.8" />
+    
+    <!-- Curved Text Path -->
+    <path id="stamp-curve-top" d="M 18,50 A 32,32 0 1,1 82,50" fill="none" />
+    <path id="stamp-curve-bottom" d="M 82,50 A 32,32 0 0,1 18,50" fill="none" />
+    
+    <text font-family="var(--font-heading)" font-size="8.5" font-weight="700" letter-spacing="0.22em" fill="var(--color-primary)">
+      <textPath href="#stamp-curve-top" startOffset="50%" text-anchor="middle">
+        REGIONAL
+      </textPath>
+    </text>
+    
+    <text font-family="var(--font-heading)" font-size="8.5" font-weight="700" letter-spacing="0.22em" fill="var(--color-primary)">
+      <textPath href="#stamp-curve-bottom" startOffset="50%" text-anchor="middle">
+        FLAVOURS
+      </textPath>
+    </text>
+    
+    <!-- Central 8-pointed Star -->
+    <g transform="translate(50, 50) scale(0.65)" fill="var(--color-primary)">
+      <polygon points="0,-15 3.5,-4 15,0 3.5,4 0,15 -3.5,4 -15,0 -3.5,-4" />
+      <polygon points="0,-15 3.5,-4 15,0 3.5,4 0,15 -3.5,4 -15,0 -3.5,-4" transform="rotate(45)" opacity="0.75" />
+    </g>
+  </svg>
+</div>
+

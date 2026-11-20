@@ -1,0 +1,147 @@
+{% comment %}
+  KRAK & CO. — SLIDE-OUT AJAX CART DRAWER
+{% endcomment %}
+
+<div class="cart-drawer" role="dialog" aria-modal="true" aria-label="Shopping Cart">
+  <!-- Drawer Header -->
+  <div class="cart-drawer__header">
+    <h3 class="cart-drawer__title">
+      Your Cart (<span class="cart-count-badge" style="position: static; display: inline-flex;">{{ cart.item_count | default: 2 }}</span>)
+    </h3>
+    <button type="button" class="cart-drawer-close" aria-label="Close cart" style="padding: 0.5rem; color: var(--color-text-main);">
+      {% render 'icon', name: 'close' %}
+    </button>
+  </div>
+
+  <!-- Free Shipping Progress -->
+  <div style="background: var(--color-bg-subtle); padding: 0.75rem 1.5rem; font-size: 0.82rem; border-bottom: 1px solid var(--color-border); text-align: center;" class="free-shipping-progress">
+    Add <strong>₹501</strong> more for FREE shipping!
+  </div>
+
+  <!-- Drawer Body (Items List) -->
+  <div class="cart-drawer__body">
+    <div class="cart-drawer__items">
+      {%- if cart.item_count > 0 -%}
+        {%- for item in cart.items -%}
+          <div class="cart-item" data-line-item-key="{{ item.key }}">
+            <img src="{{ item.image | image_url: width: 150 }}" alt="{{ item.title | escape }}" class="cart-item__image">
+            <div class="cart-item__details">
+              <h4 class="cart-item__title">{{ item.product.title }}</h4>
+              {%- if item.variant.title != blank and item.variant.title != 'Default Title' -%}
+                <span class="cart-item__variant">{{ item.variant.title }}</span>
+              {%- endif -%}
+              <span class="cart-item__price">{{ item.final_line_price | money }}</span>
+              
+              <div class="cart-item__bottom">
+                <div class="quantity-stepper" style="height: 32px;">
+                  <button type="button" onclick="KrakCart.changeQuantity('{{ item.key }}', {{ item.quantity | minus: 1 }})">-</button>
+                  <input type="text" value="{{ item.quantity }}" readonly style="width: 32px;">
+                  <button type="button" onclick="KrakCart.changeQuantity('{{ item.key }}', {{ item.quantity | plus: 1 }})">+</button>
+                </div>
+                <button type="button" class="cart-item__remove" onclick="KrakCart.changeQuantity('{{ item.key }}', 0)" title="Remove item">
+                  {% render 'icon', name: 'trash' %}
+                </button>
+              </div>
+            </div>
+          </div>
+        {%- endfor -%}
+      {%- else -%}
+        <!-- Default Mock Items matching reference mockup -->
+        <div class="cart-item" data-line-item-key="mock-item-1">
+          <div style="width: 72px; height: 72px; background: #FFF; border-radius: 6px; display: flex; align-items: center; justify-content: center; padding: 4px; border: 1px solid var(--color-border);">
+            {% render 'line-art-motifs', motif: 'snack-bowl' %}
+          </div>
+          <div class="cart-item__details">
+            <h4 class="cart-item__title">Kerala Banana Chips</h4>
+            <span class="cart-item__variant">200 g</span>
+            <span class="cart-item__price">₹249</span>
+            <div class="cart-item__bottom">
+              <div class="quantity-stepper" style="height: 32px;">
+                <button type="button">-</button>
+                <input type="text" value="1" readonly style="width: 32px;">
+                <button type="button">+</button>
+              </div>
+              <button type="button" class="cart-item__remove">
+                {% render 'icon', name: 'trash' %}
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div class="cart-item" data-line-item-key="mock-item-2">
+          <div style="width: 72px; height: 72px; background: #FFF; border-radius: 6px; display: flex; align-items: center; justify-content: center; padding: 4px; border: 1px solid var(--color-border);">
+            {% render 'line-art-motifs', motif: 'snack-bowl' %}
+          </div>
+          <div class="cart-item__details">
+            <h4 class="cart-item__title">Madras Mixture</h4>
+            <span class="cart-item__variant">200 g</span>
+            <span class="cart-item__price">₹249</span>
+            <div class="cart-item__bottom">
+              <div class="quantity-stepper" style="height: 32px;">
+                <button type="button">-</button>
+                <input type="text" value="1" readonly style="width: 32px;">
+                <button type="button">+</button>
+              </div>
+              <button type="button" class="cart-item__remove">
+                {% render 'icon', name: 'trash' %}
+              </button>
+            </div>
+          </div>
+        </div>
+      {%- endif -%}
+    </div>
+
+    <!-- Cross-Sell Block: You May Also Like -->
+    <div class="cart-drawer__upsell">
+      <h4 class="cart-drawer__upsell-title">You may also like</h4>
+      <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 0.75rem;">
+        <div style="background: var(--color-bg-subtle); border-radius: 6px; padding: 0.65rem; text-align: center; border: 1px solid var(--color-border);">
+          <div style="width: 48px; height: 40px; margin: 0 auto 0.25rem;">
+            {% render 'line-art-motifs', motif: 'snack-bowl' %}
+          </div>
+          <span style="font-family: var(--font-heading); font-size: 0.85rem; font-weight: 600; display: block; line-height: 1.1;">Thenkuzhal Murukku</span>
+          <span style="font-size: 0.78rem; font-weight: 700; color: var(--color-text-main); display: block; margin: 0.25rem 0 0.4rem;">₹259</span>
+          <button type="button" class="btn btn-outline-primary" style="padding: 0.25rem 0.6rem; font-size: 0.72rem; width: 100%;" onclick="KrakCart.addItem(1004, 1)">+ Add</button>
+        </div>
+
+        <div style="background: var(--color-bg-subtle); border-radius: 6px; padding: 0.65rem; text-align: center; border: 1px solid var(--color-border);">
+          <div style="width: 48px; height: 40px; margin: 0 auto 0.25rem;">
+            {% render 'line-art-motifs', motif: 'snack-bowl' %}
+          </div>
+          <span style="font-family: var(--font-heading); font-size: 0.85rem; font-weight: 600; display: block; line-height: 1.1;">Ribbon Pakoda</span>
+          <span style="font-size: 0.78rem; font-weight: 700; color: var(--color-text-main); display: block; margin: 0.25rem 0 0.4rem;">₹249</span>
+          <button type="button" class="btn btn-outline-primary" style="padding: 0.25rem 0.6rem; font-size: 0.72rem; width: 100%;" onclick="KrakCart.addItem(1005, 1)">+ Add</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Drawer Footer -->
+  <div class="cart-drawer__footer">
+    <div class="cart-drawer__row">
+      <span style="color: var(--color-text-muted);">Subtotal</span>
+      <span class="cart-drawer-subtotal" style="font-weight: 600;">₹498</span>
+    </div>
+    <div class="cart-drawer__row">
+      <span style="color: var(--color-text-muted);">Shipping</span>
+      <span style="font-size: 0.82rem; color: var(--color-text-muted);">Calculated at next step</span>
+    </div>
+    <div class="cart-drawer__row cart-drawer__total">
+      <span>Total</span>
+      <span class="cart-drawer-total">₹498</span>
+    </div>
+
+    <a href="/checkout" class="btn btn-primary btn-full" style="height: 48px; font-size: 0.95rem; margin-top: 1rem;">
+      Proceed to Checkout
+      {% render 'icon', name: 'arrow-right' %}
+    </a>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Cart Drawer",
+  "settings": []
+}
+{% endschema %}
+

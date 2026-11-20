@@ -1,0 +1,120 @@
+[
+  {
+    "name": "theme_info",
+    "theme_name": "Krak & Co.",
+    "theme_version": "1.0.0",
+    "theme_author": "Krak & Co.",
+    "theme_documentation_url": "https://krakandco.com",
+    "theme_support_url": "https://krakandco.com/support"
+  },
+  {
+    "name": "Colors & Branding",
+    "settings": [
+      {
+        "type": "color",
+        "id": "color_primary",
+        "label": "Primary Heritage Maroon",
+        "default": "#7A1F1D"
+      },
+      {
+        "type": "color",
+        "id": "color_primary_hover",
+        "label": "Primary Hover Maroon",
+        "default": "#5E1615"
+      },
+      {
+        "type": "color",
+        "id": "color_accent_terracotta",
+        "label": "Terracotta / North Accent",
+        "default": "#B85D3B"
+      },
+      {
+        "type": "color",
+        "id": "color_accent_sage",
+        "label": "Sage / South Accent",
+        "default": "#3B5E43"
+      },
+      {
+        "type": "color",
+        "id": "color_bg_main",
+        "label": "Main Background (Warm Ivory)",
+        "default": "#FBF7F0"
+      },
+      {
+        "type": "color",
+        "id": "color_bg_surface",
+        "label": "Surface Background (White / Cards)",
+        "default": "#FFFFFF"
+      },
+      {
+        "type": "color",
+        "id": "color_bg_subtle",
+        "label": "Subtle Card Background",
+        "default": "#F5EFE6"
+      },
+      {
+        "type": "color",
+        "id": "color_text_main",
+        "label": "Primary Text (Espresso Charcoal)",
+        "default": "#1C1614"
+      },
+      {
+        "type": "color",
+        "id": "color_text_muted",
+        "label": "Muted Text (Sepia)",
+        "default": "#756658"
+      },
+      {
+        "type": "color",
+        "id": "color_border",
+        "label": "Border & Divider Line",
+        "default": "#E8DFD3"
+      },
+      {
+        "type": "color",
+        "id": "color_gold_star",
+        "label": "Gold Review Star",
+        "default": "#D49B28"
+      }
+    ]
+  },
+  {
+    "name": "Store Policies & Thresholds",
+    "settings": [
+      {
+        "type": "number",
+        "id": "free_shipping_threshold",
+        "label": "Free Shipping Minimum Amount (INR)",
+        "default": 999
+      },
+      {
+        "type": "text",
+        "id": "announcement_text",
+        "label": "Default Announcement Bar Text",
+        "default": "★ A NEW SNACKING CULTURE | REGIONAL FLAVOURS | FREE SHIPPING ABOVE ₹999 ★"
+      }
+    ]
+  },
+  {
+    "name": "Social Media",
+    "settings": [
+      {
+        "type": "text",
+        "id": "social_instagram_link",
+        "label": "Instagram Link",
+        "default": "https://instagram.com"
+      },
+      {
+        "type": "text",
+        "id": "social_twitter_link",
+        "label": "Twitter / X Link"
+      },
+      {
+        "type": "text",
+        "id": "social_facebook_link",
+        "label": "Facebook Link"
+      }
+    ]
+  }
+]
+

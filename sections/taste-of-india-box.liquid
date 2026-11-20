@@ -1,0 +1,95 @@
+{% comment %}
+  KRAK & CO. — A LITTLE TASTE OF INDIA (CURATED BOXES PROMO BANNER)
+{% endcomment %}
+
+<section class="taste-box-section section-spacing">
+  <div class="container">
+    <div class="taste-box-wrapper" style="background-color: var(--color-bg-subtle); border: 1px solid var(--color-border); border-radius: var(--radius-lg); padding: 3rem 2.5rem; display: grid; grid-template-columns: 1.1fr 0.9fr; gap: 3rem; align-items: center; overflow: hidden; position: relative;">
+      
+      <!-- Left Visual (Gift Box / Curated Hamper Representation) -->
+      <div class="taste-box-visual" style="display: flex; align-items: center; justify-content: center;">
+        <div style="background: #E8D5BF; border: 2px solid #8A4F1D; border-radius: 12px; padding: 2rem 1.75rem; width: 100%; max-width: 440px; box-shadow: var(--shadow-lg); position: relative; text-align: center;">
+          <div style="border: 1px dashed #8A4F1D; border-radius: 8px; padding: 1.5rem 1rem;">
+            <img src="{{ 'krak-logo-transparent.png' | asset_url }}" alt="KRAK &amp; CO." style="height: 44px; width: auto; margin: 0 auto 0.75rem; display: block;">
+            
+            <h3 style="font-family: var(--font-heading); font-size: 1.45rem; color: #1C1614; margin-bottom: 0.25rem;">
+              THE INDIA BOX
+            </h3>
+            <span style="font-size: 0.75rem; letter-spacing: 0.12em; text-transform: uppercase; color: #756658;">
+              A Curated Taste of India
+            </span>
+
+            <div style="display: flex; justify-content: center; gap: 1rem; margin-top: 1.25rem;">
+              <div style="background: #7A1F1D; color: #FFF; font-size: 0.68rem; padding: 0.4rem 0.6rem; border-radius: 4px; font-weight: 600;">
+                Kerala Chips
+              </div>
+              <div style="background: #B85D3B; color: #FFF; font-size: 0.68rem; padding: 0.4rem 0.6rem; border-radius: 4px; font-weight: 600;">
+                Bikaneri Bhujia
+              </div>
+              <div style="background: #3B5E43; color: #FFF; font-size: 0.68rem; padding: 0.4rem 0.6rem; border-radius: 4px; font-weight: 600;">
+                Murukku
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Right Content -->
+      <div class="taste-box-content">
+        <h2 style="font-size: clamp(2rem, 3.5vw, 2.8rem); margin-bottom: 1rem;">
+          {{ section.settings.heading | default: 'A Little Taste of India.' }}
+        </h2>
+        <p style="font-size: 1.05rem; line-height: 1.6; color: var(--color-text-muted); margin-bottom: 1.75rem;">
+          {{ section.settings.subtext | default: "Can't decide where to start? Discover a little bit of everything with our curated snack boxes." }}
+        </p>
+        <a href="{{ section.settings.btn_link | default: '/collections/all' }}" class="btn btn-primary">
+          {{ section.settings.btn_text | default: 'Explore Our Boxes' }}
+          {% render 'icon', name: 'arrow-right' %}
+        </a>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<style>
+  @media (max-width: 860px) {
+    .taste-box-wrapper {
+      grid-template-columns: 1fr !important;
+      padding: 2rem 1.5rem !important;
+      text-align: center;
+    }
+  }
+</style>
+
+{% schema %}
+{
+  "name": "Taste of India Box",
+  "settings": [
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Heading",
+      "default": "A Little Taste of India."
+    },
+    {
+      "type": "textarea",
+      "id": "subtext",
+      "label": "Subtext",
+      "default": "Can't decide where to start? Discover a little bit of everything with our curated snack boxes."
+    },
+    {
+      "type": "text",
+      "id": "btn_text",
+      "label": "Button text",
+      "default": "Explore Our Boxes"
+    },
+    {
+      "type": "url",
+      "id": "btn_link",
+      "label": "Button link"
+    }
+  ]
+}
+{% endschema %}
+

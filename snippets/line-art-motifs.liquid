@@ -1,0 +1,163 @@
+{% comment %}
+  KRAK & CO. — LINE ART MOTIFS & HERITAGE ENGRAVINGS
+  Usage: {% render 'line-art-motifs', motif: 'south-temple' %}
+{% endcomment %}
+
+{%- case motif -%}
+  {%- when 'south-temple' -%}
+    <svg viewBox="0 0 200 160" width="100%" height="100%" fill="none" stroke="{{ color | default: 'var(--color-accent-sage)' }}" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round" class="line-art-south">
+      <!-- Coconut Palm Trees Left -->
+      <path d="M 25 150 Q 30 110 38 75" stroke-width="1.8" />
+      <path d="M 38 75 Q 15 65 5 70" />
+      <path d="M 38 75 Q 20 50 15 45" />
+      <path d="M 38 75 Q 40 40 45 42" />
+      <path d="M 38 75 Q 55 55 60 62" />
+      <path d="M 38 75 Q 58 75 62 82" />
+      
+      <!-- Coconut Palm Trees Right -->
+      <path d="M 175 150 Q 170 105 162 70" stroke-width="1.8" />
+      <path d="M 162 70 Q 185 60 195 65" />
+      <path d="M 162 70 Q 180 45 185 40" />
+      <path d="M 162 70 Q 160 35 155 38" />
+      <path d="M 162 70 Q 145 50 140 58" />
+      <path d="M 162 70 Q 142 70 138 78" />
+
+      <!-- South Indian Temple Gopuram Tower (Tiered Architecture) -->
+      <!-- Kalasam / Pinnacle -->
+      <path d="M 100 15 L 100 22 M 95 22 L 105 22" stroke-width="1.5" />
+      <path d="M 97 18 L 103 18" />
+      
+      <!-- Tier 1 (Top) -->
+      <polygon points="90,32 110,32 114,44 86,44" fill="none" />
+      <line x1="94" y1="36" x2="106" y2="36" />
+      <line x1="100" y1="32" x2="100" y2="44" />
+      
+      <!-- Tier 2 -->
+      <polygon points="84,44 116,44 122,58 78,58" fill="none" />
+      <line x1="88" y1="50" x2="112" y2="50" />
+      <circle cx="94" cy="51" r="1.5" />
+      <circle cx="106" cy="51" r="1.5" />
+
+      <!-- Tier 3 -->
+      <polygon points="76,58 124,58 132,74 68,74" fill="none" />
+      <line x1="80" y1="65" x2="120" y2="65" />
+      <path d="M 90 74 L 90 65 M 100 74 L 100 65 M 110 74 L 110 65" />
+
+      <!-- Tier 4 -->
+      <polygon points="66,74 134,74 144,94 56,94" fill="none" />
+      <line x1="72" y1="82" x2="128" y2="82" />
+      <line x1="70" y1="88" x2="130" y2="88" />
+
+      <!-- Tier 5 -->
+      <polygon points="54,94 146,94 158,118 42,118" fill="none" />
+      <line x1="60" y1="104" x2="140" y2="104" />
+      <circle cx="75" cy="106" r="2" />
+      <circle cx="100" cy="106" r="2" />
+      <circle cx="125" cy="106" r="2" />
+
+      <!-- Temple Base & Grand Gateway (Gopura Dwaram) -->
+      <rect x="36" y="118" width="128" height="32" />
+      <path d="M 88 150 L 88 128 Q 100 122 112 128 L 112 150 Z" />
+      <line x1="10" y1="150" x2="190" y2="150" stroke-width="1.5" />
+    </svg>
+
+  {%- when 'north-palace' -%}
+    <svg viewBox="0 0 200 160" width="100%" height="100%" fill="none" stroke="{{ color | default: 'var(--color-accent-terracotta)' }}" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round" class="line-art-north">
+      <!-- Flying Birds -->
+      <path d="M 40 25 Q 46 20 52 25 Q 58 20 64 25" />
+      <path d="M 140 32 Q 145 28 150 32 Q 155 28 160 32" />
+
+      <!-- Rajasthan Haveli Domes (Chhatris) -->
+      <!-- Center Main Dome -->
+      <path d="M 100 45 L 100 36 M 97 39 L 103 39" stroke-width="1.4" />
+      <path d="M 82 65 C 82 48, 100 45, 100 45 C 100 45, 118 48, 118 65 Z" fill="none" />
+      <rect x="85" y="65" width="30" height="12" />
+      <path d="M 94 77 Q 100 71 106 77" />
+
+      <!-- Left Chhatri Dome -->
+      <path d="M 45 62 L 45 55 M 42 58 L 48 58" />
+      <path d="M 32 78 C 32 66, 45 62, 45 62 C 45 62, 58 66, 58 78 Z" />
+      <line x1="36" y1="78" x2="36" y2="92" />
+      <line x1="54" y1="78" x2="54" y2="92" />
+      <path d="M 40 92 Q 45 86 50 92" />
+
+      <!-- Right Chhatri Dome -->
+      <path d="M 155 62 L 155 55 M 152 58 L 158 58" />
+      <path d="M 142 78 C 142 66, 155 62, 155 62 C 155 62, 168 66, 168 78 Z" />
+      <line x1="146" y1="78" x2="146" y2="92" />
+      <line x1="164" y1="78" x2="164" y2="92" />
+      <path d="M 150 92 Q 155 86 160 92" />
+
+      <!-- Palace Facade & Jharokha Windows -->
+      <rect x="25" y="92" width="150" height="58" />
+      <!-- Ornate Battlements / Kanguras -->
+      <path d="M 25 92 L 25 88 L 30 88 L 30 92 L 35 92 L 35 88 L 40 88 L 40 92 L 60 92 L 60 88 L 65 88 L 65 92 L 80 92 L 80 88 L 85 88 L 85 92 L 115 92 L 115 88 L 120 88 L 120 92 L 135 92 L 135 88 L 140 88 L 140 92 L 160 92 L 160 88 L 165 88 L 165 92 L 175 92 L 175 88" />
+      
+      <!-- Arches & Windows Row -->
+      <path d="M 45 118 Q 55 106 65 118 L 65 130 L 45 130 Z" />
+      <path d="M 85 112 Q 100 98 115 112 L 115 150 L 85 150 Z" />
+      <path d="M 135 118 Q 145 106 155 118 L 155 130 L 135 130 Z" />
+
+      <!-- Ground Base Line -->
+      <line x1="10" y1="150" x2="190" y2="150" stroke-width="1.5" />
+    </svg>
+
+  {%- when 'kerala-backwaters' -%}
+    <svg viewBox="0 0 200 120" width="100%" height="100%" fill="none" stroke="{{ color | default: 'var(--color-primary)' }}" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round">
+      <!-- Water ripples -->
+      <path d="M 10 105 Q 35 100 60 105 T 110 105 T 160 105 T 190 105" opacity="0.6" />
+      <path d="M 25 112 Q 55 108 85 112 T 145 112 T 180 112" opacity="0.4" />
+      <!-- Palms and thatched house -->
+      <path d="M 30 105 Q 35 60 45 35" stroke-width="1.6" />
+      <path d="M 45 35 Q 20 25 10 32 M 45 35 Q 30 12 25 8 M 45 35 Q 52 10 56 12 M 45 35 Q 68 22 72 28" />
+      <!-- Thatched cottage -->
+      <polygon points="90,105 90,85 115,70 140,85 140,105" />
+      <line x1="85" y1="85" x2="145" y2="85" />
+      <path d="M 108 105 L 108 92 Q 115 88 122 92 L 122 105" />
+      <!-- Boat -->
+      <path d="M 145 102 Q 165 102 185 96 Q 165 108 145 102 Z" fill="{{ color | default: 'var(--color-primary)' }}" fill-opacity="0.1" />
+      <line x1="165" y1="90" x2="165" y2="102" />
+    </svg>
+
+  {%- when 'order-success' -%}
+    <div style="width: 80px; height: 80px; margin: 0 auto 1.5rem; display: flex; align-items: center; justify-content: center;">
+      <svg viewBox="0 0 100 100" width="100%" height="100%">
+        <!-- Scalloped badge background -->
+        <circle cx="50" cy="50" r="46" fill="var(--color-primary)" />
+        <circle cx="50" cy="50" r="42" fill="none" stroke="#FFFFFF" stroke-width="1.5" stroke-dasharray="3 2" />
+        <!-- White Checkmark -->
+        <path d="M 32 50 L 45 63 L 68 38" fill="none" stroke="#FFFFFF" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" />
+      </svg>
+    </div>
+
+  {%- when 'snack-bowl' -%}
+    <svg viewBox="0 0 160 140" width="100%" height="100%" fill="none" class="snack-bowl-svg">
+      <!-- Traditional Kansa / Brass Serving Bowl with snacks -->
+      <defs>
+        <linearGradient id="brass-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+          <stop offset="0%" stop-color="#E5BE64" />
+          <stop offset="40%" stop-color="#C59634" />
+          <stop offset="100%" stop-color="#8C5C1B" />
+        </linearGradient>
+        <radialGradient id="chip-grad" cx="40%" cy="40%" r="60%">
+          <stop offset="0%" stop-color="#FFE885" />
+          <stop offset="70%" stop-color="#F2BA2C" />
+          <stop offset="100%" stop-color="#CE880E" />
+        </radialGradient>
+      </defs>
+      <!-- Bowl base rim -->
+      <ellipse cx="80" cy="116" rx="35" ry="8" fill="#8C5C1B" opacity="0.6" />
+      <!-- Bowl body -->
+      <path d="M 20 75 Q 80 135 140 75 Q 128 62 80 62 Q 32 62 20 75 Z" fill="url(#brass-grad)" stroke="#6C4512" stroke-width="1.5" />
+      <!-- Bowl interior shadow -->
+      <ellipse cx="80" cy="72" rx="55" ry="14" fill="#6A4614" />
+      <!-- Pile of golden chips -->
+      <ellipse cx="65" cy="62" rx="16" ry="10" fill="url(#chip-grad)" transform="rotate(-15 65 62)" stroke="#B87B11" stroke-width="0.8" />
+      <ellipse cx="95" cy="60" rx="18" ry="11" fill="url(#chip-grad)" transform="rotate(20 95 60)" stroke="#B87B11" stroke-width="0.8" />
+      <ellipse cx="80" cy="50" rx="17" ry="11" fill="url(#chip-grad)" transform="rotate(5 80 50)" stroke="#B87B11" stroke-width="0.8" />
+      <ellipse cx="50" cy="68" rx="14" ry="9" fill="url(#chip-grad)" transform="rotate(-30 50 68)" stroke="#B87B11" stroke-width="0.8" />
+      <ellipse cx="110" cy="66" rx="15" ry="9" fill="url(#chip-grad)" transform="rotate(25 110 66)" stroke="#B87B11" stroke-width="0.8" />
+      <ellipse cx="80" cy="64" rx="16" ry="10" fill="url(#chip-grad)" stroke="#B87B11" stroke-width="0.8" />
+    </svg>
+{%- endcase -%}
+

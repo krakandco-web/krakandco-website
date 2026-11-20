@@ -1,0 +1,114 @@
+{% comment %}
+  KRAK & CO. — COLLECTIONS HUB (LIST OF ALL COLLECTIONS)
+  Matches Screen 2 from reference design mockups
+{% endcomment %}
+
+<section class="collections-hub-section section-spacing">
+  <div class="container" style="max-width: 840px;">
+    
+    <!-- Header -->
+    <div style="margin-bottom: 2.5rem; text-align: left;">
+      <h1 style="font-size: clamp(2.2rem, 4vw, 3rem); margin-bottom: 0.5rem;">
+        Collections
+      </h1>
+      <p style="font-size: 1.05rem; color: var(--color-text-muted);">
+        Curated snack collections from across India.
+      </p>
+    </div>
+
+    <!-- Featured Regional Cards (South & North) -->
+    <div class="grid grid--2-col" style="gap: 1.5rem; margin-bottom: 3.5rem;">
+      <!-- The South Collection -->
+      <a href="/collections/south" class="regional-spotlight-card" style="background: var(--color-bg-surface); border: 1px solid var(--color-border); border-radius: var(--radius-lg); padding: 1.75rem; position: relative; overflow: hidden; display: flex; flex-direction: column; justify-content: space-between; min-height: 180px;">
+        <div style="max-width: 65%; z-index: 2;">
+          <h3 style="font-size: 1.45rem; margin-bottom: 0.35rem;">The South Collection</h3>
+          <p style="font-size: 0.85rem; color: var(--color-text-muted); margin-bottom: 1rem;">
+            Flavours rooted in tradition, made for today.
+          </p>
+          <div style="color: var(--color-accent-sage);">
+            {% render 'icon', name: 'circle-arrow-right' %}
+          </div>
+        </div>
+        <div style="position: absolute; right: 5px; bottom: 5px; width: 130px; height: 110px; opacity: 0.9; pointer-events: none;">
+          {% render 'line-art-motifs', motif: 'south-temple', color: 'var(--color-accent-sage)' %}
+        </div>
+      </a>
+
+      <!-- The North Collection -->
+      <a href="/collections/north" class="regional-spotlight-card" style="background: var(--color-bg-surface); border: 1px solid var(--color-border); border-radius: var(--radius-lg); padding: 1.75rem; position: relative; overflow: hidden; display: flex; flex-direction: column; justify-content: space-between; min-height: 180px;">
+        <div style="max-width: 65%; z-index: 2;">
+          <h3 style="font-size: 1.45rem; margin-bottom: 0.35rem;">The North Collection</h3>
+          <p style="font-size: 0.85rem; color: var(--color-text-muted); margin-bottom: 1rem;">
+            Discover the flavours that bring people together.
+          </p>
+          <div style="color: var(--color-accent-terracotta);">
+            {% render 'icon', name: 'circle-arrow-right' %}
+          </div>
+        </div>
+        <div style="position: absolute; right: 5px; bottom: 5px; width: 130px; height: 110px; opacity: 0.9; pointer-events: none;">
+          {% render 'line-art-motifs', motif: 'north-palace', color: 'var(--color-accent-terracotta)' %}
+        </div>
+      </a>
+    </div>
+
+    <!-- All Collections Directory List -->
+    <div>
+      <h3 style="font-size: 1.4rem; margin-bottom: 1.25rem;">All Collections</h3>
+      
+      <div style="display: flex; flex-direction: column; gap: 0.85rem;">
+        
+        <!-- List Item 1: All Snacks -->
+        <a href="/collections/all" style="display: flex; align-items: center; justify-content: space-between; background: var(--color-bg-surface); border: 1px solid var(--color-border); border-radius: var(--radius-md); padding: 1rem 1.25rem; transition: all var(--transition-fast);">
+          <div style="display: flex; align-items: center; gap: 1rem;">
+            <div style="width: 48px; height: 48px; border-radius: var(--radius-sm); background: var(--color-bg-subtle); display: flex; align-items: center; justify-content: center; padding: 4px;">
+              {% render 'line-art-motifs', motif: 'snack-bowl' %}
+            </div>
+            <div>
+              <h4 style="font-size: 1.05rem; margin-bottom: 0.15rem;">All Snacks</h4>
+              <span style="font-size: 0.82rem; color: var(--color-text-muted);">120+ Products</span>
+            </div>
+          </div>
+          <span style="color: var(--color-text-muted);">{% render 'icon', name: 'chevron-right' %}</span>
+        </a>
+
+        <!-- List Item 2: Bestsellers -->
+        <a href="/collections/all" style="display: flex; align-items: center; justify-content: space-between; background: var(--color-bg-surface); border: 1px solid var(--color-border); border-radius: var(--radius-md); padding: 1rem 1.25rem; transition: all var(--transition-fast);">
+          <div style="display: flex; align-items: center; gap: 1rem;">
+            <div style="width: 48px; height: 48px; border-radius: var(--radius-sm); background: var(--color-bg-subtle); display: flex; align-items: center; justify-content: center; padding: 4px;">
+              {% render 'line-art-motifs', motif: 'snack-bowl' %}
+            </div>
+            <div>
+              <h4 style="font-size: 1.05rem; margin-bottom: 0.15rem;">Bestsellers</h4>
+              <span style="font-size: 0.82rem; color: var(--color-text-muted);">Our most loved snacks</span>
+            </div>
+          </div>
+          <span style="color: var(--color-text-muted);">{% render 'icon', name: 'chevron-right' %}</span>
+        </a>
+
+        <!-- List Item 3: New Arrivals -->
+        <a href="/collections/all" style="display: flex; align-items: center; justify-content: space-between; background: var(--color-bg-surface); border: 1px solid var(--color-border); border-radius: var(--radius-md); padding: 1rem 1.25rem; transition: all var(--transition-fast);">
+          <div style="display: flex; align-items: center; gap: 1rem;">
+            <div style="width: 48px; height: 48px; border-radius: var(--radius-sm); background: var(--color-bg-subtle); display: flex; align-items: center; justify-content: center; padding: 4px;">
+              {% render 'line-art-motifs', motif: 'snack-bowl' %}
+            </div>
+            <div>
+              <h4 style="font-size: 1.05rem; margin-bottom: 0.15rem;">New Arrivals</h4>
+              <span style="font-size: 0.82rem; color: var(--color-text-muted);">Fresh additions</span>
+            </div>
+          </div>
+          <span style="color: var(--color-text-muted);">{% render 'icon', name: 'chevron-right' %}</span>
+        </a>
+
+      </div>
+    </div>
+
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Collections Directory",
+  "settings": []
+}
+{% endschema %}
+

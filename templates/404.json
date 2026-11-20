@@ -1,0 +1,14 @@
+{
+  "sections": {
+    "main": {
+      "type": "crowd-favourites",
+      "settings": {
+        "heading": "Page Not Found — Try Our Favourites"
+      }
+    }
+  },
+  "order": [
+    "main"
+  ]
+}
+

@@ -1,0 +1,115 @@
+{% comment %}
+  KRAK & CO. — FEATURED REGIONAL COLLECTIONS (SOUTH & NORTH SPLIT CARDS)
+{% endcomment %}
+
+<section class="featured-collections-section section-spacing">
+  <div class="container">
+    <div class="grid grid--2-col" style="gap: 2rem;">
+      
+      <!-- The South Collection Card -->
+      <a href="{{ section.settings.south_link | default: '/collections/south' }}" class="regional-spotlight-card" style="background-color: #F4EDE2; border: 1px solid #E6DCCD; border-radius: var(--radius-lg); padding: 2.5rem 2.25rem; display: flex; flex-direction: column; justify-content: space-between; position: relative; overflow: hidden; min-height: 230px; box-shadow: var(--shadow-sm); transition: transform var(--transition-fast), box-shadow var(--transition-fast);">
+        <div style="z-index: 2; max-width: 58%;">
+          <h2 style="font-size: clamp(1.8rem, 3vw, 2.4rem); margin-bottom: 0.6rem; color: var(--color-text-main);">
+            {{ section.settings.south_title | default: 'The South Collection' }}
+          </h2>
+          <p style="font-size: 0.95rem; line-height: 1.5; color: var(--color-text-muted); margin-bottom: 1.5rem;">
+            {{ section.settings.south_desc | default: 'Flavours rooted in tradition, made for today.' }}
+          </p>
+          <div style="color: var(--color-accent-sage);">
+            {% render 'icon', name: 'circle-arrow-right' %}
+          </div>
+        </div>
+
+        <!-- Engraved Motif Placement -->
+        <div class="spotlight-motif" style="position: absolute; right: 0; bottom: 0; width: 220px; height: 180px; pointer-events: none; opacity: 0.95; display: flex; align-items: flex-end; justify-content: flex-end;">
+          <img src="{{ 'illustration-south-clean.png' | asset_url }}" alt="South Collection Heritage Illustration" style="max-width: 100%; max-height: 100%; object-fit: contain;">
+        </div>
+      </a>
+
+      <!-- The North Collection Card -->
+      <a href="{{ section.settings.north_link | default: '/collections/north' }}" class="regional-spotlight-card" style="background-color: #F4EDE2; border: 1px solid #E6DCCD; border-radius: var(--radius-lg); padding: 2.5rem 2.25rem; display: flex; flex-direction: column; justify-content: space-between; position: relative; overflow: hidden; min-height: 230px; box-shadow: var(--shadow-sm); transition: transform var(--transition-fast), box-shadow var(--transition-fast);">
+        <div style="z-index: 2; max-width: 58%;">
+          <h2 style="font-size: clamp(1.8rem, 3vw, 2.4rem); margin-bottom: 0.6rem; color: var(--color-text-main);">
+            {{ section.settings.north_title | default: 'The North Collection' }}
+          </h2>
+          <p style="font-size: 0.95rem; line-height: 1.5; color: var(--color-text-muted); margin-bottom: 1.5rem;">
+            {{ section.settings.north_desc | default: 'Discover the flavours that bring people together.' }}
+          </p>
+          <div style="color: var(--color-accent-terracotta);">
+            {% render 'icon', name: 'circle-arrow-right' %}
+          </div>
+        </div>
+
+        <!-- Engraved Motif Placement -->
+        <div class="spotlight-motif" style="position: absolute; right: 0; bottom: 0; width: 220px; height: 180px; pointer-events: none; opacity: 0.95; display: flex; align-items: flex-end; justify-content: flex-end;">
+          <img src="{{ 'illustration-north-clean.png' | asset_url }}" alt="North Collection Heritage Illustration" style="max-width: 100%; max-height: 100%; object-fit: contain;">
+        </div>
+      </a>
+
+    </div>
+  </div>
+</section>
+
+<style>
+  .regional-spotlight-card:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-lg);
+    border-color: var(--color-border-dark);
+  }
+  .regional-spotlight-card:hover .icon-circle-arrow {
+    transform: translateX(4px);
+  }
+  @media (max-width: 640px) {
+    .regional-spotlight-card {
+      padding: 1.75rem 1.25rem !important;
+    }
+    .spotlight-motif {
+      width: 125px !important;
+      height: 105px !important;
+      right: 0 !important;
+    }
+  }
+</style>
+
+{% schema %}
+{
+  "name": "Featured Collections",
+  "settings": [
+    {
+      "type": "text",
+      "id": "south_title",
+      "label": "South collection title",
+      "default": "The South Collection"
+    },
+    {
+      "type": "text",
+      "id": "south_desc",
+      "label": "South collection description",
+      "default": "Flavours rooted in tradition, made for today."
+    },
+    {
+      "type": "url",
+      "id": "south_link",
+      "label": "South collection link"
+    },
+    {
+      "type": "text",
+      "id": "north_title",
+      "label": "North collection title",
+      "default": "The North Collection"
+    },
+    {
+      "type": "text",
+      "id": "north_desc",
+      "label": "North collection description",
+      "default": "Discover the flavours that bring people together."
+    },
+    {
+      "type": "url",
+      "id": "north_link",
+      "label": "North collection link"
+    }
+  ]
+}
+{% endschema %}
+

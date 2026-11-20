@@ -1,0 +1,14 @@
+{% comment %}
+  KRAK & CO. — QUANTITY STEPPER SNIPPET
+  Usage: {% render 'quantity-stepper', name: 'quantity', value: 1 %}
+{% endcomment %}
+
+<div class="quantity-wrapper" style="margin-bottom: 1.25rem;">
+  <span class="pdp-label">{{ 'products.product.quantity' | t | default: 'Quantity' }}</span>
+  <div class="quantity-stepper">
+    <button type="button" data-action="minus" aria-label="Decrease quantity">-</button>
+    <input type="number" name="{{ name | default: 'quantity' }}" value="{{ value | default: 1 }}" min="1" readonly>
+    <button type="button" data-action="plus" aria-label="Increase quantity">+</button>
+  </div>
+</div>
+

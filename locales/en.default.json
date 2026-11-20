@@ -1,0 +1,102 @@
+{
+  "general": {
+    "search": {
+      "placeholder": "Search snacks, collections, ingredients...",
+      "submit": "Search",
+      "heading": "Search results"
+    },
+    "continue_shopping": "Continue Shopping",
+    "view_all": "SHOP ALL SNACKS"
+  },
+  "header": {
+    "menu": "Menu",
+    "cart": "Cart",
+    "account": "Account",
+    "search": "Search"
+  },
+  "sections": {
+    "announcement": {
+      "default_text": "A LITTLE CRUNCH. A LOT OF FLAVOUR. WELCOME TO KRAK & CO. • FREE SHIPPING ABOVE ₹999"
+    },
+    "hero": {
+      "tagline": "REGIONAL SNACKS • MODERN FLAVOURS",
+      "heading": "India's snack culture. With a little more KRAK.",
+      "description": "From the snacks we grew up with to flavours we can't stop talking about. We bring regional favourites and bold twists together, one ridiculously satisfying crunch at a time.",
+      "shop_cta": "SHOP THE CRUNCH",
+      "story_cta": "EXPLORE OUR SNACKS"
+    },
+    "trust_badges": {
+      "badge_1": "Authentic Indian Flavours",
+      "badge_2": "No Artificial Preservatives",
+      "badge_3": "Premium Ingredients",
+      "badge_4": "Delivering Pan India"
+    },
+    "brand_intro": {
+      "heading": "Not just snacks. A whole snack culture.",
+      "lead": "Some cravings don't need an occasion.",
+      "welcome": "Welcome to KRAK & CO."
+    },
+    "shop_our_snacks": {
+      "heading": "Meet your next obsession.",
+      "subheading": "Three snacks. Three personalities. Zero boring bites."
+    },
+    "why_krak": {
+      "heading": "Old-school soul. New-school snack energy."
+    },
+    "lifestyle_banner": {
+      "heading": "Warning: Sharing may become difficult.",
+      "cta": "SHOP NOW"
+    },
+    "snack_moments": {
+      "heading": "There is a KRAK for every moment."
+    },
+    "brand_story": {
+      "heading": "We believe India deserves a bigger snack shelf.",
+      "tagline": "Welcome to our world. Welcome to KRAK & CO."
+    },
+    "crowd_favourites": {
+      "heading": "The crowd's crunching favourites.",
+      "subheading": "The snacks people keep reaching for. Find your favourite, or discover a new one.",
+      "view_all": "SHOP ALL SNACKS"
+    },
+    "combo": {
+      "heading": "Can't pick one? Don't.",
+      "subheadline": "Why settle for one craving when you can have the whole snack party?",
+      "cta": "GET THE SNACK COMBO"
+    },
+    "social": {
+      "heading": "Crunch happens here.",
+      "cta": "FOLLOW @KRAKANDCO"
+    },
+    "newsletter": {
+      "heading": "Get the inside crunch.",
+      "copy": "New flavours, snack drops, special offers and a few things worth opening your inbox for.",
+      "button": "COUNT ME IN",
+      "microcopy": "No spam. Just snack-worthy updates."
+    },
+    "footer": {
+      "tagline": "Regional Snacks. Modern Flavours.",
+      "closing": "Stay crunchy. Stay hungry. Stay KRAK. © KRAK & CO. All rights reserved."
+    }
+  },
+  "products": {
+    "product": {
+      "add_to_cart": "ADD TO CART",
+      "buy_now": "BUY NOW",
+      "sold_out": "Sold Out",
+      "unavailable": "Unavailable",
+      "weight": "Weight",
+      "quantity": "Quantity",
+      "reviews": "reviews",
+      "you_may_also_like": "You may also like"
+    }
+  },
+  "cart": {
+    "title": "Your crunch collection.",
+    "empty": "Looks like your snack shelf is empty. Let's fix that.",
+    "empty_cta": "EXPLORE SNACKS",
+    "subtotal": "Subtotal",
+    "shipping_note": "Your next snack break is closer than you think.",
+    "checkout": "PROCEED TO CHECKOUT"
+  }
+}

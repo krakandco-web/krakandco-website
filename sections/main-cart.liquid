@@ -1,0 +1,61 @@
+{% comment %}
+  KRAK & CO. — MAIN STANDALONE CART PAGE
+{% endcomment %}
+
+<section class="main-cart-section section-spacing">
+  <div class="container" style="max-width: 800px;">
+    <h1 style="font-size: 2.2rem; margin-bottom: 2rem;">Your Cart</h1>
+
+    {%- if cart.item_count > 0 -%}
+      <form action="/cart" method="post" id="cart">
+        <div class="cart-page-items" style="border-top: 1px solid var(--color-border);">
+          {%- for item in cart.items -%}
+            <div class="cart-item" style="padding: 1.5rem 0; border-bottom: 1px solid var(--color-border); display: flex; gap: 1.5rem;">
+              <img src="{{ item.image | image_url: width: 200 }}" alt="{{ item.title }}" style="width: 90px; height: 90px; border-radius: var(--radius-sm); object-fit: cover;">
+              <div style="flex: 1;">
+                <h3 style="font-size: 1.25rem; margin-bottom: 0.25rem;">{{ item.product.title }}</h3>
+                <p style="font-size: 0.85rem; margin-bottom: 0.5rem;">{{ item.variant.title }}</p>
+                <span style="font-weight: 700;">{{ item.final_line_price | money }}</span>
+              </div>
+              <div style="display: flex; align-items: center; gap: 1rem;">
+                <input type="number" name="updates[]" value="{{ item.quantity }}" min="0" style="width: 60px; padding: 0.4rem; border: 1px solid var(--color-border); border-radius: var(--radius-sm); text-align: center;">
+                <a href="/cart/change?line={{ forloop.index }}&quantity=0" style="color: var(--color-text-muted);">
+                  {% render 'icon', name: 'trash' %}
+                </a>
+              </div>
+            </div>
+          {%- endfor -%}
+        </div>
+
+        <div style="margin-top: 2rem; display: flex; justify-content: space-between; align-items: flex-end;">
+          <div>
+            <a href="/collections/all" class="link-with-arrow">&larr; Continue Shopping</a>
+          </div>
+          <div style="text-align: right; min-width: 250px;">
+            <div style="display: flex; justify-content: space-between; margin-bottom: 0.5rem;">
+              <span>Subtotal</span>
+              <span style="font-weight: 700; font-size: 1.25rem;">{{ cart.total_price | money }}</span>
+            </div>
+            <p style="font-size: 0.82rem; margin-bottom: 1.25rem;">Taxes and shipping calculated at checkout</p>
+            <button type="submit" name="checkout" class="btn btn-primary btn-full">
+              Proceed to Checkout &rarr;
+            </button>
+          </div>
+        </div>
+      </form>
+    {%- else -%}
+      <div style="text-align: center; padding: 4rem 1rem;">
+        <p style="font-size: 1.2rem; margin-bottom: 1.5rem;">Your cart is currently empty.</p>
+        <a href="/collections/all" class="btn btn-primary">Start Snacking &rarr;</a>
+      </div>
+    {%- endif -%}
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Main Cart Page",
+  "settings": []
+}
+{% endschema %}
+

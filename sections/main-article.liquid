@@ -1,0 +1,39 @@
+{% comment %}
+  KRAK & CO. — SINGLE ARTICLE VIEW
+{% endcomment %}
+
+<article class="main-article-section section-spacing">
+  <div class="container" style="max-width: 780px;">
+    {% render 'breadcrumbs' %}
+
+    <header style="margin-bottom: 2rem;">
+      <span class="overline">RECIPES</span>
+      <h1 style="font-size: clamp(2.2rem, 4vw, 3.4rem); margin-bottom: 0.75rem;">
+        {{ article.title | default: 'How Kerala Banana Chips Became a Timeless Classic' }}
+      </h1>
+      <span style="font-size: 0.88rem; color: var(--color-text-muted);">
+        By Krak &amp; Co. Editorial &bull; 5 min read
+      </span>
+    </header>
+
+    <div style="background: #F9F2E7; height: 320px; border-radius: var(--radius-lg); display: flex; align-items: center; justify-content: center; margin-bottom: 2.5rem;">
+      {% render 'line-art-motifs', motif: 'snack-bowl' %}
+    </div>
+
+    <div class="article-content" style="font-size: 1.08rem; line-height: 1.8; color: var(--color-text-main);">
+      {{ article.content | default: '<p>The story of banana chips in Kerala is inseparable from the unique geography and agricultural richness of God’s Own Country. Made exclusively from thick-skinned, golden Nendran bananas, these chips owe their iconic crispness to cold-pressed coconut oil and a pinch of turmeric salt added directly to the hot pan.</p><p style="margin-top: 1.5rem;">At KRAK &amp; CO., our mission is preserving this exact artisanal rhythm. No artificial seasoning, no shortcuts—just the pure taste of honest tradition.</p>' }}
+    </div>
+
+    <div style="margin-top: 3rem; padding-top: 1.5rem; border-top: 1px solid var(--color-border); display: flex; justify-content: space-between;">
+      <a href="/blogs/snack-culture" class="link-with-arrow">&larr; Back to Snack Culture</a>
+    </div>
+  </div>
+</article>
+
+{% schema %}
+{
+  "name": "Article Content",
+  "settings": []
+}
+{% endschema %}
+

@@ -1,0 +1,98 @@
+{% comment %}
+  KRAK & CO. — FOOTER SECTION (MASTER BRAND COPY)
+{% endcomment %}
+
+<footer class="site-footer" style="background-color: #241D1B; color: #E8DFD3; padding: 4.5rem 0 2rem; border-top: 2px solid var(--color-border);">
+  <div class="container">
+    <div class="footer-grid" style="display: grid; grid-template-columns: 1.4fr 1fr 1fr 1.2fr; gap: 3rem; margin-bottom: 3.5rem;">
+      
+      <!-- Col 1: Brand Info -->
+      <div class="footer-col">
+        <div class="brand-logo" style="text-align: left; align-items: flex-start; justify-content: flex-start; margin-bottom: 1rem;">
+          <img 
+            src="{{ 'krak-logo-transparent.png' | asset_url }}" 
+            alt="KRAK &amp; CO." 
+            style="height: 48px; width: auto; object-fit: contain; filter: brightness(0) invert(1);"
+            loading="lazy"
+          >
+        </div>
+        <p style="font-family: var(--font-heading); font-size: 1.2rem; color: #FFFFFF; font-weight: 600; margin-bottom: 0.4rem;">
+          KRAK &amp; CO.
+        </p>
+        <p style="font-size: 0.95rem; color: #D5C8B8; margin-bottom: 1.25rem;">
+          Regional Snacks. Modern Flavours.
+        </p>
+        <p style="font-size: 0.88rem; color: #A89B8C; line-height: 1.6;">
+          For orders, queries and all things crunchy, reach out to us through our contact page.
+        </p>
+      </div>
+
+      <!-- Col 2: Explore -->
+      <div class="footer-col">
+        <h4 class="footer-col__title" style="color: #FFFFFF; font-size: 1rem; font-weight: 700; margin-bottom: 1.25rem;">Explore</h4>
+        <div class="footer-links" style="display: flex; flex-direction: column; gap: 0.6rem; font-size: 0.9rem;">
+          <a href="/collections/all" style="color: #D5C8B8;">Shop All</a>
+          <a href="/products/thenkulzal-murukku" style="color: #D5C8B8;">Thenkulzal Murukku</a>
+          <a href="/products/peri-peri-murukku" style="color: #D5C8B8;">Peri Peri Murukku</a>
+          <a href="/products/thika-namki" style="color: #D5C8B8;">Thika Namki</a>
+          <a href="/collections/all" style="color: #D5C8B8;">Snack Combos</a>
+        </div>
+      </div>
+
+      <!-- Col 3: About -->
+      <div class="footer-col">
+        <h4 class="footer-col__title" style="color: #FFFFFF; font-size: 1rem; font-weight: 700; margin-bottom: 1.25rem;">About</h4>
+        <div class="footer-links" style="display: flex; flex-direction: column; gap: 0.6rem; font-size: 0.9rem;">
+          <a href="/pages/our-story" style="color: #D5C8B8;">Our Story</a>
+          <a href="/pages/contact" style="color: #D5C8B8;">Contact Us</a>
+          <a href="/pages/faqs" style="color: #D5C8B8;">FAQs</a>
+          <a href="/pages/customer-support" style="color: #D5C8B8;">Customer Support</a>
+          <a href="/pages/shipping-delivery" style="color: #D5C8B8;">Shipping &amp; Delivery</a>
+          <a href="/pages/returns-refunds" style="color: #D5C8B8;">Returns &amp; Refunds</a>
+          <a href="/policies/privacy-policy" style="color: #D5C8B8;">Privacy Policy</a>
+          <a href="/policies/terms-of-service" style="color: #D5C8B8;">Terms &amp; Conditions</a>
+        </div>
+      </div>
+
+      <!-- Col 4: Newsletter -->
+      <div class="footer-col">
+        <h4 class="footer-col__title" style="color: #FFFFFF; font-size: 1rem; font-weight: 700; margin-bottom: 1.25rem;">Get the inside crunch.</h4>
+        <p style="font-size: 0.88rem; color: #D5C8B8; margin-bottom: 1rem; line-height: 1.6;">
+          New flavours, snack drops, special offers and a few things worth opening your inbox for.
+        </p>
+        {% form 'customer', class: 'footer-newsletter-form' %}
+          <div style="display: flex; gap: 0.5rem;">
+            <input 
+              type="email" 
+              name="contact[email]" 
+              placeholder="Enter your email address" 
+              required 
+              style="padding: 0.6rem 1rem; border-radius: var(--radius-pill); border: 1px solid #443734; background: #1C1614; color: #FFF; flex: 1; font-size: 0.88rem;"
+            >
+            <button type="submit" class="btn btn-primary" style="padding: 0.6rem 1rem; border-radius: var(--radius-pill); font-size: 0.85rem; font-weight: 700;">
+              COUNT ME IN
+            </button>
+          </div>
+          <div style="font-size: 0.78rem; color: #A89B8C; margin-top: 0.5rem;">No spam. Just snack-worthy updates.</div>
+        {% endform %}
+      </div>
+    </div>
+
+    <!-- Bottom Line & Copyright -->
+    <div class="footer-bottom" style="border-top: 1px solid #382C29; padding-top: 1.75rem; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem; font-size: 0.88rem; color: #A89B8C;">
+      <div style="font-weight: 700; color: #E5BE64; letter-spacing: 0.04em;">
+        Stay crunchy. Stay hungry. Stay KRAK.
+      </div>
+      <div>
+        &copy; KRAK &amp; CO. All rights reserved.
+      </div>
+    </div>
+  </div>
+</footer>
+
+{% schema %}
+{
+  "name": "Footer",
+  "settings": []
+}
+{% endschema %}

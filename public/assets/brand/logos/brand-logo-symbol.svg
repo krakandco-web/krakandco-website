@@ -1,9 +1,0 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64">
-  <rect x="2" y="2" width="60" height="60" rx="12" fill="#7A1C1C" stroke="#E6AC2A" stroke-width="3" />
-  <rect x="6" y="6" width="52" height="52" rx="8" fill="none" stroke="#F2DFBA" stroke-dasharray="3 2" stroke-width="1" />
-  <!-- Letter K in 3D retro font -->
-  <text x="14" y="48" font-family="'Playfair Display', 'Impact', serif" font-size="44" font-weight="900" fill="#E6AC2A" stroke="#262321" stroke-width="2">K</text>
-  <!-- Little burst star -->
-  <path d="M 44 14 L 46 8 L 48 14 L 54 16 L 48 18 L 46 24 L 44 18 L 38 16 Z" fill="#FFF8EE" />
-</svg>
-
